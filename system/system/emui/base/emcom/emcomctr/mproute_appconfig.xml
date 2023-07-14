@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mproute version="001.001" thermalLevel="3">
+    <app name="com.huawei.appmarket.vehicle" foreground="false" grade="1" device="car">
+        <switch>1</switch>                                      <!-- 0:off; 1:on; 2:force off; 3:force on; Note: setting switch to force on/off, will disable further overwrite for this app -->
+        <hicomfeatures>
+            <multipathPolicy>
+                <fiEnableFlag>1</fiEnableFlag>
+                <multipathFlow>
+                    <enableType>2</enableType>
+                    <bondPolicy>2</bondPolicy>
+                    <algorithmType>65538</algorithmType>        <!--1表示动态流分配，用于优化百度网盘;2-优先建链优化，用于优化应用市场和应用宝;0表示无特殊算法; 高16bit是否置1来表示是否要同时拉起主wifi和主蜂窝-->
+                    <totalBwThresholdKb>1000000</totalBwThresholdKb>
+                    <startDualWifiThresholdKb>2000</startDualWifiThresholdKb>
+                    <version>1</version>
+                    <fiEnableFlag>1</fiEnableFlag>
+                    <rssiThreshold>
+                        <goodMobile>-98</goodMobile>
+                        <poorMobile>-110</poorMobile>
+                        <goodWIFI>-72</goodWIFI>
+                        <poorWIFI>-76</poorWIFI>
+                    </rssiThreshold>
+                    <burstBind>                                 <!--短时间密集建链时的绑定策略-->
+                    <!--当某些数据流占用了一部分带宽之后，网络的QoS/可用带宽发生变化，优选网卡也随之刷新。但是对于突发大量建链的情况，绑定策略无法及时刷新，所以设置并发绑定模式-->
+                        <protocol>6</protocol>                  <!--符合协议+端口条件，才进入burstBind逻辑.IPPROTO_TCP=6,IPPROTO_UDP=17-->
+                        <port>80,443</port>                     <!--端口，端口可以写成多个，例如80, 443，最多列8个-->
+                        <mode>2</mode>                          <!--fix表示不使用QoE信息进行计算，按照固定比例轮流绑定网卡，auto表示根据QoS进行计算，off表示不使用并发模式 枚举值：OFF:0 AUTO:1 FIX:2-->
+                        <ratio>1:1:1:1:1</ratio>                  <!--当mode是fix时配置。前2个绑上最优网卡（根据后续QoS计算），后2个绑次优一个网卡。再后面2个绑最后网卡，如此循环-->
+                        <batchTotal>1</batchTotal>              <!--当mode是auto时配置。一批并发数据流的总数量。例如百度下载一个文件并发10条流，认为是一个批次。同时下载两个文件，并发20条流，认为两批次。batchTotal仍然是10-->
+                        <sizeEsti>1073741824</sizeEsti>         <!--当mode是auto时配置。用于计算单流占用带宽，单位是kB。设置一个很大的数值表示一个流会尽可能占满带宽，此时按照网卡的带宽等比例分配-->
+                    </burstBind>
+                    <!-- ******** MPFlow 非连续建链时的绑定策略推导 ******** -->
+                    <scatterBind>                               <!--建流时间间隔长（零星分布）时的绑定策略-->
+                        <policy>                                <!--一个policy对应一个协议和端口的组合，不同的policy之间不允许重叠-->
+                            <protocol>6</protocol>              <!--协议，不同的policy的协议和端口组合不能重合。枚举值：IPPROTO_TCP = 6 IPPROTO_UDP = 17-->
+                            <port>80,443</port>                 <!--端口，端口可以写成多个，例如80, 443，最多列8个-->
+                            <mode>2</mode>                      <!--fix表示不使用QoE信息进行计算，按照固定比例轮流绑定网卡，auto表示根据QoS进行计算，off表示不使用并发模式 枚举值：OFF:0 AUTO:1 FIX:2-->
+                            <ratio>2:2</ratio>                  <!--当mode是fix时配置。前1个绑第一个网卡，后1个绑次第二个网卡。如此循环-->
+                            <sizeEsti>1073741824</sizeEsti>     <!--当mode是auto时配置。数据流的大小，单位是kB，用于计算数据流完成时间，从而决定优选网卡建链。网卡1和网卡2相近时，会随机选其中一个，方便后续探测和更新QoS-->
+                        </policy>
+                        <!--对于不在所有policy范围内的协议和端口组合，按照默认路由进行绑定，即MPFlow不对这些流进行处理-->
+                    </scatterBind>
+                    <!-- ******** MPFlow 断链策略配置 ******** -->
+                    <rstCtrl>                                   <!--切换控制-->
+                        <!--MPFlow对某一条流发送RST策略之后，间隔1秒再对下一条流发RST策略。目的是等待上一个RST策略生效并观察该策略带来的影响 ，再决定新的策略-->
+                        <policy>                                <!--最多8个flowtype标签，每个标签的name可以填多个值，用逗号隔开，最多8个。多个类型之间没有联系，填多个只是为了减少配置长度-->
+                            <flowType>1,2</flowType>            <!--枚举值:DOWNLOAD:1 UPLOAD:2 VIDEO_STREAM:3 AUDIO_STREAM:4 LIVE_TCP_UPSTREAM:5 LIVE_UDP_UPSTREAM:6 LIVE_DOWNSTREAM:7 VIDEO_CALL:8 AUDIO_CALL:9 GAME_MOBA:10 GAME_HEARTBEAT:11 MAP_NAVIGATE:12 BROWSING_STREAM:13-->
+                            <rstOperation>1</rstOperation>      <!--SK_ERROR:1 INTF_CHANGE:2-->
+                            <coolDownTimeMs>600000</coolDownTimeMs>
+                            <qoeCase>                           <!--最多4个-->
+                                <badReason>3</badReason>        <!--QoE差的类型--><!--枚举值:RELATIVE_LOW_BITRATE:1 ABSOLUTE_LOW_BITRATE:2 ONE_BUSY_ONE_IDLE:3 UDP_LONG_ECHO_DELAY:4 UDP_INFER_ECHO_DELAY:5 UDP_DOWNLINK_PKT_NUM:6 RESPONSE_DRIPPING:7 UDP_HIGH_DROP_INFERED:8 TCP_UPLINK_CONGEST:9 SPEED_DECAY:10 TCP_RTT_RISE:11-->
+                                <timing>1</timing>              <!--进行RST的时机，接收到QoE差立刻断链-->
+                                <nicBlinkMs>1000</nicBlinkMs>   <!--断链之后短时间内数据流绑定到其他接口上，在后续若干ms内，全局将数据流绑定到另一个网卡-->
+                            </qoeCase>
+                        </policy>
+                        <policy>                                <!--最多8个flowtype标签，每个标签的name可以填多个值，用逗号隔开，最多8个。多个类型之间没有联系，填多个只是为了减少配置长度-->
+                            <flowType>13</flowType>             <!--枚举值:DOWNLOAD:1 UPLOAD:2 VIDEO_STREAM:3 AUDIO_STREAM:4 LIVE_TCP_UPSTREAM:5 LIVE_UDP_UPSTREAM:6 LIVE_DOWNSTREAM:7 VIDEO_CALL:8 AUDIO_CALL:9 GAME_MOBA:10 GAME_HEARTBEAT:11 MAP_NAVIGATE:12 BROWSING_STREAM:13-->
+                            <rstOperation>1</rstOperation>      <!--SK_ERROR:1 INTF_CHANGE:2-->
+                            <coolDownTimeMs>600000</coolDownTimeMs>
+                            <qoeCase>                           <!--最多4个-->
+                                <badReason>7</badReason>        <!--QoE差的类型--><!--枚举值:RELATIVE_LOW_BITRATE:1 ABSOLUTE_LOW_BITRATE:2 ONE_BUSY_ONE_IDLE:3 UDP_LONG_ECHO_DELAY:4 UDP_INFER_ECHO_DELAY:5 UDP_DOWNLINK_PKT_NUM:6 RESPONSE_DRIPPING:7 UDP_HIGH_DROP_INFERED:8 TCP_UPLINK_CONGEST:9 SPEED_DECAY:10 TCP_RTT_RISE:11-->
+                                <timing>1</timing>              <!--进行RST的时机，接收到QoE差立刻断链-->
+                                <nicBlinkMs>2000</nicBlinkMs>   <!--断链之后短时间内数据流绑定到其他接口上，在后续若干ms内，全局将数据流绑定到另一个网卡-->
+                            </qoeCase>
+                            <qoeCase>                           <!--最多4个-->
+                                <badReason>11</badReason>       <!--QoE差的类型--><!--枚举值:RELATIVE_LOW_BITRATE:1 ABSOLUTE_LOW_BITRATE:2 ONE_BUSY_ONE_IDLE:3 UDP_LONG_ECHO_DELAY:4 UDP_INFER_ECHO_DELAY:5 UDP_DOWNLINK_PKT_NUM:6 RESPONSE_DRIPPING:7 UDP_HIGH_DROP_INFERED:8 TCP_UPLINK_CONGEST:9 SPEED_DECAY:10 TCP_RTT_RISE:11 -->
+                                <timing>1</timing>              <!--进行RST的时机，接收到QoE差立刻断链-->
+                                <nicBlinkMs>2000</nicBlinkMs>   <!--断链之后短时间内数据流绑定到其他接口上，在后续若干ms内，全局将数据流绑定到另一个网卡-->
+                            </qoeCase>
+                        </policy>
+                    </rstCtrl>
+                </multipathFlow>
+            </multipathPolicy>
+        </hicomfeatures>
+        <featureReport>                                             <!--所有的特征提取策略都汇聚到此标签下，需人工保证后续特征匹配和QoE识别所用到的特征都有被提取-->
+            <qosReport>1</qosReport>                        <!--QoS信息上报开关，目前都是开启的，预留未来只做数据流识别，不计算QoS的情况-->
+            <policy>                                                <!--一个policy对应一个协议+端口范围组合，不同policy的协议+端口范围组合不重叠-->
+                <protocol>1</protocol>                          <!--枚举值:PROTO_NULL:0 TCP:1 UDP:2 PROTO_ANY:-1 -->
+                <port>80,443</port>                                    <!--若有多个端口，可以单列出来，例如80，443，最多列8个，用英文逗号分隔，0表示任意匹配-->
+                <!--QoS特征上报的开关-->
+                <!--在程序中硬编码实现“不过滤任何数据包的基础统计功能”，从数据流开始一直持续监控到数据流结束，因为需要使用周期上报的特征来判断数据流QoE
+                统计对象有：skState,payloadByteUp,payloadByteDown,pktNumUp,pktNumDown,tcpSendWnd,echoDelay
+                分别指：sk状态，上行字节数，下行字节数，上行数据包数（包含空ACK），下行数据包数（包含空ACK），拥塞窗口剩余大小(单位是MSS)，每一个上行包与后续紧接着的下行包的时间差
+                如果要计算特定数据包的echoDelay，通过逐包上报的方法实现。-->
+                <basicReport>1</basicReport>                    <!--基础统计功能不进行详细配置，但是保留开关-->
+                <!--下面是用户定义的，“过滤特定条件的数据包的统计功能”，例如只统计包长在1000-1500的数据包数量-->
+                <periodicReport>                                    <!--用户定义的特征上报策略，periodic表示每500ms上报，immediate表示立刻上报-->
+                    <upLink>                                        <!--上行的统计策略-->
+                        <roi>1</roi>    <!--枚举值:OFF:0 ALWAYS:1 NUM_CTRL:2 TIME_CTRL:3 -->
+                        <roiRange>0:10</roiRange>
+                        <filterPktSize>0:10000</filterPktSize>  <!--可选，只关心特定长度数据包，符合条件才提取特征，两端都是闭区间-->
+                        <!--<filterStr>1A2B3C4D</filterStr>             可选，字符串的内容值，最多15字节，用十六进制表示，两个字符表示一个字节，可以并列多个值，最多8个，例如1A2B, 3C4D。任意一个匹配则返回成功-->
+                        <!--<filterStrOffset>10</filterStrOffset>       可选，数据包字符串匹配偏移，从应用层载荷开始算字节数。负数表示从往前找偏移。字符串必须与偏移共同使用，避免全包匹配。-->
+                        <target>0</target>                      <!--FI内核提取的特征类型，枚举值：payloadLen:0 payloadStr:1 echoDelay:2 TcpSeq:3 TcpAck:4 TcpFlags:5 TcpWindow:6 TcpOption:7, 可以取多个，用逗号分隔。-->
+                                                                    <!--如果是payloadStr，在周期上报策略下，取最后面数据包的str-->
+                        <!--用户定义的周期上报中不提供echoDelay，由基础统计功能提供所有数据包的echoDelay，对于特定长度和载荷数据包的echoDelay，通过逐包上报，在Daemon计算-->
+                        <targetStrOffset>0:150</targetStrOffset>    <!--可选，target是payloadStr时搭配使用，指定字符串的起始偏移位置和结束偏移位置，负数表示从后往前偏移，两端都是闭区间，最大长度150-->
+                    </upLink>
+                    <downLink>                                      <!--下行的统计策略-->
+                        <roi>1</roi>    <!--枚举值:OFF:0 ALWAYS:1 NUM_CTRL:2 TIME_CTRL:3 -->
+                        <roiRange>0:10</roiRange>
+                        <filterPktSize>0:10000</filterPktSize>  <!--可选，只关心特定长度数据包，符合条件才提取特征，两端都是闭区间-->
+                        <!--<<filterStr>1A2B3C4D</filterStr>                可选，字符串的内容值，最多15字节，用十六进制表示，两个字符表示一个字节，可以并列多个值，最多8个，例如1A2B, 3C4D。任意一个匹配则返回成功-->
+                        <!--<<filterStrOffset>10</filterStrOffset>      可选，数据包字符串匹配偏移，从应用层载荷开始算字节数。负数表示从往前找偏移。字符串必须与偏移共同使用，避免全包匹配。-->
+                        <target>0</target>              <!--FI内核提取的特征类型，其他取值：pktNum, payloadStr。可以取多个，用逗号分隔。-->
+                                                                    <!--如果是payloadStr，在周期上报策略下，取最后面数据包的str-->
+                        <targetStrOffset>0:150</targetStrOffset>    <!--可选，target是payloadStr时搭配使用，指定字符串的起始偏移位置和结束偏移位置，负数表示从后往前偏移，两端都是闭区间，最大长度150-->
+                    </downLink>
+                </periodicReport>
+                <immediateReport>                                    <!--内部的字段与periodicReport一样。另外逐包上报策略需要设置严格的过滤规则，减少上报量-->
+                    <upLink>
+                        <roi>2</roi>                                <!--枚举值:OFF:0 ALWAYS:1 NUM_CTRL:2 TIME_CTRL:3 --><!--使用时间进行过滤，超出范围之后则不再提取单包特征和上报。另外的取值是pktNum，指用特定方向（由target字段指定）的数据包数量进行过滤-->
+                        <roiRange>0:5</roiRange>                    <!--起始计数和结束计数，begin<=x<=end。对于使用pktNum控制，如果配置了filter，满足filter的数据包才会增加pktNum计数-->
+                        <filterPktSize>1:128000</filterPktSize>    <!--可选，只关心特定长度数据包，符合条件才提取特征-->
+                        <target>0,1,2</target>                    <!--FI内核提取的特征类型，枚举值：payloadLen:0 payloadStr:1 echoDelay:2 TcpSeq:3 TcpAck:4 TcpFlags:5 TcpWindow:6 TcpOption:7, 可以取多个，用逗号分隔。-->
+                        <targetStrOffset>0:349</targetStrOffset>    <!--可选，target是payloadStr时搭配使用，指定字符串的起始偏移位置和结束偏移位置，负数表示从后往前偏移，最大长度150-->
+                    </upLink>
+                    <downLink>
+                        <roi>0</roi>                                <!--枚举值:OFF:0 ALWAYS:1 NUM_CTRL:2 TIME_CTRL:3 --><!--使用时间进行过滤，超出范围之后则不再提取单包特征和上报。另外的取值是pktNum，指用特定方向（由target字段指定）的数据包数量进行过滤-->
+                        <roiRange>0:100</roiRange>                    <!--起始计数和结束计数，begin<=x<=end。对于使用pktNum控制，如果配置了filter，满足filter的数据包才会增加pktNum计数-->
+                        <filterPktSize>0:128000</filterPktSize>    <!--可选，只关心特定长度数据包，符合条件才提取特征-->
+                        <target>0,1,2</target>                    <!--FI内核提取的特征类型，枚举值：payloadLen:0 payloadStr:1 echoDelay:2 TcpSeq:3 TcpAck:4 TcpFlags:5 TcpWindow:6 TcpOption:7, 可以取多个，用逗号分隔。-->
+                        <targetStrOffset>0:150</targetStrOffset>    <!--可选，target是payloadStr时搭配使用，指定字符串的起始偏移位置和结束偏移位置，负数表示从后往前偏移，最大长度150-->
+                    </downLink>
+                </immediateReport>
+            </policy>                                               <!--此例子只有1个policy。支持最多8个policy-->
+        </featureReport>
+        <!-- ******** FI Daemon进行流量识别和QoE识别的配置 ******** -->
+        <flowRecognition>
+            <policy>                                    <!--流量类型识别和QoE评估，数据流类型名字，保证一个类型对应一个QoE算法。例如Video有RTMP数据流和UDP数据流，分别对应不同识别策略和QoE衡量方法，则需要将Video细分。-->
+                <flowType>1</flowType>  <!--枚举值:DOWNLOAD:1 UPLOAD:2 VIDEO_STREAM:3 AUDIO_STREAM:4 LIVE_TCP_UPSTREAM:5 LIVE_UDP_UPSTREAM:6 LIVE_DOWNSTREAM:7 VIDEO_CALL:8 AUDIO_CALL:9 GAME_MOBA:10 GAME_HEARTBEAT:11 MAP_NAVIGATE:12 BROWSING_STREAM:13-->
+                <classification>                                        <!--匹配策略，包含多个case，命中任意一个case表示匹配成功，一个协议下最多支持4个featureCase。-->
+                    <featureCase>                                       <!--一个featureCase内部的特征是与关系。可以包含最多2个数值特征和2个字符串特征。-->
+                        <protocol>6</protocol>                      <!--IPPROTO_TCP = 6 IPPROTO_UDP = 17-->
+                        <port>80</port>                                <!--若有多个端口，可以单列出来，例如80，443，最多列8个，0表示任意匹配-->
+                        <stringFeature>                                    <!--字符串特征，FI根据target所表明的位置、协议的格式构造正则表达式，对数据包进行匹配-->
+                            <source>2</source>    <!--统计数据的上报来源，通过消息类型指定，其他取值,periodicReport,rawPeriodicReport,immediateReport-->
+                            <target>4</target>                    <!--其他取值：dnsQuery:0, dnsAnswer:1, tlsSni:2, httpMethod:3, httpUriSuffix:4, httpHost:5, httpRespCode:6, httpContType:7, httpContLen:8, httpRedirDest:9, customStr:10-->
+                            <customStrLoc>0</customStrLoc>            <!--配套target字段取值customStr使用，指明匹配位置的偏移量-->
+                            <cmpValue>61706b</cmpValue>            <!--匹配字符串apk--><!--字符串的内容值，最多15字节，用十六进制表示，两个字符表示一个字节，可以并列多个值，最多8个，例如1A2B, 3C4D。任意一个匹配则返回成功-->
+                        </stringFeature>
+                    </featureCase>
+                    <featureCase>                                       <!--一个featureCase内部的特征是与关系。可以包含最多2个数值特征和2个字符串特征。-->
+                        <protocol>6</protocol>                      <!--IPPROTO_TCP = 6 IPPROTO_UDP = 17-->
+                        <port>443</port>                                <!--若有多个端口，可以单列出来，例如80，443，最多列8个，0表示任意匹配-->
+                        <stringFeature>                                    <!--字符串特征，FI根据target所表明的位置、协议的格式构造正则表达式，对数据包进行匹配-->
+                            <source>2</source>    <!--统计数据的上报来源，通过消息类型指定，其他取值,periodicReport,rawPeriodicReport,immediateReport-->
+                            <target>2</target>                    <!--其他取值：dnsQuery:0, dnsAnswer:1, tlsSni:2, httpMethod:3, httpUriSuffix:4, httpHost:5, httpRespCode:6, httpContType:7, httpContLen:8, httpRedirDest:9, customStr:10-->
+                            <customStrLoc>0</customStrLoc>            <!--配套target字段取值customStr使用，指明匹配位置的偏移量-->
+                            <cmpValue>617070646c,646c2e747863646e73</cmpValue>                <!--tlsSni匹配appdl|dl.txcdns--><!--字符串的内容值，最多15字节，用十六进制表示，两个字符表示一个字节，可以并列多个值，最多8个，例如1A2B, 3C4D。任意一个匹配则返回成功-->
+                        </stringFeature>
+                    </featureCase>
+                    <featureCase>                                       <!--一个featureCase内部的特征是与关系。可以包含最多2个数值特征和2个字符串特征。-->
+                        <protocol>6</protocol>                      <!--IPPROTO_TCP = 6 IPPROTO_UDP = 17-->
+                        <port>80,443</port>                             <!--若有多个端口，可以单列出来，例如80，443，最多列8个，0表示任意匹配-->
+                        <statFeature>                                   <!--数值特征，可以从FI内核的周期上报数据进行计算，也可以从立即上报的数据进行计算-->
+                            <source>0</source>              <!--统计数据的上报来源，通过消息类型指定，其他取值,periodicReport,rawPeriodicReport,immediateReport-->
+                            <target>3</target>                  <!--统计对象。枚举值:pktNumUp:0, pktNumDown:1, payloadByteUp:2, payloadByteDown:3, pktNumRatio:4, payloadByteRatio:5, echoDelay:6。后面三个跟方向无关-->
+                            <roiRange>0:20</roiRange>                    <!--必选，统计时间范围，按数据流开始时间计算。若超出该范围仍没有匹配成功，则放弃匹配-->
+                            <roiWin>3</roiWin>                          <!--可选，在roiRange内，按照窗口大小进行滑窗，从中选择一小段来来计算统计值，任意一个滑窗位置匹配成功则认为匹配成功。-->
+                                                                        <!--roiWin=0表示每秒的统计量进行累加，一旦满足阈值，则判断匹配成功-->
+                            <calc>3</calc>                          <!--统计方法。枚举值:max:0, min:1, mean:2, sum:3, stdvar:4, coeff_var:5。在计算统计特征时，每秒对应一个值来计算统计量-->
+                            <cmpValue>2097152‬:1073741824‬</cmpValue>                   <!--注：取值范围统一用冒号:隔开。统计值的取值范围，浮点数，可以是负数，左边是下界，右边是上界，两端都是闭区间-->
+                        </statFeature>
+                    </featureCase>
+                </classification>
+                <!--synFail的情况，作为对所有TCP的监控手段，在2秒内建链不成功则认为QoE差。在建链时无法识别数据流类型。如果短时间内大量数据流建链不成功，则逃生，禁用该网卡-->
+                <qoeEvaluation>                                         <!--衡量QoE，不同的case是或关系，有先后优先级，命中前面任意一个则直接返回bad以及类型，不再判断后续case。-->
+                    <qoeCase>                                           <!--最多8个case，badReason是一个枚举值，badParameter是8个int。未配置的case在转成结构体时，把badReason赋值为invalid-->
+                        <!--QoE差的类型是一个枚举值，可以使用位图进行分类，后续的处理模块可以根据QoE差的不同类型进行不同处理，例如更换网卡、提升数据包优先级，单路/多路冗余发送等
+                        例如用一个char表示类型，1-2比特表示大类型（单流、多流、多网卡），3-5比特表示小类型（TCP状态异常，速率对比异常），6-8比特表示具体原因
+                        参数依次标号为A, B, C, D, E, F, G, H。A表示阈值，B表示持续时间，C-H表示额外参数。-->
+                        <badReason>2</badReason>    <!--枚举值:RELATIVE_LOW_BITRATE:1 ABSOLUTE_LOW_BITRATE:2 ONE_BUSY_ONE_IDLE:3 UDP_LONG_ECHO_DELAY:4 UDP_INFER_ECHO_DELAY:5 UDP_DOWNLINK_PKT_NUM:6 RESPONSE_DRIPPING:7 UDP_HIGH_DROP_INFERED:8 TCP_UPLINK_CONGEST:9 SPEED_DECAY:10 -->
+                        <source>0</source>              <!--统计数据的上报来源，通过消息类型指定，其他取值,periodicReport,rawPeriodicReport,immediateReport-->
+                        <exemptFromSynMs>1000</exemptFromSynMs>         <!--数据流建立的2秒QoE BAD判断。对于下载流，刚建链速度还没有起来。对于noResponse，可以配置为0-->
+                        <roiWin>10</roiWin>                          <!--保存过去10个slot的QoE判断结果，一个slot对应FI内核的一个上报周期-->
+                        <triggerCount>10</triggerCount>                  <!--如果前面的10个结果中有10个是BAD，则向下游模块报送指定的数据流QoE BAD，让下游模块进行干预-->
+                        <cmpValue>0:0</cmpValue> <!--判断QoE差的阈值，跟具体的QoE衡量方法有关，不同的衡量方法对应的阈值语义不一样，所以阈值的单位也不一样-->
+                        <extraParameter>5000,2</extraParameter>     <!--8个int，可以为负数，是QoE衡量方法的额外参数，跟具体的衡量方法有关，语义不在配置文档中体现-->
+                    </qoeCase>
+                </qoeEvaluation>
+            </policy>
+            <policy>                                    <!--流量类型识别和QoE评估，数据流类型名字，保证一个类型对应一个QoE算法。例如Video有RTMP数据流和UDP数据流，分别对应不同识别策略和QoE衡量方法，则需要将Video细分。-->
+                <flowType>13</flowType>    <!--枚举值:DOWNLOAD:1 UPLOAD:2 VIDEO_STREAM:3 AUDIO_STREAM:4 LIVE_TCP_UPSTREAM:5 LIVE_UDP_UPSTREAM:6
+                LIVE_DOWNSTREAM:7 VIDEO_CALL:8 AUDIO_CALL:9 GAME_MOBA:10 GAME_HEARTBEAT:11 MAP_NAVIGATE:12 BROWSING_STREAM:13-->
+                <classification>                                        <!--匹配策略，包含多个case，命中任意一个case表示匹配成功，一个协议下最多支持4个featureCase。-->
+                    <featureCase>                                        <!--一个featureCase内部的特征是与关系。可以包含最多2个数值特征和2个字符串特征。-->
+                        <protocol>6</protocol>                        <!--IPPROTO_TCP = 6 IPPROTO_UDP = 17-->
+                        <port>80</port>                                <!--若有多个端口，可以单列出来，例如80，443，最多列8个，0表示任意匹配-->
+                        <stringFeature>                                    <!--字符串特征，FI根据target所表明的位置、协议的格式构造正则表达式，对数据包进行匹配-->
+                            <source>2</source>    <!--统计数据的上报来源，通过消息类型指定，其他取值,periodicReport,rawPeriodicReport,immediateReport-->
+                            <target>10</target>                    <!--其他取值：dnsQuery:0, dnsAnswer:1, tlsSni:2, httpMethod:3, httpUriSuffix:4, httpHost:5, httpRespCode:6, httpContType:7, httpContLen:8, httpRedirDest:9, customStr:10-->
+                            <customStrLoc>0</customStrLoc>            <!--配套target字段取值customStr使用，指明匹配位置的偏移量-->
+                            <cmpValue>474554,504F5354</cmpValue>                <!--字符串的内容值，最多15字节，用十六进制表示，两个字符表示一个字节，可以并列多个值，最多8个，例如1A2B, 3C4D。任意一个匹配则返回成功-->
+                        </stringFeature>
+                    </featureCase>
+                    <featureCase>                                        <!--一个featureCase内部的特征是与关系。可以包含最多2个数值特征和2个字符串特征。-->
+                        <protocol>6</protocol>                        <!--IPPROTO_TCP = 6 IPPROTO_UDP = 17-->
+                        <port>443</port>                                <!--若有多个端口，可以单列出来，例如80，443，最多列8个，0表示任意匹配-->
+                        <statFeature>                                   <!--数值特征，可以从FI内核的周期上报数据进行计算，也可以从立即上报的数据进行计算-->
+                            <source>0</source>              <!--统计数据的上报来源，通过消息类型指定，其他取值,periodicReport,rawPeriodicReport,immediateReport-->
+                            <target>0</target>                  <!--统计对象。枚举值:pktNumUp:0, pktNumDown:1, payloadByteUp:2, payloadByteDown:3, pktNumRatio:4, payloadByteRatio:5, echoDelay:6。后面三个跟方向无关-->
+                            <roiRange>0:20</roiRange>                   <!--必选，统计时间范围，按数据流开始时间计算。若超出该范围仍没有匹配成功，则放弃匹配-->
+                            <roiWin>3</roiWin>                          <!--可选，在roiRange内，按照窗口大小进行滑窗，从中选择一小段来来计算统计值，任意一个滑窗位置匹配成功则认为匹配成功。-->
+                                                                        <!--roiWin=0表示每秒的统计量进行累加，一旦满足阈值，则判断匹配成功-->
+                            <calc>3</calc>                          <!--统计方法。枚举值:max:0, min:1, mean:2, sum:3, stdvar:4, coeff_var:5。在计算统计特征时，每秒对应一个值来计算统计量-->
+                            <cmpValue>1:1073741824‬</cmpValue>                 <!--防止视频流识别为浏览流，需要增加1秒后再判断包数量，数量多的且带ts/mp4特征的则识别为视频流，其他为浏览流。-->
+                        </statFeature>
+                    </featureCase>
+                </classification>
+                <!--synFail的情况，作为对所有TCP的监控手段，在2秒内建链不成功则认为QoE差。在建链时无法识别数据流类型。如果短时间内大量数据流建链不成功，则逃生，禁用该网卡-->
+                <qoeEvaluation>                                            <!--衡量QoE，不同的case是或关系，有先后优先级，命中前面任意一个则直接返回bad以及类型，不再判断后续case。-->
+                    <qoeCase>                                            <!--最多8个case，badReason是一个枚举值，badParameter是8个int。未配置的case在转成结构体时，把badReason赋值为invalid-->
+                        <!--QoE差的类型是一个枚举值，可以使用位图进行分类，后续的处理模块可以根据QoE差的不同类型进行不同处理，例如更换网卡、提升数据包优先级，单路/多路冗余发送等
+                        例如用一个char表示类型，1-2比特表示大类型（单流、多流、多网卡），3-5比特表示小类型（TCP状态异常，速率对比异常），6-8比特表示具体原因
+                        参数依次标号为A, B, C, D, E, F, G, H。A表示阈值，B表示持续时间，C-H表示额外参数。-->
+                        <badReason>11</badReason>    <!--枚举值:RELATIVE_LOW_BITRATE:1 ABSOLUTE_LOW_BITRATE:2 ONE_BUSY_ONE_IDLE:3 UDP_LONG_ECHO_DELAY:4 UDP_INFER_ECHO_DELAY:5 UDP_DOWNLINK_PKT_NUM:6 RESPONSE_DRIPPING:7 UDP_HIGH_DROP_INFERED:8 TCP_UPLINK_CONGEST:9 SPEED_DECAY:10 TCP_RTT_RISE:11 NO_RESPONSE:12-->
+                        <exemptFromSynMs>1000</exemptFromSynMs>            <!--数据流建立的2秒QoE BAD判断。对于下载流，刚建链速度还没有起来。对于noResponse，可以配置为0-->
+                        <roiWin>5</roiWin>                            <!--保存过去5个slot的QoE判断结果，一个slot对应FI内核的一个上报周期-->
+                        <triggerCount>3</triggerCount>                    <!--如果前面的5个结果中有2个是BAD，则向下游模块报送指定的数据流QoE BAD，让下游模块进行干预-->
+                        <cmpValue>300000:20000000</cmpValue>    <!--判断QoE差的阈值，跟具体的QoE衡量方法有关，不同的衡量方法对应的阈值语义不一样，所以阈值的单位也不一样-->
+                    </qoeCase>
+                    <qoeCase>                                            <!--最多8个case，badReason是一个枚举值，badParameter是8个int。未配置的case在转成结构体时，把badReason赋值为invalid-->
+                        <!--QoE差的类型是一个枚举值，可以使用位图进行分类，后续的处理模块可以根据QoE差的不同类型进行不同处理，例如更换网卡、提升数据包优先级，单路/多路冗余发送等
+                        例如用一个char表示类型，1-2比特表示大类型（单流、多流、多网卡），3-5比特表示小类型（TCP状态异常，速率对比异常），6-8比特表示具体原因
+                        参数依次标号为A, B, C, D, E, F, G, H。A表示阈值，B表示持续时间，C-H表示额外参数。-->
+                        <badReason>7</badReason>    <!--枚举值:RELATIVE_LOW_BITRATE:1 ABSOLUTE_LOW_BITRATE:2 ONE_BUSY_ONE_IDLE:3 UDP_LONG_ECHO_DELAY:4 UDP_INFER_ECHO_DELAY:5 UDP_DOWNLINK_PKT_NUM:6 RESPONSE_DRIPPING:7 UDP_HIGH_DROP_INFERED:8 TCP_UPLINK_CONGEST:9 SPEED_DECAY:10 TCP_RTT_RISE:11 NO_RESPONSE:12-->
+                        <exemptFromSynMs>1000</exemptFromSynMs>            <!--数据流建立的2秒QoE BAD判断。对于下载流，刚建链速度还没有起来。对于noResponse，可以配置为0-->
+                        <roiWin>3</roiWin>                            <!--保存过去5个slot的QoE判断结果，一个slot对应FI内核的一个上报周期-->
+                        <triggerCount>2</triggerCount>                    <!--如果前面的5个结果中有2个是BAD，则向下游模块报送指定的数据流QoE BAD，让下游模块进行干预-->
+                        <cmpValue>0:15360</cmpValue>    <!--判断QoE差的阈值，跟具体的QoE衡量方法有关，不同的衡量方法对应的阈值语义不一样，所以阈值的单位也不一样-->
+                        <extraParameter>0</extraParameter>        <!--8个int，可以为负数，是QoE衡量方法的额外参数，跟具体的衡量方法有关，语义不在配置文档中体现-->
+                    </qoeCase>
+                </qoeEvaluation>
+            </policy>
+        </flowRecognition>
+    </app>
+</mproute>

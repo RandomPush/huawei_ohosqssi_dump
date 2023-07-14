@@ -1,0 +1,24 @@
+{
+    "all_trans_rule": [
+        {
+            "event_name": "ZrHung",
+            "eventid": 10030,
+            "params": {
+                "PID":"LONG1",
+                "TGID":"LONG2",
+                "MSG":"STR3",
+                "CMD":"STR4"
+            }
+        },
+        {
+            "event_name": "RUNNING_TIME_OF_SYSTEM",
+            "eventid": 908003001,
+            "params": {
+                "TEST_TYPE":"TESTTYPE",
+                "APR_TIME":"APRTIME",
+                "START_TIME":"STARTTIME",
+                "END_TIME":"ENDTIME"
+            }
+        }
+    ]
+}

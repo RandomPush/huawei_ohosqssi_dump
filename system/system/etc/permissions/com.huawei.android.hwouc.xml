@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <allow-in-power-save package="com.huawei.android.hwouc" />
+  <rollback-whitelisted-app package="com.huawei.android.hwouc"/>
+  <whitelisted-staged-installer package="com.huawei.android.hwouc"/>
+</permissions>

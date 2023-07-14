@@ -1,0 +1,158 @@
+{
+    "MemoryLeak": {
+        "Beta": {
+            "enable" : true,
+            "upload_interval" : 36000,
+            "heap_threshold": 0.85,
+            "default_baseline": 1800,
+            "sample_time": {
+                "enable" : true,
+                "window_time":1000,
+                "psi": {
+                    "150": 50,
+                    "100": 100,
+                    "70": 200
+                }
+            },
+            "memory_type": {
+                "ion": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 1500,
+                        "6G": 2000,
+                        "8G": 2560
+                    },
+                    "meminfo_name" : "IonTotalUsed",
+                    "proc_name" : "ion_process_info"
+                },
+                "slub": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 600,
+                        "6G": 1000,
+                        "8G": 1400
+                    },
+                    "meminfo_name" : "Slab",
+                    "proc_name" : "slabinfo"
+                },
+                "vmalloc": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 600,
+                        "6G": 700,
+                        "8G": 800
+                    },
+                    "meminfo_name" : "VmallocUsed",
+                    "proc_name" : "vmalloc_info"
+                },
+                "ashmem": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 600,
+                        "6G": 800,
+                        "8G": 1024
+                    },
+                    "meminfo_name" : "AshmemUsed",
+                    "proc_name" : "ashmem_process_info"
+                },
+                "gpu": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 1000,
+                        "6G": 1450,
+                        "8G": 1680
+                    },
+                    "meminfo_name" : "GpuTotalUsed",
+                    "proc_name" : "gpumem_process_info"
+                },
+                "cma": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 9999,
+                        "6G": 9999,
+                        "8G": 9999
+                    },
+                    "meminfo_name" : "CmaUsed",
+                    "proc_name" : "cma_info"
+                }
+            }
+        },
+        "Commercial": {
+            "enable" : true,
+            "upload_interval" : 72000,
+            "heap_threshold": 0.85,
+            "default_baseline": 1800,
+            "sample_time": {
+                "enable" : true,
+                "window_time":1000,
+                "psi": {
+                    "150": 50,
+                    "100": 100,
+                    "70": 200
+                }
+            },
+            "memory_type": {
+                "ion": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 1500,
+                        "6G": 2000,
+                        "8G": 2560
+                    },
+                    "meminfo_name" : "IonTotalUsed",
+                    "proc_name" : "ion_process_info"
+                },
+                "slub": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 600,
+                        "6G": 1000,
+                        "8G": 1400
+                    },
+                    "meminfo_name" : "Slab",
+                    "proc_name" : "slabinfo"
+                },
+                "vmalloc": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 600,
+                        "6G": 700,
+                        "8G": 800
+                    },
+                    "meminfo_name" : "VmallocUsed",
+                    "proc_name" : "vmalloc_info"
+                },
+                "ashmem": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 600,
+                        "6G": 800,
+                        "8G": 1024
+                    },
+                    "meminfo_name" : "AshmemUsed",
+                    "proc_name" : "ashmem_process_info"
+                },
+                "gpu": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 1000,
+                        "6G": 1450,
+                        "8G": 1680
+                    },
+                    "meminfo_name" : "GpuTotalUsed",
+                    "proc_name" : "gpumem_process_info"
+                },
+                "cma": {
+                    "enable" : true,
+                    "monitor_threshold": {
+                        "4G": 9999,
+                        "6G": 9999,
+                        "8G": 9999
+                    },
+                    "meminfo_name" : "CmaUsed",
+                    "proc_name" : "cma_info"
+                }
+            }
+        }
+    }
+}

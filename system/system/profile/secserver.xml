@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+    <process>secserver</process>
+    <loadlibs>
+        <libpath>libdevicesecmgr.z.so</libpath>
+    </loadlibs>
+    <systemability> 
+        <name>3511</name> 
+        <libpath>libdevicesecmgr.z.so</libpath> 
+         
+         
+        <run-on-create>true</run-on-create> 
+        <distributed>false</distributed> 
+        <dump-level>1</dump-level> 
+    </systemability>
+</info>

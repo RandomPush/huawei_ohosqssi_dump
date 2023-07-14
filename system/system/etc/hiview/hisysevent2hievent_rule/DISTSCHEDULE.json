@@ -1,0 +1,48 @@
+{
+    "simple_rule": [
+        {
+            "event_name": "DmsLocalInterfaceException",
+            "eventid": 950003002
+        },
+        {
+            "event_name": "RemoteRecord",
+            "eventid": 1001
+        },
+        {
+            "event_name": "InitialEnvironmentException",
+            "eventid": 950003001
+        },
+        {
+            "event_name": "DmsRemoteContinueAbilityException",
+            "eventid": 950003003
+        },
+        {
+            "event_name": "DmsRemoteBindAbilityException",
+            "eventid": 950003004
+        },
+        {
+            "event_name": "DmsRemoteUnbindAbilityException",
+            "eventid": 950003005
+        },
+        {
+            "event_name": "DmsRemoteStartAbilityException",
+            "eventid": 950003006
+        },
+        {
+            "event_name": "DmsRemoteStopAbilityException",
+            "eventid": 950003007
+        },
+        {
+            "event_name": "DmsRemoteGetProviderException",
+            "eventid": 950003008
+        },
+        {
+            "event_name": "DmsRemoteStartAbility",
+            "eventid": 991310074
+        },
+        {
+            "event_name": "DmsRemoteConnectAbility",
+            "eventid": 991310075
+        }
+    ]
+}

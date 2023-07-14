@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+    <process>distributedsched</process>
+    <loadlibs>
+        <libpath>libdistributedschedsvr.z.so</libpath>
+    </loadlibs>
+    <systemability> 
+        <name>1401</name> 
+        <libpath>libdistributedschedsvr.z.so</libpath> 
+         
+         
+        <run-on-create>true</run-on-create> 
+        <distributed>true</distributed> 
+        <dump-level>1</dump-level> 
+    </systemability>
+</info>

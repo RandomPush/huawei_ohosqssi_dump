@@ -1,0 +1,223 @@
+{
+    "header": {
+        "emui": "11",
+        "version": "23"
+    },
+    "address": "supl.platform.dbankcloud.cn",
+    "port": "7275",
+    "requirement" : [
+        {
+            "country" : "***",
+            "product" : [
+                {
+                    "productname" : "ANA-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "ELS-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "OCE-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "NOH-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "NOP-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "TET-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "ANG-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "BRQ-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "CDL-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "HCL-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "PPAH-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "DNN-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "YOR-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "JSC-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "HJC-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "CND-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "HCD-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "ALA-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "CHL-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "NTN-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "WKG-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "CHW-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "FRF-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "WNG-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "PKU-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "NEN-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "JAD-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "AGM-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "AGM3-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "BZF-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "BZG-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "MNC-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "COCO-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "RNA-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "NAM-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "ABR-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "BAL-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "PAL-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "JLN-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "DCO-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "CET-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "GLA-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "NCO-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "ALT-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "MNA-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "GOA-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "FOA-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "STG-***",
+                    "version" : "***_***"
+                },
+                {
+                    "productname" : "CTR-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "BNE-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "MAO-***",
+                    "version" : "***-***"
+                },
+                {
+                    "productname" : "LNA-***",
+                    "version" : "***-***"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "BundleNameTrustList": [
+    "com.huawei.hwid",
+    "com.huawei.hms",
+    "com.huawei.hwid.tv",
+    "com.huawei.hwid.car"
+  ],
+  "AccountEventMap": {
+    "LOGIN" : "Hwid.event.LOGIN",
+    "LOGOUT" : "Hwid.event.LOGOUT",
+    "TOKEN_INVALID" : "Hwid.event.TOKEN_INVALID",
+    "LOGOFF" : "Hwid.event.LOGOFF"
+  }
+}

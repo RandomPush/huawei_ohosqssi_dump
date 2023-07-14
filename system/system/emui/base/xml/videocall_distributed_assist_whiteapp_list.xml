@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <PCwhiteapp package="com.tencent.mm" />
+  <PCwhiteapp package="com.tencent.mobileqq" />
+  <PCwhiteapp package="com.huawei.works" />
+  <PCwhiteapp package="com.huawei.welink" />
+  <PCwhiteapp package="com.huawei.hwvoipservice" />
+  <PCwhiteapp package="com.tencent.wework" />
+  <PCwhiteapp package="com.huawei.CloudLink" />
+  <PCwhiteapp package="com.huawei.ims" />
+  <PCwhiteapp package="com.tencent.wemeet.app" />
+  <PCwhiteapp package="com.ss.android.lark" />
+  <PCwhiteapp package="com.alibaba.android.rimet" />
+  <PCwhiteapp package="com.whatsapp" />
+  <PCwhiteapp package="jp.naver.line.android" />
+  <PCwhiteapp package="com.viber.voip" />
+  <PCwhiteapp package="com.azarlive.android" />
+  <PCwhiteapp package="com.skype.raider" />
+  <PCwhiteapp package="us.zoom.videomeetings" />
+  <PCwhiteapp package="com.skype.rover" />
+  <PCwhiteapp package="com.cisco.webex.meetings" />
+  <PCwhiteapp package="com.microsoft.teams" />
+  <PCwhiteapp package="com.google.android.talk" />
+  <PCwhiteapp package="com.Slack" />
+  <PCwhiteapp package="com.huawei.meetime" />
+  <PCwhiteapp package="com.vipkid.studypad" />
+  <PCwhiteapp package="cn.eeo.classin" />
+  <PCwhiteapp package="com.fenbi.android.zenglish" />
+  <PCwhiteapp package="com.zuoyebang.airclass" />
+  <PCwhiteapp package="com.xueersi.parentsmeeting" />
+  <PCwhiteapp package="com.zmlearn.course.am" />
+  <PCwhiteapp package="com.talk51.kid" />
+  
+  <TVwhiteapp package="com.vipkid.studypad" />
+  <TVwhiteapp package="com.xueersi.parentsmeeting" />
+  <TVwhiteapp package="com.fenbi.android.zenglish" />
+  <TVwhiteapp package="com.zuoyebang.airclass" />
+  <TVwhiteapp package="com.zmlearn.course.am" />
+  <TVwhiteapp package="cn.eeo.classin" />
+  <TVwhiteapp package="com.talk51.kid" />
+  
+  <TVwhiteapp package="com.tencent.mm" />
+  <TVwhiteapp package="com.tencent.wework" />
+  <TVwhiteapp package="com.tencent.mobileqq" />
+  <TVwhiteapp package="com.huawei.works" />
+  <TVwhiteapp package="com.huawei.welink" />
+  <TVwhiteapp package="com.huawei.CloudLink" />
+  <TVwhiteapp package="com.huawei.hwvoipservice" />
+  <TVwhiteapp package="com.huawei.ims" />
+  <TVwhiteapp package="com.tencent.wemeet.app" />
+  <TVwhiteapp package="com.ss.android.lark" />
+  <TVwhiteapp package="com.alibaba.android.rimet" />
+  <TVwhiteapp package="com.huawei.meetime" />
+  <TVwhiteapp package="com.huawei.meetime" />
+  <!-- 国外-->
+  <TVwhiteapp package="com.whatsapp" />
+  <TVwhiteapp package="us.zoom.videomeetings" />
+  <TVwhiteapp package="com.skype.rover" />
+  <TVwhiteapp package="com.microsoft.teams" />
+  <TVwhiteapp package="com.skype.raider" />
+</resources>

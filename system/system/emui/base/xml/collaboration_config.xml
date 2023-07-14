@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <businessid name="SUPER_LAUNCHER">
+    <devicetype name="131">
+      <allowlist>
+        <appaccesscontrol>
+          <application name="" version=""/>
+        </appaccesscontrol>
+        <featureaccesscontrol>
+          <appcasttransfer>
+            <application name="" version=""/>
+          </appcasttransfer>
+          <hardwaretransfer>
+            <application name="" version=""/>
+          </hardwaretransfer>
+        </featureaccesscontrol>
+        <subfeaturesaccesscontrol>
+          <camera>
+            <application name="com.xueersi.parentsmeeting" version=""/>
+            <application name="com.baidu.homework" version=""/>
+            <application name="cn.eeo.classin" version=""/>
+            <application name="com.talk51.kid" version=""/>
+            <application name="com.tencent.mm" version=""/>
+            <application name="com.tencent.wework" version=""/>
+            <application name="com.tencent.mobileqq" version=""/>
+            <application name="com.huawei.meetime" version=""/>
+            <application name="com.alibaba.android.rimet" version=""/>
+            <application name="tv.danmaku.bili" version=""/>
+            <application name="com.ss.android.ugc.aweme" version=""/>
+            <application name="com.smile.gifmaker" version=""/>
+            <application name="com.duowan.kiwi" version=""/>
+            <application name="com.duowan.live" version=""/>
+            <application name="air.tv.douyu.android" version=""/>
+            <application name="com.huawei.welink" version=""/>
+            <application name="com.huawei.works" version=""/>
+            <application name="com.huawei.CloudLink" version=""/>
+            <application name="com.tencent.wemeet.app" version=""/>
+            <application name="com.ss.android.lark" version=""/>
+          </camera>
+          <mic>
+            <application name="" version=""/>
+          </mic>
+          <speaker>
+            <application name="" version=""/>
+          </speaker>
+          <gps>
+            <application name="com.autonavi.minimap" version=""/>
+            <application name="com.baidu.BaiduMap" version=""/>
+            <application name="com.tencent.map" version=""/>
+          </gps>
+          <relaunch>
+            <application name="" version=""/>
+          </relaunch>
+          <magicwindow>
+            <application name="" version=""/>
+          </magicwindow>
+        </subfeaturesaccesscontrol>
+      </allowlist>
+      <denylist>
+        <appaccesscontrol>
+          <application name="" version=""/>
+        </appaccesscontrol>
+        <featureaccesscontrol>
+          <appcasttransfer>
+            <application name="" version=""/>
+          </appcasttransfer>
+          <hardwaretransfer>
+            <application name="" version=""/>
+          </hardwaretransfer>
+        </featureaccesscontrol>
+        <subfeaturesaccesscontrol>
+          <camera>
+            <application name="" version=""/>
+          </camera>
+          <mic>
+            <application name="" version=""/>
+          </mic>
+          <speaker>
+            <application name="" version=""/>
+          </speaker>
+          <gps>
+            <application name="" version=""/>
+          </gps>
+          <relaunch>
+            <application name="com.autonavi.minimap" version=""/>
+            <application name="com.baidu.BaiduMap" version=""/>
+            <application name="com.tencent.map" version=""/>
+          </relaunch>
+          <magicwindow>
+            <application name="" version=""/>
+          </magicwindow>
+        </subfeaturesaccesscontrol>
+      </denylist>
+      <appendpackage>
+        <hardwaretransfer>
+          <application name="com.huawei.himovie" version="">
+            <append name="com.tencent.qqlivehuawei"/>
+          </application>
+        </hardwaretransfer>
+      </appendpackage>
+      <navigationapp>
+        <application name="com.autonavi.minimap" version=""/>
+        <application name="com.baidu.BaiduMap" version=""/>
+        <application name="com.tencent.map" version=""/>
+      </navigationapp>
+      <interceptbroadcast>
+        <broadcast name="android.media.AUDIO_BECOMING_NOISY"/>
+        <broadcast name="android.media.VOLUME_CHANGED_ACTION"/>
+        <broadcast name="android.intent.action.HEADSET_PLUG"/>
+        <broadcast name="android.media.STREAM_MUTE_CHANGED_ACTION"/>
+      </interceptbroadcast>
+    </devicetype>
+    <devicetype name="156">
+      <allowlist>
+        <appaccesscontrol>
+          <application name="" version=""/>
+        </appaccesscontrol>
+        <featureaccesscontrol>
+          <appcasttransfer>
+            <application name="" version=""/>
+          </appcasttransfer>
+          <hardwaretransfer>
+            <application name="" version=""/>
+          </hardwaretransfer>
+        </featureaccesscontrol>
+        <subfeaturesaccesscontrol>
+          <camera>
+            <application name="com.xueersi.parentsmeeting" version=""/>
+            <application name="com.baidu.homework" version=""/>
+            <application name="com.huawei.meetime" version=""/>
+            <application name="com.alibaba.android.rimet" version=""/>
+            <application name="tv.danmaku.bili" version=""/>
+            <application name="com.ss.android.ugc.aweme" version=""/>
+            <application name="com.smile.gifmaker" version=""/>
+            <application name="com.duowan.kiwi" version=""/>
+            <application name="com.duowan.live" version=""/>
+            <application name="air.tv.douyu.android" version=""/>
+            <application name="com.tencent.wemeet.app" version=""/>
+            <application name="com.tencent.qqlive" version=""/>
+            <application name="com.ss.android.ugc.live" version=""/>
+            <application name="com.ss.android.ugc.aweme.lite" version=""/>
+            <application name="com.kuaishou.nebula" version=""/>
+            <application name="com.netease.vopen" version=""/>
+          </camera>
+          <mic>
+            <application name="" version=""/>
+          </mic>
+          <speaker>
+            <application name="" version=""/>
+          </speaker>
+          <gps>
+            <application name="" version=""/>
+          </gps>
+          <relaunch>
+            <application name="" version=""/>
+          </relaunch>
+          <magicwindow>
+            <application name="" version=""/>
+          </magicwindow>
+        </subfeaturesaccesscontrol>
+      </allowlist>
+      <denylist>
+        <appaccesscontrol>
+          <application name="" version=""/>
+        </appaccesscontrol>
+        <featureaccesscontrol>
+          <appcasttransfer>
+            <application name="" version=""/>
+          </appcasttransfer>
+          <hardwaretransfer>
+            <application name="" version=""/>
+          </hardwaretransfer>
+        </featureaccesscontrol>
+        <subfeaturesaccesscontrol>
+          <camera>
+            <application name="" version=""/>
+          </camera>
+          <mic>
+            <application name="" version=""/>
+          </mic>
+          <speaker>
+            <application name="" version=""/>
+          </speaker>
+          <gps>
+            <application name="" version=""/>
+          </gps>
+          <relaunch>
+            <application name="" version=""/>
+          </relaunch>
+          <magicwindow>
+            <application name="" version=""/>
+          </magicwindow>
+        </subfeaturesaccesscontrol>
+      </denylist>
+      <appendpackage>
+        <hardwaretransfer>
+          <application name="com.huawei.himovie" version="">
+            <append name="com.tencent.qqlivehuawei"/>
+          </application>
+        </hardwaretransfer>
+      </appendpackage>
+      <interceptbroadcast>
+        <broadcast name="android.media.AUDIO_BECOMING_NOISY"/>
+        <broadcast name="android.media.VOLUME_CHANGED_ACTION"/>
+        <broadcast name="android.intent.action.HEADSET_PLUG"/>
+        <broadcast name="android.media.STREAM_MUTE_CHANGED_ACTION"/>
+      </interceptbroadcast>
+    </devicetype>
+  </businessid>
+</configuration>

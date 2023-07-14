@@ -1,0 +1,52 @@
+{
+    "simple_rule": [
+        {
+            "event_name": "FRAMEWORK_APP_START_EXCEPTION",
+            "eventid": 951004000
+        },
+        {
+            "event_name": "FRAMEWORK_PAGE_ROUTER_EXCEPTION",
+            "eventid": 951004001
+        },
+        {
+            "event_name": "COMPONENT_EXCEPTION",
+            "eventid": 951004002
+        },
+        {
+            "event_name": "API_CHANNEL_EXCEPTION",
+            "eventid": 951004003
+        },
+        {
+            "event_name": "RENDER_EXCEPTION",
+            "eventid": 951004004
+        },
+        {
+            "event_name": "JS_EXCEPTION",
+            "eventid": 951004005
+        },
+        {
+            "event_name": "ANIMATION_EXCEPTION",
+            "eventid": 951004006
+        },
+        {
+            "event_name": "EVENT_EXCEPTION",
+            "eventid": 951004007
+        },
+        {
+            "event_name": "PLUGIN_EXCEPTION",
+            "eventid": 951004008
+        },
+        {
+            "event_name": "INTERNATIONALIZATION_EXCEPTION",
+            "eventid": 951004009
+        },
+        {
+            "event_name": "ACCESSIBILITY_EXCEPTION",
+            "eventid": 951004010
+        },
+        {
+            "event_name": "FORM_EXCEPTION",
+            "eventid": 951004011
+        }
+    ]
+}

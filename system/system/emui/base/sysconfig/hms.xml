@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- These are configurations that must exist on all HMS devices. -->
+<config>
+    <!-- These are the standard packages that are white-listed to always have internet
+         access while in power save mode, even if they aren't in the foreground. -->
+    <!-- HMSCore must always have network access for Huawei Push and other things. -->
+    <allow-in-power-save package="com.huawei.hwid" />
+    <allow-in-data-usage-save package="com.huawei.hwid" />
+    <allow-unthrottled-location package="com.huawei.hwid" />
+    <allow-in-power-save package="com.huawei.hms" />
+    <allow-in-data-usage-save package="com.huawei.hms" />
+    <allow-unthrottled-location package="com.huawei.hms" />
+    <allow-in-power-save package="com.huawei.hwid.tv" />
+    <allow-in-data-usage-save package="com.huawei.hwid.tv" />
+    <allow-unthrottled-location package="com.huawei.hwid.tv" />
+    
+    <!-- These are the packages that are white-listed to be able to run as system user -->
+    <system-user-whitelisted-app package="com.huawei.hwid" />
+    <system-user-whitelisted-app package="com.huawei.hwid.tv" />
+    <system-user-whitelisted-app package="com.huawei.hms" />
+    <!-- Specify the explicit set of other applications whose app data directories are accessible by other applications -->
+    <app-data-isolation-whitelisted-app package="com.huawei.hwid" />
+    <app-data-isolation-whitelisted-app package="com.huawei.hwid.tv" />
+    <app-data-isolation-whitelisted-app package="com.huawei.hms" />
+    <app-data-isolation-whitelisted-app package="com.huawei.android.hsf" />
+</config>

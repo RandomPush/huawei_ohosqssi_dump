@@ -1,0 +1,104 @@
+{
+    "simple_rule": [
+        {
+            "event_name": "BmsBundleScanFailed",
+            "eventid": 951000208
+        },
+        {
+            "event_name": "AccountInterfaceFailed",
+            "eventid": 951000205
+        },
+        {
+            "event_name": "DbInterfaceException",
+            "eventid": 950004000
+        },
+        {
+            "event_name": "UninstallFailed",
+            "eventid": 951000203
+        },
+        {
+            "event_name": "RegisterNotificationException",
+            "eventid": 951000201
+        },
+        {
+            "event_name": "BmsInitFailed",
+            "eventid": 951000200
+        },
+        {
+            "event_name": "GlobalInterfaceFailed",
+            "eventid": 951000103
+        },
+        {
+            "event_name": "DmsInterfaceFailed",
+            "eventid": 950004202
+        },
+        {
+            "event_name": "ConnectAbilityFailed",
+            "eventid": 951000002
+        },
+        {
+            "event_name": "InstallFailed",
+            "eventid": 951000202
+        },
+        {
+            "event_name": "LoadAbilityFailed",
+            "eventid": 951000001
+        },
+        {
+            "event_name": "DmsServiceFailed",
+            "eventid": 950004201
+        },
+        {
+            "event_name": "DmsCallbackFailed",
+            "eventid": 950004203
+        },
+        {
+            "event_name": "BmsServiceFailed",
+            "eventid": 951000101
+        },
+        {
+            "event_name": "BmsInterfaceFailed",
+            "eventid": 951000102
+        },
+        {
+            "event_name": "DistributedDatamgrInterfaceFailed",
+            "eventid": 951000104
+        },
+        {
+            "event_name": "InitEnvironmentFailed",
+            "eventid": 951000105
+        },
+        {
+            "event_name": "StartRemoteAbility",
+            "eventid": 991310072
+        },
+        {
+            "event_name": "ConnectRemoteAbility",
+            "eventid": 991310073
+        },
+        {
+            "event_name": "DBSyncResult",
+            "eventid": 951000209
+        },
+        {
+            "event_name": "FmsInitFailed",
+            "eventid": 951000020
+        },
+        {
+            "event_name": "FmsDataStorageFailed",
+            "eventid": 951000021
+        },
+        {
+            "event_name": "FmsFARefreshTimes",
+            "eventid": 951000025,
+            "params": {
+                "BUNDLE_NAME":"BUNDLE_NAME",
+                "MODULE_NAME":"MODULE_NAME",
+                "FORM_NAME":"FORM_NAME",
+                "FORM_ID":"FORM_ID",
+                "DAILY_REFRESH_TIMES":"DAILY_REFRESH_TIMES",
+                "INVISIBLE_REFRESH_TIMES":"INVISIBLE_REFRESH_TIMES"
+            }
+        }
+    ]
+}

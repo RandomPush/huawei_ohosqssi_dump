@@ -1,0 +1,59 @@
+[
+  {
+    "CRITERIA": [
+      {
+        "UPDATE_PERIOD": "900"
+      }
+    ]
+  },
+  {
+    "CRITERIA": [
+      {
+        "NAME": "AP_NUM",
+        "MAX": "10",
+        "MIN": "2",
+        "PERCENT": "10"
+      }
+    ]
+  },
+  {
+    "CRITERIA": [
+      {
+        "NAME": "RSSI",
+        "MAX": "-55",
+        "MIN": "-100",
+        "PERCENT": "5"
+      }
+    ]
+  },
+  {
+    "CRITERIA": [
+      {
+        "NAME": "CHLOAD",
+        "MAX": "1000",
+        "MIN": "0",
+        "PERCENT": "75"
+      }
+    ]
+  },
+  {
+    "CRITERIA": [
+      {
+        "NAME": "NOISE",
+        "MAX": "-62",
+        "MIN": "-95",
+        "PERCENT": "5"
+      }
+    ]
+  },
+  {
+    "CRITERIA": [
+      {
+        "NAME": "SIGNAL_COUNT",
+        "MAX": "5",
+        "MIN": "2",
+        "PERCENT": "5"
+      }
+    ]
+  }
+]

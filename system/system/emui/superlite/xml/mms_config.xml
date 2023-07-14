@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mms_config>
+  <!--2021-12-28 10:05:53.0-->
+  <bool name="enableSmartSmsSimpleMode">false</bool>
+</mms_config>

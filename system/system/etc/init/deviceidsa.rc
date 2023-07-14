@@ -1,0 +1,15 @@
+on post-fs-data
+    mkdir /data/deviceidsrv 0700 root root
+    write /data/deviceidsrv/sn ${ro.serialno}
+    chown root root /data/deviceidsrv/sn
+    chmod 0600 /data/deviceidsrv/sn
+
+service DeviceidInit /system/bin/sa_main /system/profile/deviceidsrv.xml
+    class z_core
+    system system
+    group system shell
+    seclabel u:r:deviceidsrv:s0
+    disabled
+
+on property:sys.hw_mc.deviceidsrv=start
+    start DeviceidInit

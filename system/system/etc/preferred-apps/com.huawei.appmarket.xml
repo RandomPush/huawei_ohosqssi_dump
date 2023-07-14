@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<preferred-activities>
+    <item name="com.huawei.appmarket/com.huawei.appmarket.service.externalapi.view.ThirdApiActivity">
+        <filter>
+            <action name="android.intent.action.VIEW" />
+            <cat name="android.intent.category.DEFAULT" />
+            <scheme name="market" />
+        </filter>
+    </item>
+</preferred-activities>

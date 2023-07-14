@@ -1,0 +1,40 @@
+{
+    "Header": {
+        "emui": 11,
+        "version": 1
+    },
+    "BleScanCfg": [
+        {
+            "PackageName": "fr.gouv.android.stopcovid",
+            "ScanType": 1,
+            "ScanMode": 1,
+            "ScanInt": 5000,
+            "ScanWin": 500
+        }
+    ],
+    "AppFeatureCfg": [
+        {
+            "PackageName": "fr.gouv.android.stopcovid",
+            "FeatureType": 0
+        }
+    ],
+    "HwBlePeripheralCfg": [
+        {
+            "PencilPid": "4241,4261",
+            "KeyboardPid": "4253,4254,4260,4274,4287,4306",
+            "KbSupHostDicPid": "4254,4260",
+            "KbCrossingPid":"4287",
+            "KbName": "HUAWEI MatePad Keyboard,HONOR Smart Keyboard,HONOR Wireless Keyboard,HUAWEI MatePad Pro Keyboard,HUAWEI Ultrathin Keyboard,HUAWEI Smart Keyboard",
+            "MousePid":"4284,4292",
+            "MouseCrossingPid":"4284,4292"
+        }
+    ],
+    "ForceStartTrackGame": [
+        {
+            "PackageName": "com.happyelements.AndroidAnimal"
+        },
+        {
+            "PackageName": "com.tencent.feiji"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+service xmntn_himntn /system/bin/xmntn -h 1
+    class late_start
+    user root
+    group system root
+    disabled
+    oneshot
+    seclabel u:r:xmntn:s0
+
+service xmntn_rainbow /system/bin/xmntn -r 1
+    class late_start
+    user root
+    group system root
+    disabled
+    oneshot
+    seclabel u:r:xmntn:s0
+
+service xmntn_fulldump /system/bin/xmntn -f 1
+    class late_start
+    user root
+    group system root
+    disabled
+    oneshot
+    seclabel u:r:xmntn:s0
+
+on post-fs-data
+    mkdir /data/log/bbox 0775 root system
+    restorecon_recursive /data/log/bbox
+
+    mkdir /data/log/fulldump 0775 root system
+    restorecon_recursive /data/log/fulldump
+
+    mkdir /data/vendor/log/reliability/reset_logs
+    chmod 0775 /data/vendor/log/reliability/reset_logs
+    chown root system /data/vendor/log/reliability/reset_logs
+    restorecon_recursive /data/vendor/log/reliability/reset_logs
+
+on post-fs-data
+    start xmntn_himntn
+    start xmntn_rainbow
+    start xmntn_fulldump
+

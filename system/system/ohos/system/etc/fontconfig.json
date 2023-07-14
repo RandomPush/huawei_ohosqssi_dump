@@ -1,0 +1,232 @@
+{
+  "fontdir": ["/system/fonts/"],
+  "generic": [
+    {
+      "family": "HarmonyOS Sans",
+      "alias": [
+        {
+          "HarmonyOS-Sans": 0
+        }
+      ],
+      "variations": [
+        {
+          "weight": 100,
+          "wght": 100
+        },
+        {
+          "weight": 200,
+          "wght": 173
+        },
+        {
+          "weight": 300,
+          "wght": 247
+        },
+        {
+          "weight": 400,
+          "wght": 400
+        },
+        {
+          "weight": 500,
+          "wght": 500
+        },
+        {
+          "weight": 600,
+          "wght": 600
+        },
+        {
+          "weight": 700,
+          "wght": 700
+        },
+        {
+          "weight": 800,
+          "wght": 772
+        },
+        {
+          "weight": 900,
+          "wght": 844
+        }
+      ]
+    },
+    {
+      "family": "HarmonyOS Sans Condensed",
+      "alias": [
+        {
+          "HarmonyOS-Sans-Condensed": 0
+        }
+      ],
+      "variations": [
+        {
+          "weight": 100,
+          "wght": 100
+        },
+        {
+          "weight": 200,
+          "wght": 173
+        },
+        {
+          "weight": 300,
+          "wght": 247
+        },
+        {
+          "weight": 400,
+          "wght": 400
+        },
+        {
+          "weight": 500,
+          "wght": 500
+        },
+        {
+          "weight": 600,
+          "wght": 600
+        },
+        {
+          "weight": 700,
+          "wght": 700
+        },
+        {
+          "weight": 800,
+          "wght": 772
+        },
+        {
+          "weight": 900,
+          "wght": 844
+        }
+      ]
+    }
+  ],
+  "fallback": [
+    {
+      "": [
+        {
+          "zh-Hans": "HarmonyOS Sans SC",
+          "variations": [
+            {
+              "weight": 100,
+              "wght": 100
+            },
+            {
+              "weight": 200,
+              "wght": 173
+            },
+            {
+              "weight": 300,
+              "wght": 247
+            },
+            {
+              "weight": 400,
+              "wght": 400
+            },
+            {
+              "weight": 500,
+              "wght": 500
+            },
+            {
+              "weight": 600,
+              "wght": 600
+            },
+            {
+              "weight": 700,
+              "wght": 700
+            },
+            {
+              "weight": 800,
+              "wght": 772
+            },
+            {
+              "weight": 900,
+              "wght": 844
+            }
+          ]
+        },
+        {
+          "zh-Hant": "HarmonyOS Sans TC",
+          "variations": [
+            {
+              "weight": 100,
+              "wght": 100
+            },
+            {
+              "weight": 200,
+              "wght": 173
+            },
+            {
+              "weight": 300,
+              "wght": 247
+            },
+            {
+              "weight": 400,
+              "wght": 400
+            },
+            {
+              "weight": 500,
+              "wght": 500
+            },
+            {
+              "weight": 600,
+              "wght": 600
+            },
+            {
+              "weight": 700,
+              "wght": 700
+            },
+            {
+              "weight": 800,
+              "wght": 772
+            },
+            {
+              "weight": 900,
+              "wght": 844
+            }
+          ]
+        },
+        {
+          "und-Arab": "HarmonyOS Sans Naskh Arabic UI",
+          "variations": [
+            {
+              "weight": 100,
+              "wght": 100
+            },
+            {
+              "weight": 200,
+              "wght": 173
+            },
+            {
+              "weight": 300,
+              "wght": 247
+            },
+            {
+              "weight": 400,
+              "wght": 400
+            },
+            {
+              "weight": 500,
+              "wght": 500
+            },
+            {
+              "weight": 600,
+              "wght": 600
+            },
+            {
+              "weight": 700,
+              "wght": 700
+            },
+            {
+              "weight": 800,
+              "wght": 772
+            },
+            {
+              "weight": 900,
+              "wght": 844
+            }
+          ]
+        },
+        {
+          "und-Zsye": "Noto Color Emoji Flags"
+        },
+        {
+          "und-Zsye": "Noto Color Emoji"
+        }
+      ]
+    }
+  ]
+}

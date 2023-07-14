@@ -1,0 +1,11 @@
+on property:sys.user.0.ce_available=true
+    mkdir /data/misc_ce/0/dmsdata
+    chmod 770 /data/misc_ce/0/dmsdata
+    chown vendor_dms vendor_dms /data/misc_ce/0/dmsdata
+    restorecon_recursive /data/misc_ce/0/dmsdata
+
+service distributedsched /system/bin/sa_main /system/profile/distributedsched.xml
+    class z_core
+    user vendor_dms
+    group vendor_dms shell
+    seclabel u:r:distributedsched:s0

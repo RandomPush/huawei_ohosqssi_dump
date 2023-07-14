@@ -1,0 +1,7 @@
+service iGraphicsservice /system/bin/iGraphicsservice
+    interface aidl iGraphicsservice
+    disabled
+    oneshot
+    class main
+    user system
+    group system

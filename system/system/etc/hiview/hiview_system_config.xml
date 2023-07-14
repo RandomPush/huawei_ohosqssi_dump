@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?Declaration Don't modify the file manually,  its created automaticlly?>
+<!--Applicable to version EMUI 11.0-->
+<HiViewSystemConfig>
+  <HiView>
+    <TaskInfo name="HiViewWiFiTimerTask" betaPeriod="3600" commPeriod="10800" id="0"/>
+    <TaskInfo name="HiViewCellularTimerTask" betaPeriod="86400" commPeriod="21600" id="1"/>
+    <TaskInfo name="HiViewImmediateTimerTask" betaPeriod="600" commPeriod="600" id="2"/>
+    <TaskInfo name="UeWiFiTimerTask" betaPeriod="3600" commPeriod="10800" id="3"/>
+    <TaskInfo name="UeCellularTimerTask" betaPeriod="86400" commPeriod="21600" id="4"/>
+    <DataInfo name="MaxFailedRetryTimes" value="5"/>
+    <DataInfo name="MaxLocalLogDirSize" value="2048"/>
+    <DataInfo name="MaxRemoteDebugFileSize" value="100"/>
+    <DataInfo name="MaxUploadSizeEachTime" value="150"/>
+    <DataInfo name="MaxEnableUploadYears" value="5"/>
+    <DataInfo name="UeAllowedOSVersion" value="2"/>
+    <DataInfo name="UuidRefreshPeriod" value="30"/>
+  </HiView>
+</HiViewSystemConfig>

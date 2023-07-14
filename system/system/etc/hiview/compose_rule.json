@@ -1,0 +1,353 @@
+{
+    "version": "1.0.0",
+    "ANR": {
+            "07_ANR_00": {
+                "PNAME": "BasicParam.v_process",
+                "PTOPCPU": "BasicParam.v_topcpu",
+                "TOTALCPU": "BasicParam.v_totalcpu",
+                "IOWAITCPU": "BasicParam.v_iowait",
+                "APPVERSION": "BasicParam.v_appversion",
+                "SYSVMTYPE": "BasicParam.v_sysvmtype",
+                "APPVMTYPE": "BasicParam.v_appvmtype",
+                "FG": "BasicParam.v_foreground",
+                "FREEZE_NAME": "BasicParam.v_activity",
+                "LIFETIME": "BasicParam.v_lifetime",
+                "SHELLFRONTTEMP":"BasicParam.v_temp",
+                "IPAVALUE":"BasicParam.v_ipa",
+                "FREQUENCY":"BasicParam.v_freq",
+                "SUBJECT": "BasicParam.v_subject",
+                "END_STACK": "MainCallTrace.v_trust_stack",
+                "BINDERLIST": "BinderBlock.v_binderlist",
+                "BINDERMAX": "BinderBlock.v_bindermax",
+                "FLAG": "BasicParam.v_flag",
+                "PID": "BasicParam.v_pid",
+                "UID": "BasicParam.v_uid",
+                "PACKAGE": "BasicParam.v_package",
+                "TRACEID": "BasicParam.v_traceid",
+                "FAULTCPU": "BasicParam.v_faultcpu"
+            }
+        },
+    "JAVA_CRASH": {
+            "07_JAVA_CRASH_00": {
+                "PNAME": "BasicParam.v_process",
+                "APPVERSION": "BasicParam.v_appversion",
+                "SYSVMTYPE": "BasicParam.v_sysvmtype",
+                "APPVMTYPE": "BasicParam.v_appvmtype",
+                "FG": "BasicParam.v_foreground",
+                "LIFETIME": "BasicParam.v_lifetime",
+                "MAINTHREAD": "BasicParam.v_mainthread",
+                "FLAG": "BasicParam.v_flag",
+                "END_STACK": "BasicParam.v_trace",
+                "REASON": "BasicParam.v_reason",
+                "TRACEID": "BasicParam.v_traceid",
+                "PID": "BasicParam.v_pid",
+                "UID": "BasicParam.v_uid",
+                "PACKAGE": "BasicParam.v_package"
+            }
+    },
+    "NATIVE_CRASH": {
+            "07_NATIVE_CRASH_00": {
+                "PNAME": "BasicParam.v_process",
+                "FPNAME": "BasicParam.v_process",
+                "SUBNAME": "BasicParam.v_name",
+                "APPVERSION": "BasicParam.v_appversion",
+                "SYSVMTYPE": "BasicParam.v_sysvmtype",
+                "APPVMTYPE": "BasicParam.v_appvmtype",
+                "FG": "BasicParam.v_foreground",
+                "LIFETIME": "BasicParam.v_lifetime",
+                "SIGNALNUM": "SignalParam.v_sigmsg",
+                "SIGMSG": "SignalParam.v_sigmsg+SignalParam.v_sicode",
+                "REASON": "ExceptionReason.v_cause",
+                "END_STACK": "MainCallTrace.v_trace",
+                "PACKAGE": "BasicParam.v_package",
+                "LOGVERSION": "BasicParam.v_androidvision",
+                "FLAG": "BasicParam.v_flag",
+                "UID": "BasicParam.v_uid",
+                "PID": "BasicParam.v_pid",
+                "TRACEID": "BasicParam.v_traceid",
+                "SUBTYPE": "BasicParam.v_abortmsg",
+                "SICODE": "SignalParam.v_sicode"
+            }
+    },
+    "ServiceDie": {
+            "07_ServiceDie_00": {
+                "END_STACK":"CallTrace.v_calltrace"
+            },
+            "07_ServiceDie_01": {
+                "PNAME": "BasicParam.v_pname:BasicParam.v_funcname",
+                "END_STACK":"MainCallTrace.v_maintrace",
+                "REASON": "BasicParam.v_reason"
+            },
+            "07_ServiceDie_02": {
+                "END_STACK":"CallTrace.v_calltrace"
+            },
+            "07_ServiceDie_03": {
+                "PID": "BasicParam.v_pid"
+            },
+            "07_ServiceDie_04": {
+                "PNAME": "BasicParam.v_pname:BasicParam.v_funcname",
+                "END_STACK":"MainCallTrace.v_maintrace",
+                "REASON": "BasicParam.v_reason",
+                "PID": "BasicParam.v_pid"
+            }
+    },
+    "JsCrash": {
+            "07_JsCrash_00": {
+                "LIFETIME": "BasicParam.v_lifeTime",
+                "ABILITYNAME":"BasicParam.v_ability",
+                "PAGE":"BasicParam.v_page",
+                "SUBTYPE":"BasicParam.v_error",
+                "JSVMTYPE":"BasicParam.v_vm",
+                "END_STACK":"BasicParam.v_trace"
+            }
+    },
+    "CPP_CRASH": {
+        "07_CPP_CRASH_00": {
+            "PNAME": "BasicParam.v_process",
+            "END_STACK": "MainCallTrace.v_trace"
+        }
+    },
+    "JS_ERROR": {
+            "07_JS_ERROR_00": {
+                "PNAME": "BasicParam.v_process",
+                "PID": "BasicParam.v_pid",
+                "END_STACK": "MainCallTrace.v_trace"
+            }
+    },
+    "VM_REBOOT": {
+            "07_VM_REBOOT_00": {
+                "PNAME": "BasicParam.v_process",
+                "SIGMSG": "SignalParam.v_sigmsg:SignalParam.v_sicode",
+                "REASON": "BasicParam.v_reason",
+                "SYSVMTYPE": "BasicParam.v_sysvmtype",
+                "END_STACK": "MainCallTrace.v_trace"
+            }
+    },
+    "VM_WATCHDOG": {
+        "07_VM_WATCHDOG_00":{
+            "PNAME": "BasicParam.v_block_reason",
+            "SYSVMTYPE": "BasicParam.v_sysvmtype",
+            "END_STACK": "MainCallTrace.v_trace"
+        }
+    },
+    "PANIC": {
+        "04_PANIC_00":{
+            "PNAME": "HungtaskParam.v_taskName"
+        },
+        "04_PANIC_01":{
+            "F1NAME": "NocTrace.v_errcode+NocTrace.v_master+NocTrace.v_slave+NocTrace.v_address+NocTrace.v_user_signal+NocTrace.v_security",
+            "F3NAME": "BasicParam.v_noc",
+            "END_STACK": "MainCallTrace.v_trace"
+        },
+        "04_PANIC_02":{
+            "PNAME": "HungtaskParam.v_taskName"
+        },
+        "04_PANIC_03":{
+            "F1NAME": "BasicParam.v_f1",
+            "F2NAME": "BasicParam.v_f2",
+            "F3NAME": "BasicParam.v_f3",
+            "END_STACK": "MainCallTrace.v_trace"
+        },
+        "02_PANIC_04":{
+            "F1NAME": "BasicParam.v_f1",
+            "F2NAME": "BasicParam.v_f2",
+            "F3NAME": "BasicParam.v_f3",
+            "END_STACK": "MainCallTrace.v_trace"
+        },
+        "02_PANIC_05":{
+            "PNAME": "BasicParam.v_pname",
+            "F1NAME": "BasicParam.v_f1",
+            "F3NAME": "BasicParam.v_cause"
+        },
+        "01_PANIC_06":{
+            "PNAME": "HungtaskParam.v_taskName"
+        },
+        "01_PANIC_07":{
+            "PNAME": "BasicParam.v_pname",
+            "F1NAME": "BasicParam.v_f1",
+            "F2NAME": "BasicParam.v_f2",
+            "F3NAME": "BasicParam.v_cause"
+        },
+        "01_PANIC_08":{
+            "PNAME": "HungtaskParam.v_taskName",
+            "END_STACK": "MainCallTrace.v_trace"
+        },
+        "01_PANIC_09":{
+            "PNAME": "BasicParam.v_pname",
+            "F1NAME": "BasicParam.v_f1",
+            "F2NAME": "BasicParam.v_f2",
+            "F3NAME": "BasicParam.v_cause"
+        }
+    },
+    "MODEM_REBOOTSYS": {
+        "04_MODEM_REBOOTSYS_00":{
+            "F1NAME": "BasicParam.v_f1",
+            "F2NAME": "BasicParam.v_f2",
+            "F3NAME": "BasicParam.v_f3"
+        },
+        "04_MODEM_REBOOTSYS_01":{
+            "END_STACK": "MainCallTrace.v_trace"
+        }
+    },
+    "HWWATCHDOG": {
+        "04_HWWATCHDOG_00":{
+            "PNAME": "BasicParam.v_pname",
+            "F1NAME": "BasicParam.v_f1",
+            "END_STACK": "MainCallTrace.v_trace"
+        }
+    },
+    "HARDWARE_FAULT": {
+        "04_HARDWARE_FAULT_00":{
+            "F1NAME": "BasicParam.v_subType"
+        },
+        "04_HARDWARE_FAULT_01":{
+            "F1NAME": "DdrcParam.v_master+DdrcParam.v_op+DdrcParam.v_subMaster+DdrcParam.v_port"
+        },
+        "02_HARDWARE_FAULT_02":{
+            "F2NAME": "BasicParam.v_pg_sdn_sts0+BasicParam.v_pg_sdn_sts1",
+            "F3NAME": "BasicParam.v_oc_sdn_sts0+BasicParam.v_oc_sdn_sts1"
+        }
+    },
+    "MODEMCRASH": {
+        "04_MODEMCRASH_00":{
+            "PNAME": "BasicParam.v_process",
+            "F1NAME": "BasicParam.v_f1",
+            "F2NAME": "BasicParam.v_f2",
+            "F3NAME": "BasicParam.v_f3"
+        },
+        "02_MODEMCRASH_01":{
+            "PNAME": "BasicParam.v_fatal+BasicParam.v_assert+BasicParam.v_assert_file",
+            "F1NAME": "BasicParam.v_err_code1+BasicParam.v_p1",
+            "F2NAME": "BasicParam.v_err_code2+BasicParam.v_p2",
+            "F3NAME": "BasicParam.v_err_code3+BasicParam.v_p3"
+        },
+        "01_MODEMCRASH_02":{
+            "F1NAME": "BasicParam.v_f1",
+            "F2NAME": "BasicParam.v_f2"
+        }
+    },
+    "MODEM_CRASH": {
+        "01_MODEM_CRASH_01":{
+            "F1NAME": "BasicParam.v_f1",
+            "F2NAME": "BasicParam.v_f2"
+        }
+    },
+    "TRUSTZONECRASH": {
+        "04_TRUSTZONECRASH_00":{
+            "PNAME": "BasicParam.v_pname",
+            "F1NAME": "BasicParam.v_f1"
+        }
+    },
+    "HIFICRASH": {
+        "04_HIFICRASH_00":{
+            "F1NAME": "BasicParam.v_panicAddr:BasicParam.v_curPc:BasicParam.v_prePc:BasicParam.v_cause",
+            "F2NAME": "BasicParam.v_f2"
+        },
+        "04_HIFICRASH_01":{
+            "F1NAME": "BasicParam.v_panicAddr:BasicParam.v_curPc:BasicParam.v_prePc:BasicParam.v_cause",
+            "F2NAME": "BasicParam.v_f2",
+            "F3NAME": "BasicParam.v_f3"
+        }
+    },
+    "SENSORHUBCRASH": {
+        "04_SENSORHUBCRASH_00":{
+            "SUBTYPE": "BasicParam.v_reason",
+            "F3NAME": "BasicParam.v_regs"
+        },
+        "02_SENSORHUBCRASH_01":{
+            "PNAME": "BasicParam.v_fatal+BasicParam.v_assert+BasicParam.v_assert_file",
+            "F1NAME": "BasicParam.v_err_code1+BasicParam.v_p1",
+            "F2NAME": "BasicParam.v_err_code2+BasicParam.v_p2",
+            "F3NAME": "BasicParam.v_err_code3+BasicParam.v_p3"
+        }
+    },
+    "CONNEXCEPTION": {
+        "02_CONNEXCEPTION_00":{
+            "F3NAME": "BasicParam.v_consys"
+        },
+        "01_CONNEXCEPTION_01":{
+            "F3NAME": "BasicParam.v_primary+BasicParam.v_secondary"
+        }
+    },
+    "HISEECRASH": {},
+    "IVPCRASH": {},
+    "ISPCRASH": {},
+    "NPUEXCEPTION": {},
+    "DSSCRASH": {},
+    "SystemHungFault": {
+        "63_SystemHungFault_00":{
+            "PID": "BasicParam.v_pid",
+            "UID": "BasicParam.v_uid"
+        }
+    },
+    "SystemHungWarning": {
+        "63_SystemHungWarning_00":{
+            "PID": "BasicParam.v_pid",
+            "UID": "BasicParam.v_uid"
+        }
+    },
+    "AppFreeze": {
+        "07_AppFreeze_00":{
+            "PID": "BasicParam.v_pid",
+            "UID": "BasicParam.v_uid",
+            "PACKAGE": "BasicParam.v_package",
+            "PROCESS": "BasicParam.v_process",
+            "ACTIVITY": "BasicParam.v_activity",
+            "VERSION": "BasicParam.v_version",
+            "MASSAGE": "BasicParam.v_massage"
+        },
+        "07_AppFreeze_01":{
+            "END_STACK":"BasicParam.v_trace",
+            "PID": "BasicParam.v_pid",
+            "UID": "BasicParam.v_uid",
+            "PACKAGE": "BasicParam.v_package",
+            "PROCESS": "BasicParam.v_process"
+        },
+        "07_AppFreeze_02":{
+            "PID": "BasicParam.v_pid",
+            "UID": "BasicParam.v_uid",
+            "PACKAGE": "BasicParam.v_package",
+            "PROCESS": "BasicParam.v_process"
+        },
+        "63_AppFreeze_03": {
+            "PNAME": "BasicParam.v_process",
+            "PID": "BasicParam.v_pid",
+            "UID": "BasicParam.v_uid"
+        }
+    },
+    "AppFreezeWarning": {
+        "63_AppFreezeWarning_00":{
+            "PID": "BasicParam.v_pid",
+            "UID": "BasicParam.v_uid",
+            "PROCESS": "BasicParam.v_process"
+        }
+    },
+    "BootFail": {
+        "07_BootFail_00":{
+            "BOOTERRORNO": "BasicParam.v_bootfailErrno",
+            "BOOTSTAGE": "BasicParam.v_bootErrStage",
+            "ROOTORNOT": "BasicParam.v_rootOrNot",
+            "ISUSERPERCEPTIBLE": "BasicParam.v_isUserPerceptible",
+            "LEFTSPACE": "BasicParam.v_leftSpace",
+            "BOOTUPTIME": "BasicParam.v_bootupTime",
+            "REASON": "BasicParam.v_bootFailDetail",
+            "STAGETIMES": "BootupStage.v_stg1:BootupStage.v_stg2:BootupStage.v_stg3:BootupStage.v_stg4:BootupStage.v_stg5:BootupStage.v_stg6:BootupStage.v_stg7"
+        },
+        "07_BootFail_01":{
+            "RECSELECT": "BasicParam.v_rcvMethod",
+            "RECRESULT": "BasicParam.v_rcvResult"
+        },
+        "07_BootFail_02":{
+            "SUBTYPE": "BasicParam.v_subType",
+            "END_STACK": "MainCallTrace.v_trace",
+            "REASON": "ExceptionReason.v_cause"
+        },
+        "07_BootFail_03":{
+            "SUBTYPE": "BasicParam.v_subType",
+            "F1NAME": "BasicParam.v_f1",
+            "F2NAME": "BasicParam.v_f2",
+            "END_STACK": "CallTrace.v_trace",
+            "F3NAME": "OtherParam.v_code"
+        }
+    }
+}

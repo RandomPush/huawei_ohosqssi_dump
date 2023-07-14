@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bbox>
+  <copyPath>/data/log/reliability/faultdetect/history.log</copyPath>
+  <logParseConfig>/system/etc/hiview</logParseConfig>
+  <ignoreList>NORMALBOOT,COLDBOOT,AP_S_COLDBOOT,AP_S_FASTBOOTFLASH,AP_S_COMBINATIONKEY,oem_rtc,SYSTEM_BOOT,IOM3_S_USER_EXCEPTION,BFM_S_NATIVE_BOOT_FAIL,BFM_S_BOOT_TIMEOUT,BFM_S_FW_BOOT_FAIL,BFM_S_NATIVE_DATA_FAIL,SYSTEM_FSCK,CP_S_NORMALRESET,rtc</ignoreList>
+  <bboxDetectors>
+    <bboxDetector>
+      <detectorType>bbox</detectorType>
+      <watchPath>/data/hisi_logs/history.log</watchPath>
+      <detailLogPath>ap_log/dmesg-ramoops-0</detailLogPath>
+      <regex>system exception core \[(.+)\], reason \[(.+)\], time \[(.+)\], sysreboot \[(.+)\], bootup_keypoint \[(.+)\], category \[(.+)\]</regex>
+      <reason>2</reason>
+      <time>3</time>
+      <subEventType>6</subEventType>
+    </bboxDetector>
+    <bboxDetector>
+      <detectorType>bbox</detectorType>
+      <watchPath>/data/vendor/log/mtklog/aee_exp/history.log,/data/vendor/log/reliability/dumplog/history.log</watchPath>
+      <detailLogPath>last_kmsg</detailLogPath>
+      <regex>system exception core \[(.+)\], reason \[(.+)\], time \[(.+)\], sysreboot \[(.+)\], bootup_keypoint \[(.+)\], category \[(.+)\]</regex>
+      <reason>2</reason>
+      <time>3</time>
+      <subEventType>6</subEventType>
+    </bboxDetector>
+    <bboxDetector>
+      <detectorType>bbox</detectorType>
+      <watchPath>/data/hisi_logs/hisi_diaginfo.log</watchPath>
+      <regex>Time \[(.+)\], Module \[(.+)\], Error_ID \[(.+)\:(\d+)\], Log_Level \[(.+)\], Fault_Type \[(.+)\], Data \[(.+)\]</regex>
+      <reason>3</reason>
+      <time>1</time>
+      <subEventType>6</subEventType>
+      <module>2</module>
+    </bboxDetector>
+    <bboxDetector>
+      <detectorType>bbox</detectorType>
+      <watchPath>/data/vendor/log/bbox/history.log</watchPath>
+      <detailLogPath>last_kmsg</detailLogPath>
+      <regex>\[(.*)\],module\[(.+)\],category\[(.+)\],event\[(.+)\],time\[(.+)\],sysreboot\[(.*)\],errdesc\[(.*)\],logpath\[(.*)\]</regex>
+      <reason>4</reason>
+      <time>5</time>
+      <subEventType>3</subEventType>
+      <errdesc>7</errdesc>
+    </bboxDetector>
+    <bboxDetector>
+      <detectorType>bbox</detectorType>
+      <watchPath>/data/log/bbox/history.log</watchPath>
+      <detailLogPath>last_kmsg</detailLogPath>
+      <regex>\[(.*)\],module\[(.+)\],category\[(.+)\],event\[(.+)\],time\[(.+)\],sysreboot\[(.*)\],errdesc\[(.*)\],logpath\[(.*)\]</regex>
+      <reason>4</reason>
+      <time>5</time>
+      <subEventType>3</subEventType>
+      <errdesc>7</errdesc>
+      <logpath>8</logpath>
+    </bboxDetector>
+    <bboxDetector>
+      <detectorType>subsystem</detectorType>
+      <watchPath>/data/vendor/log/ramdump,/data/log/modem_crash,/data/vendor/tombstones/rfs/modem</watchPath>
+    </bboxDetector>
+  </bboxDetectors>
+</bbox>

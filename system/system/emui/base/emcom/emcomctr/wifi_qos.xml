@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowConfig version="001.001">
+    <switch>1</switch>
+    <apps>
+        <app>ctrip.android.view</app>
+        <app fiSwitch="1" flowType="3,7,8,9,16">com.tencent.wework</app>
+        <app>com.huawei.email</app>
+        <app fiSwitch="1" flowType="9,10,11">com.tencent.tmgp.cf</app>
+        <app>com.tencent.ttpic</app>
+        <app fiSwitch="1" flowType="10,11">com.tencent.tmgp.sgame</app>
+        <app fiSwitch="1" flowType="7,9,10">com.netease.hyxd.huawei</app>
+        <app fiSwitch="1" flowType="3,7,8,9,16">com.huawei.welink</app>
+        <app fiSwitch="1" flowType="3,7">air.tv.douyu.android</app>
+        <app fiSwitch="1" flowType="3,7">com.hunantv.imgo.activity</app>
+        <app>com.suning.mobile.ebuy</app>
+        <app fiSwitch="1" flowType="8,9">com.tencent.mobileqq</app>
+        <app>com.netease.cloudmusiccard</app>
+        <app>com.ss.android.article.news</app>
+        <app>com.baidu.baidumapcard</app>
+        <app>bubei.tingshu</app>
+        <app>com.huawei.appmarket</app>
+        <app>android.zhibo8</app>
+        <app>com.achievo.vipshop</app>
+        <app>com.taobao.idlefish</app>
+        <app>com.yy.huyaassist4game</app>
+        <app>com.ifeng.news2</app>
+        <app>com.huawei.android.thememanager</app>
+        <app>com.alibaba.wireless</app>
+        <app>com.mt.mtxx.mtxx</app>
+        <app>cmccwm.mobilemusic</app>
+        <app fiSwitch="1" flowType="3,7">com.jingdong.app.mall</app>
+        <app>com.autonavi.minimap</app>
+        <app>org.zwanoo.android.speedtest.china</app>
+        <app>com.sankuai.meituan</app>
+        <app fiSwitch="1" flowType="3,7">com.ss.android.ugc.live</app>
+        <app>com.huawei.notepad</app>
+        <app>com.huawei.android.FMRadio</app>
+        <app>com.cubic.autohome</app>
+        <app>com.Qunar</app>
+        <app>com.kugou.android</app>
+        <app>com.ss.android.article.lite</app>
+        <app>com.kaola</app>
+        <app fiSwitch="1" flowType="10,11">com.tencent.tmgp.pubgmhd</app>
+        <app>cn.wps.moffice_eng</app>
+        <app>com.tencent.androidqqmail</app>
+        <app>com.ximalaya.ting.android</app>
+        <app>com.xunlei.downloadprovider</app>
+        <app>com.netease.newsreader.activity</app>
+        <app>com.huawei.hms.dupdateengine</app>
+        <app>com.sina.weibo</app>
+        <app>com.huawei.genexcloud.speedtest</app>
+        <app fiSwitch="1" flowType="3,7">tv.danmaku.bili</app>
+        <app>com.baidu.tieba</app>
+        <app>com.huawei.music</app>
+        <app>com.huawei.ohos.health</app>
+        <app>com.duowan.mobile</app>
+        <app>com.tencent.news</app>
+        <app>com.ss.android.article.video</app>
+        <app fiSwitch="1" flowType="8,9">com.huawei.meetime</app>
+        <app fiSwitch="1" flowType="3,7">com.wudaokou.hippo</app>
+        <app>com.sina.news</app>
+        <app>com.huawei.wallet.facard</app>
+        <app>com.huawei.vassistant</app>
+        <app>com.meitu.meiyancamera</app>
+        <app>com.youku.phone</app>
+        <app>com.appshare.android.ilisten</app>
+        <app fiSwitch="1" flowType="3,7,8,9,16">com.alibaba.android.rimet</app>
+        <app>com.taobao.trip</app>
+        <app>com.huawei.hwireader</app>
+        <app>com.vmall.client</app>
+        <app>com.campmobile.snowcamera</app>
+        <app>com.huawei.hwvplayer.youku</app>
+        <app>com.duowan.live</app>
+        <app>com.dianping.v1</app>
+        <app>com.ovital.ovitalMap</app>
+        <app>com.lizhi.podcast</app>
+        <app>com.wuba</app>
+        <app>com.huawei.gamebox</app>
+        <app fiSwitch="1" flowType="9,10,11">com.tencent.tmgp.speedmobile</app>
+        <app>com.sohu.newsclient</app>
+        <app>com.tencent.weishi</app>
+        <app fiSwitch="1" flowType="3,7">com.tencent.qqlive</app>
+        <app>cn.cntv</app>
+        <app>com.tencent.qqmusic</app>
+        <app>com.xunmeng.pinduoduo</app>
+        <app>com.wm.dmall</app>
+        <app>com.dangdang.buy2</app>
+        <app fiSwitch="1" flowType="3,4,7,8,9,15">com.tencent.mm</app>
+        <app>me.ele</app>
+        <app>com.MobileTicket</app>
+        <app>com.taobao.etao</app>
+        <app>com.shoujiduoduo.ringtone</app>
+        <app fiSwitch="1" flowType="3,7">com.taobao.taobao</app>
+        <app fiSwitch="1" flowType="3,7">com.ss.android.ugc.aweme</app>
+        <app>cn.kuwo.player</app>
+        <app>com.zhihu.android</app>
+        <app fiSwitch="1" flowType="3,7">com.baidu.haokan</app>
+        <app>com.lemon.faceu</app>
+        <app>com.tencent.android.qqdownloader</app>
+        <app>com.huawei.android.airsharing</app>
+        <app>com.huawei.photos</app>
+        <app>com.xingin.xhs</app>
+        <app>com.baidu.netdisk</app>
+        <app>com.example.pptv</app>
+        <app fiSwitch="1" flowType="3,7">com.smile.gifmaker</app>
+        <app>com.gotokeep.keep</app>
+        <app>com.tencent.karaoke</app>
+        <app>com.tencent.qqpim</app>
+        <app>com.immomo.momo</app>
+        <app fiSwitch="1" flowType="3,7">com.huawei.himovie</app>
+        <app>com.huawei.it.xinsheng</app>
+        <app>com.huawei.it.ilearning.android</app>
+        <app>com.huawei.maps.app</app>
+        <app>com.ximalaya.ting.kid</app>
+        <app>com.sinyee.babybus.chants</app>
+        <app>com.audio.tingting</app>
+        <app>com.dute.dutenews</app>
+        <app>com.aligames.sgzzlb.huawei</app>
+        <app>com.happyelements.AndroidAnimal</app>
+        <app>com.netease.my.huawei</app>
+        <app>com.sy.dldlhsdj.huawei</app>
+        <app fiSwitch="1" flowType="3,10,11">com.tencent.lolm</app>
+        <app>com.tencent.jkchess</app>
+        <app>com.zengame.hlmjhdj.HUAWEI</app>
+        <app>com.netease.dhxy.huawei</app>
+        <app>com.netease.stzb.huawei</app>
+        <app>com.tanwan.yscqlyzf.huawei</app>
+        <app fiSwitch="1" flowType="9,10,11">com.tencent.tmgp.cod</app>
+        <app>com.netease.mrzh.huawei</app>
+        <app>com.minitech.miniworld.huawei</app>
+        <app>com.sqw.jwdzg.huawei</app>
+        <app>com.tencent.egame</app>
+        <app>com.netease.dwrg.huawei</app>
+        <app>com.qqgame.hlddz</app>
+        <app>com.netease.sky.huawei</app>
+        <app>com.hnty.tfjy.huawei</app>
+        <app>com.tuyoo.doudizhu.android3d.huawei</app>
+        <app>com.leniu.jlsy.huawei</app>
+        <app>com.gbits.atm.huawei</app>
+        <app>com.tencent.mf.uam</app>
+        <app>com.netease.l10.huawei</app>
+        <app>com.netease.aceracer.huawei</app>
+        <app>com.sy.ysczglyqh.huawei</app>
+        <app>com.qileyx.ddz.huawei</app>
+        <app>com.bf.sgs.hdexp.huawei</app>
+        <app>com.netease.pes.huawei</app>
+        <app>com.pandadastudio.ninjamustdie3.huawei</app>
+        <app>com.miHoYo.bh3.huawei</app>
+        <app>com.k7k7.goujihd.huawei</app>
+        <app>com.miHoYo.wd.huawei</app>
+        <app>com.xyfywdljqq.huawei</app>
+        <app>com.bairimeng.dmmdzz.huawei</app>
+        <app>com.leiting.aobi.huawei</app>
+        <app>com.bilibili.hunter3.huawei</app>
+        <app>com.lets.p3.huawei</app>
+        <app>com.zzol.huawei</app>
+        <app>com.m37.dldl.HUAWEI</app>
+        <app>com.shenghe.wzcq.huawei</app>
+        <app>com.tszz.net.HWTV.HUAWEI</app>
+        <app>com.qqgame.happymj</app>
+        <app>com.regin.gcldnew.huawei</app>
+        <app>com.youzu.bs.huawei</app>
+        <app>com.ledou.mhhy.huawei</app>
+        <app>com.anzhuojpzmg.ckhd.huawei</app>
+        <app>com.netease.mc.huawei</app>
+        <app fiSwitch="1" flowType="10,11">com.miHoYo.Yuanshen</app>
+        <app>com.tencent.KiHan</app>
+        <app>com.supercell.clashofclans.huawei</app>
+        <app>com.qqgame.mic</app>
+        <app>com.tencent.tmgp.tstl</app>
+        <app>com.tencent.shootgame</app>
+        <app>com.tencent.tmgp.jxqy</app>
+        <app>com.tencent.tmgp.qqx5</app>
+        <app fiSwitch="1" flowType="10,11">com.tencent.tmgp.wec</app>
+        <app fiSwitch="1" flowType="3,10,11">com.tencent.tmgp.wuxia</app>
+        <app>com.tencent.fifamobile</app>
+        <app fiSwitch="1" flowType="3,7">com.duowan.kiwi</app>
+        <app>com.le123.ysdq</app>
+        <app>com.kuaikan.comic</app>
+        <app>com.kwai.videoeditor</app>
+        <app>com.qiyi.video</app>
+        <app>com.sohu.sohuvideo</app>
+        <app>com.cctv.yangshipin.app.androidp</app>
+        <app>com.all.video</app>
+        <app>com.kuaiyin.player</app>
+        <app fiSwitch="1" flowType="3,7">com.tencent.qqsports</app>
+        <app>com.cmcc.cmvideo</app>
+        <app fiSwitch="1" flowType="3,7">cn.xdf.woxue.student</app>
+        <app>com.xueersi.parentsmeeting</app>
+        <app fiSwitch="1" flowType="3,7">com.yuantiku.tutor</app>
+        <app>com.ktai.student</app>
+        <app>com.vipkid.app</app>
+        <app fiSwitch="1" flowType="3,7,8,9,16">com.tencent.wemeet.app</app>
+        <app fiSwitch="1" flowType="3,7">com.tencent.edu</app>
+        <app fiSwitch="1" flowType="3,7">com.fenbi.android.zenglish</app>
+        <app fiSwitch="1" flowType="3,7">com.zuoyebang.airclass</app>
+        <app fiSwitch="1" flowType="3,7">net.haozaixian</app>
+        <app>com.dadaabc.zhuozan.dadateacher</app>
+        <app fiSwitch="1" flowType="3,7">com.youdao.course</app>
+        <app fiSwitch="1" flowType="3,7">cn.eeo.classin</app>
+    </apps>
+</flowConfig>

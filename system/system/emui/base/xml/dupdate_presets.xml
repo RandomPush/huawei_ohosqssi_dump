@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dupdate_presets version="">
+  <string name="self_upgrade_package">com.huawei.android.hwouc</string>
+  <string name="self_upgrade_service">com.huawei.android.hwouc.service.IUpgradeService</string>
+  <string name="self_upgrade_action">com.huawei.android.hwouc.intent.action.UPGRADE_ACTION</string>
+  <string name="self_upgrade_tunnel_action">com.huawei.android.hwouc.intent.action.UPGRADE_TUNNEL_ACTION</string>
+</dupdate_presets>

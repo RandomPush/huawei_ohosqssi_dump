@@ -1,0 +1,10 @@
+<permissions>
+<!--/*$$$!!Warning: Huawei key information asset. No spread without permission.$$$*/-->
+<!--/*CODEMARK:Uhu/Fdta8ON6zouDqEcUjGfaZ663a7JX+Qow9di6T1VxAboLprqARkhn8A8YDFGfXHe+QYU6
+r+rYtUZDO9nszC6WH3Sol/cHLeOzkvzBgnNoSI1kMWrncVSXJ4F7PnUxMDeXgKzx4wRu0+Cw
++4i1OLGwa73AwYWqrvNQBcb02W+U7K4e04XK/w4xUWEzUYwvlzAClkHpAzaDmofWdm9r7hVY
+4h1VPcW/fGtB1K6T02QHBkVIOomV4YyPwNik4jYhJIT39LDDvQBrQOag3Rig/Q==#*/-->
+<!--/*$$$!!Warning: Deleting or modifying the preceding information is prohibited.$$$*/-->
+    <library name="com.huawei.nb"
+    file="/system/framework/com.huawei.nb.sdk.jar" />
+</permissions>

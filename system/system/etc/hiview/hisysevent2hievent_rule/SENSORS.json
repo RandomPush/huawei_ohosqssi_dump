@@ -1,0 +1,52 @@
+{
+    "simple_rule": [
+        {
+            "event_name": "JniEnvVarException",
+            "eventid": 951000106
+        },
+        {
+            "event_name": "ClassNotFound",
+            "eventid": 951000107
+        },
+        {
+            "event_name": "NativeMethodRegisterException",
+            "eventid": 951000108
+        },
+        {
+            "event_name": "JavaVmThreadAttachException",
+            "eventid": 951000109
+        },
+        {
+            "event_name": "SensorServiceException",
+            "eventid": 951000110
+        },
+        {
+            "event_name": "MiscServiceException",
+            "eventid": 951000111
+        },
+        {
+            "event_name": "SensorServiceIpcException",
+            "eventid": 951000112
+        },
+        {
+            "event_name": "MiscServiceIpcException",
+            "eventid": 951000113
+        },
+        {
+            "event_name": "SensorHidlServiceException",
+            "eventid": 951000114
+        },
+        {
+            "event_name": "LightHidlServiceException",
+            "eventid": 951000115
+        },
+        {
+            "event_name": "VibratorHidlServiceException",
+            "eventid": 951000116
+        },
+        {
+            "event_name": "SensorDataChannelException",
+            "eventid": 951000117
+        }
+    ]
+}

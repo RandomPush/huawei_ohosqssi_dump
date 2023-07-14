@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+    <process>netmanager</process>
+    <loadlibs>
+        <libpath>libnetmanager.z.so</libpath>
+    </loadlibs>
+    <systemability> 
+        <name>1150</name> 
+        <libpath>libnetmanager.z.so</libpath> 
+        <run-on-create>true</run-on-create> 
+        <distributed>false</distributed> 
+        <dump-level>1</dump-level> 
+    </systemability>
+</info>

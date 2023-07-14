@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+    <process>locationhub</process>
+    <loadlibs>
+        <libpath>liblbsservice_geocode.z.so</libpath>
+        <libpath>liblbsservice_locator.z.so</libpath>
+        <libpath>liblbsservice_gnss.z.so</libpath>
+        <libpath>liblbsservice_network.z.so</libpath>
+        <libpath>liblbsservice_passive.z.so</libpath>
+    </loadlibs>
+    <systemability>
+        <name>2801</name> 
+        <libpath>liblbsservice_geocode.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>2802</name> 
+        <libpath>liblbsservice_locator.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>2803</name> 
+        <libpath>liblbsservice_gnss.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>2804</name> 
+        <libpath>liblbsservice_network.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>2805</name> 
+        <libpath>liblbsservice_passive.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+</info>

@@ -1,0 +1,38 @@
+## Service definition
+service hiview /system/bin/hiview
+    class late_start
+    user system
+    group log system readproc sdcard_r sdcard_rw vendor_dsm media_rw graphics radio ext_data_rw everybody
+    group log u10_sdcard_rw u11_sdcard_rw u12_sdcard_rw u13_sdcard_rw u14_sdcard_rw u15_sdcard_rw u16_sdcard_rw
+    group log u17_sdcard_rw u18_sdcard_rw u19_sdcard_rw u20_sdcard_rw u21_sdcard_rw u22_sdcard_rw u23_sdcard_rw
+    group log u24_sdcard_rw u25_sdcard_rw u26_sdcard_rw u27_sdcard_rw u28_sdcard_rw u29_sdcard_rw u30_sdcard_rw
+    seclabel u:r:logserver:s0
+    writepid /dev/cpuset/system-background/tasks
+    socket hisysevent dgram+passcred 0622 system system
+    socket ZRHungServer stream 0660 system system
+
+on property:persist.sys.hiview.debug=0
+    setprop persist.sys.huawei.debug.on 0
+
+on property:persist.sys.hiview.debug=1
+    setprop persist.sys.huawei.debug.on 1
+
+on property:ro.logsystem.usertype=*
+    mkdir /data/system/hiview
+    chmod 0775 /data/system/hiview
+    chown_recursive system system /data/system/hiview
+    restorecon_recursive /data/system/hiview
+
+on post-fs-data
+    chown_recursive system system /data/log/dropbox
+    chown_recursive system system /data/log/faultlog
+    chown_recursive system system /data/log/reliability
+    chmod 0664 /data/vendor/log/mtklog/aee_exp/history.log
+    mkdir /data/log/faultlog/ 0770 system system
+    mkdir /data/log/faultlog/faultlogger/ 0770 system system
+    chown_recursive system log /log/LogService
+    chown_recursive system log /data/log/LogService
+    chown_recursive system system /data/log/jank
+    chown_recursive system system /log/reliability
+    restorecon_recursive /data/log/faultlog
+

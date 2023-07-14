@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hw_shadow_effect_config>
+    <shadow_effect_config
+        size = "shadow_size_xs"
+        mode = "shadow_mode_light"
+        device = "shadow_device_phone"
+        elevation = "4.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.15"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_s"
+        mode = "shadow_mode_light"
+        device = "shadow_device_phone"
+        elevation = "20.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.08"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_m"
+        mode = "shadow_mode_light"
+        device = "shadow_device_phone"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.15"
+        translationY = "10.0"
+        />
+   <shadow_effect_config
+        size = "shadow_size_l"
+        mode = "shadow_mode_light"
+        device = "shadow_device_phone"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.3"
+        translationY = "10"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_s"
+        mode = "shadow_mode_light"
+        device = "shadow_device_phone"
+        elevation = "55.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.25"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_m"
+        mode = "shadow_mode_light"
+        device = "shadow_device_phone"
+        elevation = "70.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.45"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_xs"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_phone"
+        elevation = "4.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.3"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_s"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_phone"
+        elevation = "20.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.2"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_m"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_phone"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.5"
+        translationY = "10.0"
+        />
+   <shadow_effect_config
+        size = "shadow_size_l"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_phone"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.8"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_s"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_phone"
+        elevation = "55.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.3"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_m"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_phone"
+        elevation = "70.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.5"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_xs"
+        mode = "shadow_mode_translucent"
+        device = "shadow_device_phone"
+        elevation = "4.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.3"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_s"
+        mode = "shadow_mode_translucent"
+        device = "shadow_device_phone"
+        elevation = "20.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.2"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_m"
+        mode = "shadow_mode_translucent"
+        device = "shadow_device_phone"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.3"
+        translationY = "10.0"
+        />
+   <shadow_effect_config
+        size = "shadow_size_l"
+        mode = "shadow_mode_translucent"
+        device = "shadow_device_phone"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.5"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_s"
+        mode = "shadow_mode_translucent"
+        device = "shadow_device_phone"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.3"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_m"
+        mode = "shadow_mode_translucent"
+        device = "shadow_device_phone"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.5"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_xs"
+        mode = "shadow_mode_light"
+        device = "shadow_device_car"
+        elevation = "4.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.15"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_s"
+        mode = "shadow_mode_light"
+        device = "shadow_device_car"
+        elevation = "20.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.08"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_m"
+        mode = "shadow_mode_light"
+        device = "shadow_device_car"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.15"
+        translationY = "10.0"
+        />
+   <shadow_effect_config
+        size = "shadow_size_l"
+        mode = "shadow_mode_light"
+        device = "shadow_device_car"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.3"
+        translationY = "10"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_s"
+        mode = "shadow_mode_light"
+        device = "shadow_device_car"
+        elevation = "55.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.25"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_m"
+        mode = "shadow_mode_light"
+        device = "shadow_device_car"
+        elevation = "70.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.45"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_xs"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_car"
+        elevation = "4.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.3"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_s"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_car"
+        elevation = "20.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.2"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_m"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_car"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.5"
+        translationY = "10.0"
+        />
+   <shadow_effect_config
+        size = "shadow_size_l"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_car"
+        elevation = "50.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.8"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_s"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_car"
+        elevation = "55.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.3"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_m"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_car"
+        elevation = "70.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.5"
+        translationY = "10.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_xs"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_tv"
+        elevation = "1.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.4"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_s"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_tv"
+        elevation = "2.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.4"
+        translationY = "1.0"
+        />
+    <shadow_effect_config
+        size = "shadow_size_m"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_tv"
+        elevation = "3.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.8"
+        translationY = "2.0"
+        />
+   <shadow_effect_config
+        size = "shadow_size_l"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_tv"
+        elevation = "4.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "1.0"
+        translationY = "3.0"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_s"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_tv"
+        elevation = "10.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.8"
+        translationY = "-10.0"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_m"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_tv"
+        elevation = "10.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.8"
+        translationY = "0.0"
+        />
+    <shadow_effect_config
+        size = "floating_shadow_size_l"
+        mode = "shadow_mode_dark"
+        device = "shadow_device_tv"
+        elevation = "10.0"
+        ambientAlpha = "0.0"
+        spotAlpha = "0.8"
+        translationY = "10.0"
+        />
+</hw_shadow_effect_config>

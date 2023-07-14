@@ -1,0 +1,12 @@
+{
+    "force_enable":false,
+    "enable":true,
+    "extra_heap_MB":64,
+    "supported_chip": ["mt6885"],
+    "supported_memory_GB": [8, 12],
+    "low_memory_MB":2048,
+    "long_pause_time_ms":5,
+    "log_all_gc":false,
+    "enable_limit_back_gc":true,
+    "supported_chip_limit_back_gc": ["baltimore", "kirin9000", "lahaina"]
+}

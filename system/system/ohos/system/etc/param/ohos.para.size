@@ -1,0 +1,11 @@
+default_param=4096
+hilog_param=40960
+const_product_param=4096
+startup_param=40960
+persist_param=40960
+const_param=40960
+persist_sys_param=4096
+devinfo_public_param=30720
+sys_param=4096
+bootevent_param=4096
+startup_init_param=40960

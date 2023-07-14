@@ -1,0 +1,97 @@
+dir.system = /system/bin/
+dir.system = /bin/
+dir.system = /lib/
+dir.system = /data/
+
+[system]
+additional.namespaces = aosp
+namespace.default.isolated = true
+namespace.default.visible = true
+namespace.default.search.paths = /system/${LIB}
+namespace.default.search.paths += /vendor/${LIB}
+namespace.default.search.paths += /system/${LIB}
+namespace.default.search.paths += /vendor/${LIB}
+namespace.default.search.paths += /system/${LIB}/module
+namespace.default.search.paths += /system/${LIB}/module/ability
+namespace.default.search.paths += /system/${LIB}/module/accessibility
+namespace.default.search.paths += /system/${LIB}/module/account
+namespace.default.search.paths += /system/${LIB}/module/animation
+namespace.default.search.paths += /system/${LIB}/module/app
+namespace.default.search.paths += /system/${LIB}/module/application
+namespace.default.search.paths += /system/${LIB}/module/bundle
+namespace.default.search.paths += /system/${LIB}/module/data
+namespace.default.search.paths += /system/${LIB}/module/distributedhardware
+namespace.default.search.paths += /system/${LIB}/module/events
+namespace.default.search.paths += /system/${LIB}/module/multimedia
+namespace.default.search.paths += /system/${LIB}/module/multimodalinput
+namespace.default.search.paths += /system/${LIB}/module/net
+namespace.default.search.paths += /system/${LIB}/module/security
+namespace.default.search.paths += /system/${LIB}/module/telephony
+namespace.default.search.paths += /system/${LIB}/module/useriam
+namespace.default.search.paths += /system/${LIB}/module/util
+namespace.default.search.paths += /system/${LIB}/chipset-pub-sdk
+namespace.default.search.paths += /system/${LIB}/platformsdk
+namespace.default.search.paths += /system/${LIB}/ndk
+
+namespace.default.permitted.paths = /system/${LIB}
+namespace.default.permitted.paths += /vendor/${LIB}
+
+namespace.default.link.aosp.shared_libs = libc.so
+namespace.default.link.aosp.shared_libs += libm.so
+namespace.default.link.aosp.shared_libs += libdl.so
+namespace.default.link.aosp.shared_libs += libohosadaptor.so
+namespace.default.link.aosp.shared_libs += libdl_android.so
+namespace.default.link.aosp.shared_libs += libEGL.so
+namespace.default.link.aosp.shared_libs += libGLESv1_CM.so
+namespace.default.link.aosp.shared_libs += libGLESv2.so
+namespace.default.link.aosp.shared_libs += libGLESv3.so
+namespace.default.link.aosp.shared_libs += libgraphic_compat_layer.so
+namespace.default.link.aosp.shared_libs += libnativewindow.so
+namespace.default.link.aosp.shared_libs += liblog.so
+namespace.default.link.aosp.shared_libs += libcutils.so
+namespace.default.link.aosp.shared_libs += libc_secshared.so
+namespace.default.link.aosp.shared_libs += libutilscallstack.so
+namespace.default.link.aosp.shared_libs += libGLES_mali.so
+namespace.default.link.aosp.shared_libs += android.hardware.graphics.mapper@2.0.so
+namespace.default.link.aosp.shared_libs += android.hardware.graphics.mapper@2.1.so
+namespace.default.link.aosp.shared_libs += libbase.so
+namespace.default.link.aosp.shared_libs += libhidlbase.so
+namespace.default.link.aosp.shared_libs += libsync.so
+namespace.default.link.aosp.shared_libs += libutils.so
+namespace.default.link.aosp.shared_libs += libz.so
+namespace.default.link.aosp.shared_libs += libhwaps.so
+namespace.default.link.aosp.shared_libs += libgraphicsenv.so
+namespace.default.link.aosp.shared_libs += libbacktrace.so
+namespace.default.link.aosp.shared_libs += android.hardware.configstore@1.0.so
+namespace.default.link.aosp.shared_libs += android.hardware.configstore-utils.so
+namespace.default.link.aosp.shared_libs += libnativebridge_lazy.so
+namespace.default.link.aosp.shared_libs += libnativeloader_lazy.so
+namespace.default.link.aosp.shared_libs += libGameGraphicsOpt.so
+namespace.default.link.aosp.shared_libs += libiAwareSdkAdapter.so
+namespace.default.link.aosp.shared_libs += libSurfaceFlingerProp.so
+namespace.default.link.aosp.shared_libs += android.hardware.graphics.mapper@2.0-impl-2.1.so
+namespace.default.link.aosp.shared_libs += libframeflowload.so
+namespace.default.link.aosp.shared_libs += libui.so
+namespace.default.link.aosp.shared_libs += libbinder.so
+namespace.default.link.aosp.shared_libs += libgui.so
+namespace.default.link.aosp.shared_libs += libhilog.so
+namespace.default.link.aosp.shared_libs += libiawareperf_client.so
+
+namespace.default.link.aosp.shared_libs += libEGL.z.so
+namespace.default.link.aosp.shared_libs += libGLESv1_CM.z.so
+namespace.default.link.aosp.shared_libs += libGLESv2.z.so
+
+namespace.default.links = aosp
+
+namespace.aosp.isolated = true
+namespace.aosp.visible = true
+namespace.aosp.search.paths = /vendor/aosp/system/${LIB}
+namespace.aosp.search.paths += /vendor/aosp/vendor/${LIB}
+namespace.aosp.search.paths += /vendor/aosp/vendor/${LIB}/egl
+namespace.aosp.search.paths += /vendor/aosp/system/${LIB}/egl
+namespace.aosp.search.paths += /vendor/aosp/vendor/${LIB}/hw
+namespace.aosp.search.paths += /vendor/aosp/system/${LIB}/hw
+
+namespace.aosp.permitted.paths = /vendor/aosp/system/${LIB}
+namespace.aosp.permitted.paths += /vendor/aosp/vendor/${LIB}
+

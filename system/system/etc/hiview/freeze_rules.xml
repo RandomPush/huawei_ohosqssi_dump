@@ -1,0 +1,203 @@
+<freeze version="1" >
+  <rules resolver="SysResolver">
+    <rule id="1" window="120" domain="KERNEL_VENDOR" stringid="LONG_PRESS">   <!-- powerkey longpress 10s -->
+      <links type="watchpoint">
+        <event domain="KERNEL_VENDOR" stringid="HUNGTASK">	<!-- hungtask -->
+           <result code="901004000" scope="sys"/>
+        </event>
+        <event domain="KERNEL_VENDOR" stringid="SCREEN_ON">	<!-- screen on -->
+         <result code="901004000" scope="sys"/>
+        </event>
+        <event domain="KERNEL_VENDOR" stringid="SCREEN_OFF">	<!-- screen off -->
+           <result code="901004000" scope="sys"/>
+        </event>
+        <event domain="KERNEL_VENDOR" stringid="SUSPEND_RESUME">	<!-- sr -->
+           <result code="901004000" scope="hw"/>
+        </event>
+        <event domain="KERNEL_VENDOR" stringid="DMD_TP_I2C">	<!-- TP -->
+           <result code="901004004" scope="hw"/>
+        </event>
+        <event domain="KERNEL_VENDOR" stringid="DMD_TP_HP">	<!-- TP -->
+           <result code="901004004" scope="hw"/>
+        </event>
+        <event domain="KERNEL_VENDOR" stringid="DMD_LCD_DDR">	<!-- LCD -->
+           <result code="901004004" scope="hw"/>
+        </event>
+        <event domain="KERNEL_VENDOR" stringid="DMD_EMMC_TUNING">	<!-- UFS -->
+           <result code="901004004" scope="hw"/>
+        </event>
+        <event domain="KERNEL_VENDOR" stringid="DMD_EXT4">	<!-- UFS -->
+           <result code="901004004" scope="hw"/>
+        </event>
+        <event domain="KERNEL_VENDOR" stringid="DMD_F2FS_UNLINK">	<!-- UFS -->
+           <result code="901004004" scope="hw"/>
+        </event>
+        <event domain="KERNEL_VENDOR" stringid="DMD_UFS_FASTBOOT">	<!-- UFS -->
+           <result code="901004004" scope="hw"/>
+        </event>
+        <event domain="KERNEL_VENDOR" stringid="DMD_FSCK_F2FS">	<!-- UFS -->
+           <result code="901004004" scope="hw"/>
+        </event>
+        <event domain="FRAMEWORK_AMS" stringid="VM_WATCHDOG">	<!-- VMWatchdog -->
+           <result code="901004000" scope="sys"/>
+        </event>
+      </links>
+    </rule>
+    <rule id="2" window="8" domain="KERNEL_VENDOR" stringid="SCREEN_ON">	<!-- screen on -->
+      <links type="user">
+        <event domain="KERNEL_VENDOR" stringid="POWER_KEY">	<!-- powerkey -->
+          <result code="901004000" scope="sys"/>
+        </event>
+      </links>
+    </rule>
+    <rule id="3" window="10" domain="KERNEL_VENDOR" stringid="POWER_KEY">	<!-- powerkey -->
+      <links type="watchpoint">
+        <event domain="KERNEL_VENDOR" stringid="SCREEN_ON">	<!-- screen on -->
+          <result code="901004000" scope="sys"/>
+        </event>
+      </links>
+    </rule>
+    <rule id="4" window="30" domain="FRAMEWORK_AMS" stringid="VM_WATCHDOG">	<!-- VMWatchdog -->
+      <links type="watchpoint">
+        <event domain="FRAMEWORK_AMS" stringid="VM_WATCHDOG">	<!-- VMWatchdog, fatal error report immediately-->
+          <result code="901004000" scope="sys"/>
+        </event>
+      </links>
+    </rule>
+    <rule id="5" window="0" domain="KERNEL_VENDOR" stringid="SOFT_LOCKUP">	<!-- SOFT_LOCKUP -->
+     <links type="watchpoint">
+       <event domain="KERNEL_VENDOR" stringid="SOFT_LOCKUP">	<!-- SOFT_LOCKUP -->
+         <result code="901004000" scope="sys"/>
+       </event>
+     </links>
+    </rule>
+    <rule id="6" window="0" domain="KERNEL_VENDOR" stringid="CDC_HUNGTASK">	<!-- CDC_HUNGTASK -->
+     <links type="watchpoint">
+       <event domain="KERNEL_VENDOR" stringid="CDC_HUNGTASK">	<!-- CDC_HUNGTASK -->
+         <result code="901004000" scope="sys"/>
+       </event>
+     </links>
+    </rule>
+    <rule id="7" window="0" domain="KERNEL_VENDOR" stringid="CDC_SCREEN_ON">	<!-- CDC_SCREENON -->
+     <links type="watchpoint">
+       <event domain="KERNEL_VENDOR" stringid="CDC_SCREEN_ON">	<!-- CDC_SCREENON -->
+         <result code="901004000" scope="sys"/>
+       </event>
+     </links>
+    </rule>
+    <rule id="8" window="0" domain="KERNEL_VENDOR" stringid="CDC_SCREEN_OFF">	<!-- CDC_SCREENOFF -->
+     <links type="watchpoint">
+       <event domain="KERNEL_VENDOR" stringid="CDC_SCREEN_OFF">	<!-- CDC_SCREENOFF -->
+         <result code="901004000" scope="sys"/>
+       </event>
+     </links>
+    </rule>
+  </rules>
+  <rules resolver="AppResolver">
+    <rule id="1" window="5" domain="FRAMEWORK_AMS" stringid="UI_INPUT">	<!-- UIP_INPUT -->
+      <links type="watchpoint">
+        <event domain="APPEXECFWK" stringid="UI_BLOCK_6S">	<!-- UIP_INPUT -->
+          <result code="901004005" scope="app"> <!-- only notify user -->
+             <relevance domain="APPEXECFWK" stringid="UI_BLOCK_3S"/>
+          </result>
+        </event>
+      </links>
+    </rule>
+    <rule id="2" window="0" domain="FRAMEWORK_AMS" stringid="FWK_BLOCK">	<!-- FWK_BLOCK -->
+      <links type="watchpoint">
+        <event domain="FRAMEWORK_AMS" stringid="FWK_BLOCK">	<!-- FWK_BLOCK -->
+           <result code="901004006" scope="sys"/>
+        </event>
+      </links>
+    </rule>
+    <rule id="3" window="6" domain="VENDOR_WM" stringid="HOME_KEY">	<!-- ZRHUNG_EVENT_HOMEKEY -->
+      <links type="watchpoint">
+        <event domain="APPEXECFWK" stringid="UI_BLOCK_3S">	<!-- UI_BLOCK_3S -->
+          <result code="901004006" scope="app"/> <!-- report warning -->
+        </event>
+        <event domain="APPEXECFWK" stringid="UI_BLOCK_6S">	<!-- UI_BLOCK_6S -->
+          <result code="901004005" scope="app"/> <!-- report freeze -->
+        </event>
+        <event domain="ACE" stringid="UI_BLOCK_3S">	<!-- UI_BLOCK_3S -->
+          <result code="901004006" scope="app"/> <!-- report warning -->
+        </event>
+        <event domain="ACE" stringid="UI_BLOCK_6S">	<!-- UI_BLOCK_6S -->
+          <result code="901004005" scope="app"/> <!-- report freeze -->
+        </event>
+        <event domain="FRAMEWORK_WMS" stringid="NO_FOCUS_WINDOW">	<!-- NO_FOCUS_WINDOW -->
+          <result code="901004006" scope="app"/> <!-- report freeze -->
+        </event>
+        <event domain="FRAMEWORK_WMS" stringid="TRANSPARENT_WINDOWS">	<!-- TRANSPARENT_WINDOWS -->
+          <result code="901004006" scope="app"/> <!-- report warning -->
+        </event>
+        <event domain="FRAMEWORK_AMS" stringid="FWK_BLOCK">	<!-- FWK_BLOCK -->
+          <result code="901004006" scope="app"/> <!-- report warning -->
+        </event>
+      </links>
+    </rule>
+    <rule id="4" window="0" domain="FRAMEWORK_WMS" stringid="TRANSPARENT_WINDOWS"> <!-- TRANSPARENT_WINDOWS -->
+      <links type="watchpoint">
+        <event domain="FRAMEWORK_WMS" stringid="TRANSPARENT_WINDOWS"> <!-- TRANSPARENT_WINDOWS -->
+          <result code="901004005" scope="app"/> <!-- kill bad app -->
+        </event>
+      </links>
+    </rule>
+    <rule id="5" window="5" domain="FRAMEWORK_AMS" stringid="BOOT_FAIL"> <!-- BOOT_FAIL -->
+      <links type="watchpoint">
+        <event domain="FRAMEWORK_WMS" stringid="NO_FOCUS_WINDOW"> <!-- NO_FOCUS_WINDOW -->
+          <result code="901004006" scope="app"/> <!-- notify user -->
+        </event>
+      </links>
+    </rule>
+    <rule id="6" window="5" domain="VENDOR_WM" stringid="BACK_KEY"> <!-- BACK_KEY -->
+      <links type="watchpoint">
+        <event domain="APPEXECFWK" stringid="UI_BLOCK_3S">
+          <result code="901004006" scope="app"/>
+        </event>
+        <event domain="APPEXECFWK" stringid="UI_BLOCK_6S"> <!-- UI_BLOCK_6S -->
+          <result code="901004005" scope="app">
+             <relevance domain="APPEXECFWK" stringid="UI_BLOCK_3S"/>
+          </result>
+        </event>
+        <event domain="FRAMEWORK_WMS" stringid="NO_FOCUS_WINDOW"> <!-- NO_FOCUS_WINDOW -->
+          <result code="901004005" scope="app"/> <!-- only notify user for same app -->
+        </event>
+      </links>
+    </rule>
+    <rule id="7" window="0" domain="FRAMEWORK_AMS" stringid="RESUME"> <!-- RESUME -->
+      <links type="watchpoint">
+        <event domain="FRAMEWORK_AMS" stringid="RESUME">	<!-- RESUME -->
+          <result code="901004006" scope="app"/> <!-- only notify user for same app -->
+        </event>
+      </links>
+    </rule>
+    <rule id="8" window="0" domain="APP_VIEW" stringid="NO_DRAW"> <!-- NO_DRAW -->
+      <links type="watchpoint">
+        <event domain="APP_VIEW" stringid="NO_DRAW">	<!-- NO_DRAW -->
+          <result code="901004006" scope="app"/>
+        </event>
+      </links>
+    </rule>
+    <rule id="9" window="4" domain="APPEXECFWK" stringid="UI_BLOCK_6S">
+      <links type="watchpoint">
+        <event domain="VENDOR_WM" stringid="BACK_KEY">
+          <result code="901004005" scope="app">
+             <relevance domain="APPEXECFWK" stringid="UI_BLOCK_3S"/>
+          </result>
+        </event>
+        <event domain="FRAMEWORK_AMS" stringid="UI_INPUT">
+          <result code="901004005" scope="app">
+             <relevance domain="APPEXECFWK" stringid="UI_BLOCK_3S"/>
+          </result>
+        </event>
+      </links>
+    </rule>
+    <rule id="10" window="2" domain="APPEXECFWK" stringid="UI_BLOCK_3S">
+      <links type="watchpoint">
+        <event domain="VENDOR_WM" stringid="BACK_KEY">
+          <result code="901004006" scope="app"/>
+        </event>
+      </links>
+    </rule>
+  </rules>
+</freeze>

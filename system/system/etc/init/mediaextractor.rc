@@ -1,0 +1,7 @@
+service mediaextractor /system/bin/mediaextractor
+    class main
+    user mediaex
+    group drmrpc mediadrm readproc
+    ioprio rt 4
+    task_profiles HighPerformance
+    writepid /dev/cpuset/foreground/tasks /dev/blkio/foreground/tasks /dev/cpuctl/foreground/tasks

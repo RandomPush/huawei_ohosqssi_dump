@@ -1,0 +1,76 @@
+# 2021-12-28 10:05:53.0
+fw.max_users=1
+# 2021-12-28 10:05:53.0
+fw.show_multiuserui=0
+# 2021-12-28 10:05:53.0
+hw.lcd.density.scale=800
+# 2022-05-17 10:50:08.0
+hw_mc.controlcenter.displaymode=0
+# 2021-12-28 10:05:53.0
+hw_mc.hwcamera.thumbnail_animation_style=1
+# 2021-12-28 10:05:53.0
+hw_mc.launcher.gravity_animation=false
+# 2021-12-28 10:05:53.0
+hw_mc.launcher.quick_switch_force_enable=false
+# 2022-10-17 19:50:05.0
+hw_mc.multidevice.hwdragdrop_enable=true
+# 2021-12-28 10:05:53.0
+hw_mc.servicehost.needstartprocess=true
+# 2021-12-28 10:05:53.0
+hw_mc_launcher_gesture_snapshot_enable=true
+# 2021-12-28 10:05:53.0
+hw_sc.cloudrom_version=1.0
+# 2022-03-14 15:36:16.0
+hw_sc.launcher.animation_level=1
+# 2021-12-28 10:05:53.0
+hw_sc.platform.ux_level=200
+# 2021-12-28 10:05:53.0
+hw_sc.window_corner_config=1,1,0,0
+# 2021-12-28 10:05:53.0
+ro.build.hw_emui_lite.enable=true
+# 2021-12-28 10:05:53.0
+ro.config.distributed_app_fwk=true
+# 2021-12-28 10:05:53.0
+ro.config.hicall=false
+# 2021-12-28 10:05:53.0
+ro.config.hw_emui_dbsearch_lite=true
+# 2021-12-28 10:05:53.0
+ro.config.hw_globalSearch=false
+# 2021-12-28 10:05:53.0
+ro.config.hw_linkedin_enable=false
+# 2021-12-28 10:05:53.0
+ro.config.hw_support_clone_app=false
+# 2021-12-28 10:05:53.0
+ro.config.support_sdcard_crypt=false
+# 2021-12-28 10:05:53.0
+ro.feature.animation.style=simple
+# 2021-12-28 10:05:53.0
+ro.feature.calendar.map=false
+# 2021-12-28 10:05:53.0
+ro.feature.calendar.permanentcalendar=false
+# 2021-12-28 10:05:53.0
+ro.feature.contacts.favorite=false
+# 2021-12-28 10:05:53.0
+ro.feature.contacts.smartgroup=false
+# 2021-12-28 10:05:53.0
+ro.feature.dfr.appeye=false
+# 2021-12-28 10:05:53.0
+ro.feature.dfr.erecovery=false
+# 2021-12-28 10:05:53.0
+ro.feature.email.ai_translation=false
+# 2021-12-28 10:05:53.0
+ro.feature.email.group=false
+# 2021-12-28 10:05:53.0
+ro.feature.email.smime=false
+# 2021-12-28 10:05:53.0
+ro.feature.intelligence.level=Lite
+# 2021-12-28 10:05:53.0
+ro.feature.systemui.blur_wallpaper=false
+# 2021-12-28 10:05:53.0
+ro.feature.wms.singlemode=false
+# 2021-12-28 10:05:53.0
+ro.gallery.thumbnailLoading=true
+# 2021-12-28 10:05:53.0
+ro.iconnect.trustpair=false
+# 2021-12-28 10:05:53.0
+ro.prop.hwkeychain_switch=false

@@ -1,0 +1,34 @@
+{
+  "features": {
+    "ace_engine_standard_fonts_enable": false,
+    "graphic_standard_feature_ace_enable_gpu": true,
+    "startup_init_with_param_base": true,
+    "dsoftbus_feature_conn_p2p": true,
+    "dsoftbus_feature_disc_ble": true,
+    "dsoftbus_feature_conn_br": true,
+    "dsoftbus_feature_conn_ble": true,
+    "dsoftbus_feature_trans_udp_stream": true,
+    "hilog_native_feature_ohcore": true
+  },
+  "part_to_feature": {
+    "ace_engine": [
+      "ace_engine_standard_fonts_enable"
+    ],
+    "graphic_standard": [
+      "graphic_standard_feature_ace_enable_gpu"
+    ],
+    "init": [
+      "startup_init_with_param_base"
+    ],
+    "dsoftbus": [
+      "dsoftbus_feature_conn_p2p",
+      "dsoftbus_feature_disc_ble",
+      "dsoftbus_feature_conn_br",
+      "dsoftbus_feature_conn_ble",
+      "dsoftbus_feature_trans_udp_stream"
+    ],
+    "hilog_native": [
+      "hilog_native_feature_ohcore"
+    ]
+  }
+}

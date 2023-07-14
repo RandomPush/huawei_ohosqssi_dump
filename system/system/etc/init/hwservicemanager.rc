@@ -1,0 +1,13 @@
+service hwservicemanager /system/bin/hwservicemanager
+    user system
+    disabled
+    group system readproc
+    critical
+    onrestart setprop hwservicemanager.ready false
+    onrestart class_restart main
+    onrestart class_restart hal
+    onrestart class_restart early_hal
+    task_profiles ServiceCapacityLow HighPerformance
+    writepid /dev/blkio/system-background/tasks /dev/cpuctl/system-background/tasks
+    class animation
+    shutdown critical

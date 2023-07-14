@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projection_limit>
+  <package_name type="string">com.huawei.camera</package_name>
+  <package_name type="string">com.huawei.meetime</package_name>
+  <package_name type="string">com.huawei.calendar</package_name>
+  <package_name type="string">com.linio.android</package_name>
+  <package_name type="string">com.tmob.AveaOIM</package_name>
+  <package_name type="string">th.co.truemoney.wallet</package_name>
+  <package_name type="string">com.mudah.my</package_name>
+  <package_name type="string">com.tencent.wesing</package_name>
+  <package_name type="string">com.droid27.transparentclockweather</package_name>
+  <package_name type="string">com.sssgov.sssmobileapp</package_name>
+  <package_name type="string">com.facebook.katana</package_name>
+  <package_name type="string">com.facebook.orca</package_name>
+  <package_name type="string">com.king.candycrushsaga</package_name>
+  <package_name type="string">com.ebay.mobile</package_name>
+  <package_name type="string">com.huawei.hwdockbar</package_name>
+</projection_limit>

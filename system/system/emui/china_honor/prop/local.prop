@@ -1,0 +1,30 @@
+# 2021-12-28 10:05:53.0
+hw.mc.launcher.app_classify=true
+# 2021-12-28 10:05:53.0
+hw_mc.framework.approximately_location_devices_allow=true
+# 2022-10-17 19:50:05.0
+hw_mc.multidevice.hwdragdrop_enable=true
+# 2021-12-28 10:05:53.0
+hw_mc.servicehost.needstartprocess=true
+# 2021-12-28 10:05:53.0
+ro.config.alarm_alert=Aegean_Sea.ogg
+# 2021-12-28 10:05:53.0
+ro.config.hw_ecclist_nocard=+120,+122
+# 2021-12-28 10:05:53.0
+ro.config.hw_ecclist_withcard=+112
+# 2021-12-28 10:05:53.0
+ro.config.hw_globalEcc=false
+# 2021-12-28 10:05:53.0
+ro.config.hw_nlp=com.huawei.lbs
+# 2021-12-28 10:05:53.0
+ro.config.hw_updateCotaPara=true
+# 2021-12-28 10:05:53.0
+ro.config.hw_vassistant_honor=true
+# 2021-12-28 10:05:53.0
+ro.config.ringtone=Honor.ogg
+# 2021-12-28 10:05:53.0
+ro.config.ringtone2=Huawei_Tune_Living.ogg
+# 2021-12-28 10:05:53.0
+ro.config.support_doubletap_pay=true
+# 2021-12-28 10:05:53.0
+ro.iconnect.trustpair=true

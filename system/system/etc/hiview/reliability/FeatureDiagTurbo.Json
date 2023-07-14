@@ -1,0 +1,480 @@
+{
+    "901001000": [
+            {
+                "comment": "Main thread wait for wake up",
+                "input": "DEAD_LOCK",
+                "output": [
+                    {
+                        "judge": "BINDERLIST",
+                        "reason": "IPC_DEAD_LOCK",
+                        "keys": [],
+                        "suboutputs": {
+                            "BINDER":"TRUST_PID"
+                        }
+                    },
+                    {
+                        "judge": "NON_BINDERLIST",
+                        "reason": "THREAD_DEAD_LOCK",
+                        "keys": [],
+                        "suboutputs": {
+                        }
+                    }
+                ]
+            },
+            {
+                "comment": "Main thread wait for wake up",
+                "input": "IPC_TIMEOUT",
+                "output": [
+                    {
+                        "judge": "BINDERFULL",
+                        "reason": "IPC_FULL",
+                        "keys": [
+                            "no binder thread"
+                        ],
+                        "suboutputs": {
+                            "BINDER":"TRUST_PID"
+                        }
+                    },
+                    {
+                        "judge": "WAITLIST_TIME",
+                        "reason": "IPC_WAIT",
+                        "keys": [
+                            "Object.wait",
+                            "semaphore_wait",
+                            "MutexLockWithTimeout",
+                            "binder time > 5"
+                        ],
+                        "suboutputs": {
+                            "BINDER":"TRUST_PID"
+                        }
+                    },
+                    {
+                        "judge": "WAITLIST_TIME",
+                        "reason": "IPC_WAIT",
+                        "keys": [
+                            "Object.wait",
+                            "semaphore_wait",
+                            "MutexLockWithTimeout",
+                            "binder time < 5"
+                        ],
+                        "suboutputs": {
+                            "BINDER":"TRUST_PID",
+                            "KMSG": "lowmem",
+                            "DELAY": "UIP"
+                        }
+                    },
+                    {
+                        "judge": "WAITLIST",
+                        "reason": "IPC_WAIT",
+                        "keys": [
+                            "LockSupport.park"
+                        ],
+                        "suboutputs" : {
+                            "BINDER":"TRUST_PID",
+                            "APP": "GC",
+                            "KMSG": "BLK-IO|lowmem"
+                        }
+                    },
+                    {
+                        "judge": "WAITLIST",
+                        "reason": "IPC_WAIT",
+                        "keys": [
+                            "WaitingForGcToComplete"
+                        ],
+                        "suboutputs": {
+                            "BINDER":"TRUST_PID",
+                            "APP": "GC"
+                        }
+                    },
+                    {
+                        "judge": "WAITLIST",
+                        "reason": "IPC_WAIT",
+                        "keys": [
+                            "HardwareRenderer.nSetStopped"
+                        ],
+                        "suboutputs": {
+                            "BINDER":"TRUST_PID"
+                        }
+                    },
+                    {
+                        "judge": "BinderPair",
+                        "reason": "IPC_TIMEOUT",
+                        "keys": [
+                            "binder time < 5"
+                        ],
+                        "suboutputs": {
+                            "BINDER":"TRUST_PID",
+                            "KMSG": "binder_alloc|FROZEN",
+                            "APP": "F_Z ok|PG_watchdog",
+                            "DELAY": "UIP"
+                        }
+                    },
+                    {
+                        "judge": "BinderPair",
+                        "reason": "IPC_TIMEOUT",
+                        "keys": [
+                            "binder time > 5"
+                        ],
+                        "suboutputs": {
+                            "BINDER":"TRUST_PID",
+                            "KMSG": "binder_alloc|FROZEN",
+                            "APP": "F_Z ok|PG_watchdog"
+                        }
+                    },
+                    {
+                        "judge": "SurfaceFlinger",
+                        "reason": "IPC_TIMEOUT",
+                        "keys": [
+                        ],
+                        "suboutputs": {
+                            "BINDER": "TRUST_PID",
+                            "DELAY": "Xcollie",
+                            "APP": "SurfaceFlinger: Setting|SurfaceFlinger: Finished"
+                        }
+                    },
+                    {
+                        "judge": "SystemServer",
+                        "reason": "IPC_TIMEOUT",
+                        "keys": [
+                        ],
+                        "suboutputs": {
+                            "BINDER": "TRUST_PID",
+                            "APP": "PowerManager_screenOn: UL_Power|PowerManager_screenOn: HwPhoneWindowManager|HwLightsService: back|HwNormalizedAutomaticBrightnessController: Enable|HwNormalizedRampAnimator: hbm_dimming|InputDispatcher: Excessive|SurfaceControl: Excessive|PowerMS :.*screen Lock"
+                        }
+                    },
+                    {
+                        "judge": "Default",
+                        "reason": "IPC_TIMEOUT",
+                        "keys": [
+                            "binder time > 5"
+                        ],
+                        "suboutputs": {
+                            "BINDER":"TRUST_PID"
+                        }
+                    },
+                    {
+                        "judge": "Default",
+                        "reason": "IPC_TIMEOUT",
+                        "keys": [
+                            "binder time < 5"
+                        ],
+                        "suboutputs": {
+                            "BINDER":"TRUST_PID",
+                            "DELAY": "UIP"
+                        }
+                    },
+                    {
+                        "judge": "Default",
+                        "reason": "IPC_TIMEOUT",
+                        "keys": [
+                        ],
+                        "suboutputs": {
+                            "BINDER":"TRUST_PID",
+                            "DELAY": "UIP"
+                        }
+                    }
+                ]
+            },
+            {
+                "comment": "Main thread wait for wake up",
+                "input": "THREAD_TIMEOUT",
+                "output": [
+                    {
+                        "judge": "WAITLIST",
+                        "reason": "THREAD_WAIT",
+                        "keys": [
+                            "Object.wait",
+                            "semaphore_wait",
+                            "MutexLockWithTimeout"
+                        ],
+                        "suboutputs": {
+                            "KMSG": "hisi_lowmemory",
+                            "MEMORY": ""
+                        }
+                    },
+                    {
+                        "judge": "WAITLIST",
+                        "reason": "THREAD_WAIT",
+                        "keys": [
+                            "LockSupport.park"
+                        ],
+                        "suboutputs": {
+                            "APP": "GC",
+                            "KMSG": "BLK-IO|hisi_lowmemory"
+                        }
+                    },
+                    {
+                        "judge": "WAITLIST",
+                        "reason": "THREAD_WAIT",
+                        "keys": [
+                            "WaitingForGcToComplete"
+                        ],
+                        "suboutputs": {
+                            "APP": "GC"
+                        }
+                    },
+                    {
+                        "judge": "WAITLIST",
+                        "reason": "THREAD_WAIT",
+                        "keys": [
+                            "HardwareRenderer.nSetStopped"
+                        ],
+                        "suboutputs": {
+                        }
+                    },
+                    {
+                        "judge": "Default",
+                        "reason": "THREAD_TIMEOUT",
+                        "keys": [
+                        ],
+                        "suboutputs": {
+                            "APP": "GC|too much work|launcher state|cancelDraw true|No touchable window|memory critical|GPU completion",
+                            "KMSG": "BLK-IO|lowmem",
+                            "MEMORY": "",
+                            "DELAY": "UIP",
+                            "ION": ""
+                        }
+                    }
+                ]
+            }
+    ],
+    "901000001": [
+        {
+            "comment": "Main thread wait for wake up",
+            "input": "DEAD_LOCK",
+            "output": [
+                {
+                    "judge": "BINDERLIST",
+                    "reason": "IPC_DEAD_LOCK",
+                    "keys": [],
+                    "suboutputs": {
+                        "BINDER":"TRUST_PID"
+                    }
+                },
+                {
+                    "judge": "NON_BINDERLIST",
+                    "reason": "THREAD_DEAD_LOCK",
+                    "keys": [],
+                    "suboutputs": {
+                    }
+                }
+            ]
+        },
+        {
+            "comment": "Main thread wait for wake up",
+            "input": "IPC_TIMEOUT",
+            "output": [
+                {
+                    "judge": "BINDERFULL",
+                    "reason": "IPC_FULL",
+                    "keys": [
+                        "no binder thread"
+                    ],
+                    "suboutputs": {
+                        "BINDER":"TRUST_PID"
+                    }
+                },
+                {
+                    "judge": "WAITLIST_TIME",
+                    "reason": "IPC_WAIT",
+                    "keys": [
+                        "Object.wait",
+                        "semaphore_wait",
+                        "MutexLockWithTimeout",
+                        "binder time > 5"
+                    ],
+                    "suboutputs": {
+                        "BINDER":"TRUST_PID"
+                    }
+                },
+                {
+                    "judge": "WAITLIST_TIME",
+                    "reason": "IPC_WAIT",
+                    "keys": [
+                        "Object.wait",
+                        "semaphore_wait",
+                        "MutexLockWithTimeout",
+                        "binder time < 5"
+                    ],
+                    "suboutputs": {
+                        "BINDER":"TRUST_PID",
+                        "KMSG": "lowmem",
+                        "DELAY": "UIP"
+                    }
+                },
+                {
+                    "judge": "WAITLIST",
+                    "reason": "IPC_WAIT",
+                    "keys": [
+                        "LockSupport.park"
+                    ],
+                    "suboutputs" : {
+                        "BINDER":"TRUST_PID",
+                        "APP": "GC",
+                        "KMSG": "BLK-IO|lowmem"
+                    }
+                },
+                {
+                    "judge": "WAITLIST",
+                    "reason": "IPC_WAIT",
+                    "keys": [
+                        "WaitingForGcToComplete"
+                    ],
+                    "suboutputs": {
+                        "BINDER":"TRUST_PID",
+                        "APP": "GC"
+                    }
+                },
+                {
+                    "judge": "WAITLIST",
+                    "reason": "IPC_WAIT",
+                    "keys": [
+                        "HardwareRenderer.nSetStopped"
+                    ],
+                    "suboutputs": {
+                        "BINDER":"TRUST_PID"
+                    }
+                },
+                {
+                    "judge": "BinderPair",
+                    "reason": "IPC_TIMEOUT",
+                    "keys": [
+                        "binder time < 5"
+                    ],
+                    "suboutputs": {
+                        "BINDER":"TRUST_PID",
+                        "KMSG": "binder_alloc|FROZEN",
+                        "APP": "F_Z ok|PG_watchdog",
+                        "DELAY": "UIP"
+                    }
+                },
+                {
+                    "judge": "BinderPair",
+                    "reason": "IPC_TIMEOUT",
+                    "keys": [
+                        "binder time > 5"
+                    ],
+                    "suboutputs": {
+                        "BINDER":"TRUST_PID",
+                        "KMSG": "binder_alloc|FROZEN",
+                        "APP": "F_Z ok|PG_watchdog"
+                    }
+                },
+                {
+                    "judge": "SurfaceFlinger",
+                    "reason": "IPC_TIMEOUT",
+                    "keys": [
+                    ],
+                    "suboutputs": {
+                        "BINDER": "TRUST_PID",
+                        "DELAY": "Xcollie",
+                        "APP": "SurfaceFlinger: Setting|SurfaceFlinger: Finished"
+                    }
+                },
+                {
+                    "judge": "SystemServer",
+                    "reason": "IPC_TIMEOUT",
+                    "keys": [
+                    ],
+                    "suboutputs": {
+                        "BINDER": "TRUST_PID",
+                        "APP": "PowerManager_screenOn: UL_Power|PowerManager_screenOn: HwPhoneWindowManager|HwLightsService: back|HwNormalizedAutomaticBrightnessController: Enable|HwNormalizedRampAnimator: hbm_dimming|InputDispatcher: Excessive|SurfaceControl: Excessive|PowerMS :.*screen Lock"
+                    }
+                },
+                {
+                    "judge": "Default",
+                    "reason": "IPC_TIMEOUT",
+                    "keys": [
+                        "binder time > 5"
+                    ],
+                    "suboutputs": {
+                        "BINDER":"TRUST_PID"
+                    }
+                },
+                {
+                    "judge": "Default",
+                    "reason": "IPC_TIMEOUT",
+                    "keys": [
+                        "binder time < 5"
+                    ],
+                    "suboutputs": {
+                        "BINDER":"TRUST_PID",
+                        "DELAY": "UIP"
+                    }
+                },
+                {
+                    "judge": "Default",
+                    "reason": "IPC_TIMEOUT",
+                    "keys": [
+                    ],
+                    "suboutputs": {
+                        "BINDER":"TRUST_PID",
+                        "DELAY": "UIP"
+                    }
+                }
+            ]
+        },
+        {
+            "comment": "Main thread wait for wake up",
+            "input": "THREAD_TIMEOUT",
+            "output": [
+                {
+                    "judge": "WAITLIST",
+                    "reason": "THREAD_WAIT",
+                    "keys": [
+                        "Object.wait",
+                        "semaphore_wait",
+                        "MutexLockWithTimeout"
+                    ],
+                    "suboutputs": {
+                        "KMSG": "hisi_lowmemory",
+                        "MEMORY": ""
+                    }
+                },
+                {
+                    "judge": "WAITLIST",
+                    "reason": "THREAD_WAIT",
+                    "keys": [
+                        "LockSupport.park"
+                    ],
+                    "suboutputs": {
+                        "APP": "GC",
+                        "KMSG": "BLK-IO|hisi_lowmemory"
+                    }
+                },
+                {
+                    "judge": "WAITLIST",
+                    "reason": "THREAD_WAIT",
+                    "keys": [
+                        "WaitingForGcToComplete"
+                    ],
+                    "suboutputs": {
+                        "APP": "GC"
+                    }
+                },
+                {
+                    "judge": "WAITLIST",
+                    "reason": "THREAD_WAIT",
+                    "keys": [
+                        "HardwareRenderer.nSetStopped"
+                    ],
+                    "suboutputs": {
+                    }
+                },
+                {
+                    "judge": "Default",
+                    "reason": "THREAD_TIMEOUT",
+                    "keys": [
+                    ],
+                    "suboutputs": {
+                        "APP": "GC|too much work|launcher state|cancelDraw true|No touchable window|memory critical|GPU completion",
+                        "KMSG": "BLK-IO|lowmem",
+                        "MEMORY": "",
+                        "DELAY": "UIP",
+                        "ION": ""
+                    }
+                }
+            ]
+        }
+]
+}

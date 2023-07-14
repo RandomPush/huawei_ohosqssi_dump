@@ -1,0 +1,71 @@
+plugins:45 
+EngineEventDispatcher[]:0 static
+SysEventAdapter[]:0 static
+EventLogger[]:0 static
+SysEventSource[thread:sysevent_source]:0 static
+SysEventService[thread:sysevent_service]:0 static
+SysEventConvertor[]:0 static
+DistributedCommunicatorPlugin[thread:dist_comm_looper]:0 static
+EngineEventVerify[thread:engine_event_verify]:0 static
+DMDPlugin[]:0 static
+EventDatabase[thread:event_db]:0 static
+PrivacyCompliance[]:0 static
+PrivateLogCollector[]:0 static
+ExternalLogCollector[]:0 static
+Common[thread:common]:0 static
+RunningLogCollector[]:0 static
+EventSerialize[thread:event_serialize]:0 static
+EngineEventSourceInner[thread:inner_engine_event_source]:0 static
+HiViewEventSource[thread:hiview_event_source]:0 static
+CommPlugin[]:0 static
+TimerExecutor[thread:timer_executor]:0 static
+LogControl[]:0 static
+DailyControl[thread:daily_control]:0 static
+LogPacking[thread:log_packing]:0 static
+UeEventVerify[thread:ue_event_verify]:0 static
+ResourceLeakCollector[thread:resource_leak_collector]:0 static
+MemoryLeakDetector[thread:memory_leak_detector]:0 static
+FdLeakDetector[thread:fd_leak_detector]:0 static
+ThreadLeakDetector[thread:thread_leak_detector]:0 static
+FreezeDetectorPlugin[thread:freeze_detector]:0 static
+BootEventSource[thread:boot_collector]:0 static
+BBoxCollector[thread:bbox_collector]:0 static
+CrashCollector[thread:collectorthread]:0 static
+FreezeCollector[thread:collectorthread]:0 static
+HiCollieCollector[thread:collectorthread]:0 static
+DropboxEventSource[thread:collectorthread]:0 static
+CauseResolver[thread:cause_resolver]:0 static
+AssociationAnalysis[thread:associate_analysis]:0 static
+UploadPolicy[thread:uploadthread]:0 static
+FaultUpload[thread:uploadthread]:0 static
+RemoteDetectorPlugin[thread:remote_detector]:0 static
+BBoxDetectorPlugin[thread:bbox_detector]:0 static
+Screem[]:0 static
+Faultlogger[]:0 static
+StatisticsCollect[thread:statistics_collect]:0 static
+EngineEventSource[thread:engine_event_source]:0 static
+pipelines:10
+EnginePipeline:EngineEventVerify DMDPlugin DailyControl PrivacyCompliance EventDatabase PrivateLogCollector RunningLogCollector EventSerialize LogPacking RemoteDetectorPlugin EngineEventDispatcher 
+SysEventPipeline:SysEventService SysEventConvertor Faultlogger CrashCollector EventLogger BBoxCollector 
+HiViewEventPipeline:ExternalLogCollector LogPacking 
+Basepipelines:CauseResolver AssociationAnalysis UploadPolicy FaultUpload 
+crashpipeline:CrashCollector 
+freezepipeline:FreezeCollector 
+RemoteDetectorPipeline:RemoteDetectorPlugin 
+UePipeline:UeEventVerify DailyControl PrivacyCompliance EventSerialize LogPacking 
+StatisticsPipeline:StatisticsCollect 
+RawPipeline:Common EngineEventDispatcher 
+pipelinegroups:13
+EngineEventSource:EnginePipeline RemoteDetectorPipeline UePipeline StatisticsPipeline RawPipeline 
+SysEventSource:SysEventPipeline 
+SysEventConvertor:EnginePipeline RemoteDetectorPipeline UePipeline StatisticsPipeline RawPipeline 
+EngineEventSourceInner:EnginePipeline 
+HiViewEventSource:HiViewEventPipeline 
+FreezeDetectorPlugin:freezepipeline 
+DropboxEventSource:freezepipeline crashpipeline 
+CrashCollector:Basepipelines 
+FreezeCollector:Basepipelines 
+HiCollieCollector:freezepipeline 
+BootEventSource:Basepipelines 
+BBoxCollector:Basepipelines 
+StatisticsCollect:EnginePipeline 

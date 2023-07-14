@@ -1,0 +1,9 @@
+{
+    "install_list": [
+        {
+            "bundleName": "ohos.global.systemres",
+            "app_signature" : ["F7F2BE3346D03F293BD8A1DCB39DB2F55E3EFAF7B6915BC8F16E2BFCC98EBA79"],
+            "singleton": true
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "simple_rule": [
+        {
+            "event_name": "AccountServiceStartFailed",
+            "eventid": 951001000
+        },
+        {
+            "event_name": "AccountServiceStateMachineEvent",
+            "eventid": 951001100
+        },
+        {
+            "event_name": "AccountServicePublishEventFailed",
+            "eventid": 951001002
+        }
+    ]
+}

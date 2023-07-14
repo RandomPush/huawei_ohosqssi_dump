@@ -1,0 +1,8 @@
+{
+    "simple_rule": [
+        {
+            "event_name": "GnssException",
+            "eventid": 910000007
+        }
+    ]
+}

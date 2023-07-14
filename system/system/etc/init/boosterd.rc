@@ -1,0 +1,13 @@
+on property:persist.sys.boosterd_can_load=true
+    start boosterd
+
+on property:persist.sys.boosterd_can_load=false || persist.sys.boosterd_can_load=none
+    stop boosterd
+
+service boosterd /system/bin/boosterd
+    class late_start
+    disabled
+    user root vendor_dsm
+    group root vendor_dsm system wakelock readproc vpn
+    seclabel u:r:boosterd:s0
+    onrestart setprop vendor.sys.boosterd_has_restarted 1

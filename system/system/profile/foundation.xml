@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+    <process>foundation</process>
+    <loadlibs>
+        <libpath>libans.z.so</libpath>
+        <libpath>libces.z.so</libpath>
+        <libpath>libbatteryservice.z.so</libpath>
+        <libpath>libpowermgrservice.z.so</libpath>
+        <libpath>libhkssrv.z.so</libpath>
+        <libpath>libdcallservice.z.so</libpath>
+        <libpath>libuseriambase.z.so</libpath>
+        <libpath>libbms.z.so</libpath>
+        <libpath>libfms.z.so</libpath>
+        <libpath>libdhmanagerservice.z.so</libpath>
+        <libpath>libcmptdtbdschedsvr.z.so</libpath>
+        <libpath>libresschedsvc.z.so</libpath>
+        <libpath>libbgtaskmgrservice.z.so</libpath>
+        <libpath>libschedulerpolicyservice.z.so</libpath>
+    </loadlibs>
+    <systemability>
+        <name>3203</name>
+        <libpath>libans.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>3202</name>
+        <libpath>libces.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>3302</name>
+        <libpath>libbatteryservice.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>3301</name>
+        <libpath>libpowermgrservice.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability> 
+        <name>3510</name> 
+        <libpath>libhkssrv.z.so</libpath> 
+        <run-on-create>true</run-on-create> 
+        <distributed>false</distributed> 
+        <dump-level>1</dump-level> 
+    </systemability>
+    <systemability>
+        <name>4002</name>
+        <libpath>libdcallservice.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>902</name>
+        <libpath>libuseriambase.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>401</name>
+        <libpath>libbms.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>403</name>
+        <libpath>libfms.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability> 
+        <name>4801</name> 
+        <libpath>libdhmanagerservice.z.so</libpath> 
+         
+         
+        <run-on-create>true</run-on-create> 
+        <distributed>true</distributed> 
+        <dump-level>1</dump-level> 
+    </systemability>
+    <systemability> 
+        <name>1405</name> 
+        <libpath>libcmptdtbdschedsvr.z.so</libpath> 
+         
+         
+        <run-on-create>true</run-on-create> 
+        <distributed>false</distributed> 
+        <dump-level>1</dump-level> 
+    </systemability>
+    <systemability>
+        <name>1901</name>
+        <libpath>libresschedsvc.z.so</libpath>
+         
+         
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>1903</name>
+        <libpath>libbgtaskmgrservice.z.so</libpath>
+         
+         
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+    <systemability>
+        <name>1905</name>
+        <libpath>libschedulerpolicyservice.z.so</libpath>
+         
+         
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+</info>

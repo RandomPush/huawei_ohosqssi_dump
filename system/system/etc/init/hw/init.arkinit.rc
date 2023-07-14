@@ -1,0 +1,16 @@
+service arkinit /system/bin/app_process64 -Xzygote /system/bin --zygote --nice-name=zygote64 --socket-name=arkinit
+    class main
+    disabled
+    priority -20
+    user root
+    group root readproc reserved_disk
+    socket arkinit stream 660 root system
+    socket arkinit_usap_pool stream 660 root system
+    onrestart exec_background - system system -- /system/bin/vdc volume abort_fuse
+    onrestart write /sys/power/state on
+    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks /dev/blkio/foreground/tasks
+    setenv ARK_RUNTIME libarkruntime.so
+    critical
+
+on property:ro.ark.enable=1
+    start arkinit

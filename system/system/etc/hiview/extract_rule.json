@@ -1,0 +1,556 @@
+{
+    "version": "1.0.0",
+    "segmentStatus":[
+        {"namespace":"segStatus", "matchKey":"tid=\\d+ (.*)", "desc":""},
+        {"namespace":"segWaitOther", "matchKey":"waiting to lock.*held by thread (\\d+)", "desc":" waiting on lock held by "},
+        {"namespace":"segWaitSelf", "matchKey":"- waiting on <(.*)>", "desc":" waiting on itself"},
+        {"namespace":"segIpcTrans", "matchKey":"at android\\.os\\.(BinderProxy)\\.transact", "desc":" ipc transact:"},
+        {"namespace":"segIpcFull", "matchKey":"os\\.Binder\\.(blockUntilThreadAvailable)", "desc":" ipc full:"}
+    ],
+    "Rule1":{
+        "DirOrFile":"/data/log/dropbox/",
+        "Subcatalog":".*?(app_anr|system_server_anr)@[0-9]{13}\\.txt(\\.gz)?",
+        "featureId":"07_ANR_00",
+        "segmentType":"TwoLayers",
+        "startSeg":["BasicParam.v_process", "main"],
+        "segStack":["^\\s+at\\s+.*|^\\s+-\\s\\w.*", "^\\s+at\\s+.*|^\\s+-\\s\\w.*"],
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Process: ", "v_process":"Process: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"PID: ", "v_pid":"PID: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"UID: ", "v_uid":"UID: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Flags: ", "v_flag":"Flags: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Package: ", "v_package":"Package: ([\\w\\.]+)", "v_appversion":"^Package: [^\\(]*\\((.*)\\)$"},
+            {"namespace":"BasicParam", "matchKey":"APPVMTYPE: ", "v_appvmtype":"APPVMTYPE: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"SYSVMTYPE: ", "v_sysvmtype":"SYSVMTYPE: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Foreground: ", "v_foreground":"Foreground: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Activity: ", "v_activity":"Activity: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Subject: ", "v_subject":"Subject: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Lifetime: ", "v_lifetime":"Lifetime: (\\d+)"},
+            {"namespace":"BasicParam", "matchKey":"Temp: ", "v_temp":"shellFrame: (\\d+)"},
+            {"namespace":"BasicParam", "matchKey":"Freq: ", "v_freq":"Freq: (.*),", "v_ipa":"IPAValue: (\\d+)"},
+            {"namespace":"BasicParam", "matchKey":"Build: ", "v_build":"Build: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"@R@\\d+% \\d+/([^:]+):.*", "v_topcpu":"\\d+% \\d+/([^:]+):.*"},
+            {"namespace":"BasicParam", "matchKey":"TOTAL:", "v_totalcpu":"(\\d[\\.0-9]+)% TOTAL:", "v_iowait":".* TOTAL: .* (\\d[\\.0-9]+)% iowait .*"},
+            {"namespace":"BasicParam", "matchKey":"% @{BasicParam.v_pid}@", "v_faultcpu":"\\s+([0-9|\\.]+%)"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"----- pid ", "num":2, "v_id":"^----- pid (\\d+) at", "v_name":"^Cmd line: (.*)"},
+            {"namespace":"LayerTwoCmd", "matchKey":" prio=@&@ tid=", "num":3, "v_id":"tid=(\\d+) ", "v_name":"^\"(.*)\" ", "v_sysTid":"sysTid=(\\d+) "},
+            {"namespace":"IpcCmd", "matchKey":"----- binder transactions", "v_name":"(binder) transactions"}
+        ]
+    },
+    "Rule2":{
+        "DirOrFile":"/data/log/dropbox/",
+        "Subcatalog":".*?app_crash@[0-9]{13}\\.txt(\\.gz)?",
+        "featureId":"07_JAVA_CRASH_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Process: ", "v_process":"Process: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"PID: ", "v_pid":"PID: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"UID: ", "v_uid":"UID: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Flags: ", "v_flag":"Flags: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Package: ", "v_package":"Package: ([\\w\\.]+)", "v_appversion":"^Package: [^\\(]*\\((.*)\\)$"},
+            {"namespace":"BasicParam", "matchKey":"Trace-Id: ", "v_traceid":"Trace-Id: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"SYSVMTYPE: ", "v_sysvmtype":"SYSVMTYPE: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"APPVMTYPE: ", "v_appvmtype":"APPVMTYPE: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Foreground: ", "v_foreground":"Foreground: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Lifetime: ", "v_lifetime":"Lifetime: (\\d+)"},
+            {"namespace":"BasicParam", "matchKey":"Build: ", "v_build":"Build: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"@R@\\d+% \\d+/([^:]+):.*", "v_topcpu":"\\d+% \\d+/([^:]+):.*"},
+            {"namespace":"BasicParam", "matchKey":"at ", "v_trace":"@T@^\\s+at (.*)\\)|\\s*Caused by:(.*)|\\s+Suppressed:(.*)|^java.*"},
+            {"namespace":"BasicParam", "matchKey":"-mainthread@|@-loghandler", "v_mainthread":".*\\-(mainthread)|.*\\-(loghandler)"}
+        ]
+    },
+    "Rule3":{
+        "DirOrFile":"/data/log/dropbox/",
+        "Subcatalog":".*?(TOMBSTONE|native_crash)@[0-9]{13}\\.txt(\\.gz)?",
+        "skip":100,
+        "featureId":"07_NATIVE_CRASH_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":">>> @&@ <<<", "v_process":">>> (.*) <<<", "v_name":"name: (.*?)[: ]", "v_pid":"pid: ([0-9]+),"},
+            {"namespace":"BasicParam", "matchKey":"Build: ", "v_build":"Build: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Flags: ", "v_flag":"Flags: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Package: ", "v_package":"Package: ([\\w\\.]+)", "v_appversion":"^Package: [^\\(]*\\((.*)\\)$"},
+            {"namespace":"BasicParam", "matchKey":"Trace-Id: ", "v_traceid":"Trace-Id: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Hardware: ", "v_hardware":"Hardware: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Build fingerprint: ", "v_androidvision":"\\/(\\w+:\\d+)[./]"},
+            {"namespace":"BasicParam", "matchKey":"SYSVMTYPE: ", "v_sysvmtype":"SYSVMTYPE: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"APPVMTYPE: ", "v_appvmtype":"APPVMTYPE: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Foreground: ", "v_foreground":"Foreground: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Lifetime: ", "v_lifetime":"Lifetime: (\\d+)"},
+            {"namespace":"BasicParam", "matchKey":"Abort message: ", "v_abortmsg":"Abort message: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"uid: ", "v_uid":"uid: ([0-9]+)"},
+            {"namespace":"SignalParam", "matchKey":"signal ","v_sigmsg":"signal ([0-9]+).*","v_sicode":"code ([0-9]+).*"},
+            {"namespace":"ExceptionReason", "depend":"SignalParam", "matchKey":"Cause: ","v_cause":"Cause: (.*)"},
+            {"namespace":"MainCallTrace", "matchKey":"backtrace:", "v_trace":"@T@\\s+#\\d+(.*)"}
+        ]
+    },
+    "Rule4":{
+        "DirOrFile":"/data/log/dropbox/",
+        "Subcatalog":".*?(system_server_crash|SYSTEM_TOMBSTONE)@[0-9]{13}\\.txt(\\.gz)?",
+        "featureId":"07_VM_REBOOT_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Process: ", "v_process":"Process:\\s(.*)"},
+            {"namespace":"BasicParam", "matchKey":"SYSVMTYPE: ", "v_sysvmtype":"SYSVMTYPE: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"@R@@exceptionlist@", "v_reason":"@exceptionlist@"},
+            {"namespace":"BasicParam", "matchKey":"Abort message: ", "v_abortmsg":"Abort message: (.*)"},
+            {"namespace":"SignalParam", "matchKey":"signal ","v_sigmsg":"(signal [0-9]+).*","v_sicode":"(code [0-9]+).*"},
+            {"namespace":"MainCallTrace", "matchKey":"@R@^\\s+at (.*)\\(.*", "v_trace":"@T@^\\s+at (.*)\\).*"}
+        ]
+    },
+    "Rule5":{
+        "DirOrFile":"/data/log/dropbox/",
+        "Subcatalog":".*?system_server_watchdog@[0-9]{13}\\.txt(\\.gz)?",
+        "featureId":"07_VM_WATCHDOG_00",
+        "segmentType":"TwoLayers",
+        "startSeg":["BasicParam.v_process", "BasicParam.v_thread"],
+        "segStack":["^\\s+at\\s+.*|^\\s+-\\s\\w.*", "^\\s+at\\s+.*|^\\s+-\\s\\w.*"],
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Process: ", "v_process":"Process: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Subject: Blocked in monitor@|@Subject: Blocked in handler on", "v_block_reason":"Blocked in (.*?)\\)", "v_thread":"\\((.*?)\\)"},
+            {"namespace":"BasicParam", "matchKey":"Build: ", "v_build":"Build: (.*)"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"----- pid ", "num":2, "v_id":"^----- pid (\\d+) at", "v_name":"^Cmd line: (.*)"},
+            {"namespace":"LayerTwoCmd", "matchKey":" prio=@&@ tid=", "num":3, "v_id":"tid=(\\d+) ", "v_name":"^\"(.*)\" ", "v_sysTid":"sysTid=(\\d+) "},
+            {"namespace":"IpcCmd", "matchKey":"----- binder transactions", "v_name":"(binder) transactions"}
+        ]
+    },
+    "Rule6":{
+        "DirOrFile":"/data/hisi_logs/\\d{14}-\\d{8}/",
+        "Subcatalog":"ap_log/dmesg-ramoops-0",
+        "featureId":"04_PANIC_00,04_PANIC_02",
+        "segmentType":"OneLayer",
+        "startSeg":["HungtaskParam.v_taskId"],
+        "segStack":["[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+(.*)", "Call trace:"],
+        "rules":[
+            {"namespace":"HungtaskParam", "matchKey":"blocked@&@is causing panic", "v_taskId":"[tT]ask.*:(\\d+).*is causing panic", "v_taskName":"[tT]ask (.*):.*is causing panic"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"khungtaskd@&@]hungtask:name=", "num":1, "v_id":",PID=(\\d+),", "v_name":"hungtask:name=(.*),PID="}
+        ]
+    },
+    "Rule7":{
+        "DirOrFile":"/data/hisi_logs/",
+        "Subcatalog":"\\d{14}-\\d{8}/ap_log/dmesg-ramoops-0",
+        "featureId":"04_PANIC_01,02_PANIC_05",
+        "segmentType":"OneLayer",
+        "startSeg":["NocTrace.v_cpu"],
+        "segStack":["[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+(.*)", "el1_irq+0"],
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Unhandled fault:@|@Unable to handle kernel@|@kernel BUG at@|@BUG: failure at@|@Bad mode in@|@DPM device timeout@|@invoked oom-killer@|@Synchronous External Abort:@|@,init]potentially unexpected fatal signal@|@Internal error:@|@NoC Error Probe:@|@mali gpu: Unhandled Page@|@CFI failure@|@Kernel panic - not syncing:", "v_cause":"pid:\\d+,cpu\\d+,.*\\]([A-Za-z].*)", "v_pname":",cpu[0-9],(.*?)[,:\\]]", "v_noc":"(NoC Error)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_pname", "matchKey":"PC is at ", "v_f1":"PC is at ([^\\+ ]+.*)"},
+            {"namespace":"NocTrace", "depend":"BasicParam.v_noc", "matchKey":"err_code=", "v_errcode":"\\[(err_code=\\d+)\\]"},
+            {"namespace":"NocTrace", "depend":"BasicParam.v_noc", "matchKey":"init_flow=", "v_master":"\\[init_flow=\\d+\\]: (.*)"},
+            {"namespace":"NocTrace", "depend":"BasicParam.v_noc", "matchKey":"target_flow=", "v_slave":"\\[target_flow=\\d+\\]: (.*)"},
+            {"namespace":"NocTrace", "depend":"BasicParam.v_noc", "matchKey":"adjusted ADDR", "v_address":"adjusted.* = (.*)"},
+            {"namespace":"NocTrace", "depend":"BasicParam.v_noc", "matchKey":"USER_SIGNAL =", "v_user_signal":"USER_SIGNAL = 0x[0-9a-z]+ (.*)", "v_cpu":"\\(MID: AP_CPU(\\d+)"},
+            {"namespace":"NocTrace", "depend":"BasicParam.v_noc", "matchKey":"sec_val =", "v_security":"(sec_val = 0x[0-9a-f]+)"},
+            {"namespace":"MainCallTrace", "depend":"BasicParam", "matchKey":"Call trace:", "v_trace":"@T@[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+(.*)"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"]CPU@&@: stopping", "num":1, "v_id":"\\]CPU(\\d+): stopping", "v_name":"\\](CPU\\d+): stopping"}
+        ]
+    },
+    "Rule8":{
+        "DirOrFile":"/log/reliability/boot_fail/uploading/",
+        "Subcatalog":"bootfail_\\d{14}_0(x|X)[0-9a-zA-Z]{1,12}/bootFail_info.txt",
+        "featureId":"07_BootFail_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"SpaceLeftOnData:", "v_leftSpace":"SpaceLeftOnData:(\\d+)MB"},
+            {"namespace":"BasicParam", "matchKey":"time:0x", "v_bootfailtime":"time:(0x\\d+)"},
+            {"namespace":"BasicParam", "matchKey":"bootFailErrno:0x", "v_bootfailErrno":"bootFailErrno:(0x[0-9a-f]+)"},
+            {"namespace":"BasicParam", "matchKey":"boot_stage:0x", "v_bootErrStage":"boot_stage:(0x[0-9a-f]+)"},
+            {"namespace":"BasicParam", "matchKey":"isSystemRooted:", "v_rootOrNot":"isSystemRooted:(\\d)"},
+            {"namespace":"BasicParam", "matchKey":"isUserPerceptible:", "v_isUserPerceptible":"isUserPerceptible:(\\d)"},
+            {"namespace":"BasicParam", "matchKey":"bootup_time:", "v_bootupTime":"bootup_time:([1-9]\\d+)S"},
+            {"namespace":"BasicParam", "matchKey":"bootFailDetail:", "v_bootFailDetail":"bootFailDetail:(.*)"},
+            {"namespace":"BootupStage", "depend":"BasicParam.v_bootupTime", "matchKey":"@R@start:\\s+native_stage_init_start.*elapse:(\\d+)s", "v_stg1":"start:.*elapse:(\\d+)s"},
+            {"namespace":"BootupStage", "depend":"BasicParam.v_bootupTime", "matchKey":"@R@start:\\s+framework_stage_phase_wait_for_default_display.*elapse:(\\d+)s", "v_stg2":"start:.*elapse:(\\d+)s"},
+            {"namespace":"BootupStage", "depend":"BasicParam.v_bootupTime", "matchKey":"@R@start:\\s+framework_stage_phase_lock_settings_ready.*elapse:(\\d+)s", "v_stg3":"start:.*elapse:(\\d+)s"},
+            {"namespace":"BootupStage", "depend":"BasicParam.v_bootupTime", "matchKey":"@R@start:\\s+framework_stage_phase_system_services_ready.*elapse:(\\d+)s", "v_stg4":"start:.*elapse:(\\d+)s"},
+            {"namespace":"BootupStage", "depend":"BasicParam.v_bootupTime", "matchKey":"@R@start:\\s+framework_stage_phase_activity_manager_ready.*elapse:(\\d+)s", "v_stg5":"start:.*elapse:(\\d+)s"},
+            {"namespace":"BootupStage", "depend":"BasicParam.v_bootupTime", "matchKey":"@R@start:\\s+framework_stage_phase_third_party_apps_can_start.*elapse:(\\d+)s", "v_stg6":"start:.*elapse:(\\d+)s"},
+            {"namespace":"BootupStage", "depend":"BasicParam.v_bootupTime", "matchKey":"@R@start:\\s+framework_stage_phase_boot_completed.*elapse:(\\d+)s", "v_stg7":"start:.*elapse:(\\d+)s"}
+        ]
+    },
+    "Rule9":{
+        "DirOrFile":"/log/reliability/boot_fail/uploading/",
+        "Subcatalog":"bootfail_\\d{14}_0(x|X)[0-9a-zA-Z]{1,12}/recovery_info.txt",
+        "featureId":"07_BootFail_01",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"@R@rcvMethod:(\\d+)", "v_rcvMethod":"rcvMethod:(\\d+)"},
+            {"namespace":"BasicParam", "matchKey":"@R@rcvResult:(\\d+)", "v_rcvResult":"rcvResult:(\\d+)"}
+        ]
+    },
+    "Rule10":{
+        "DirOrFile":"/data/hisi_logs/",
+        "Subcatalog":"\\d{14}-\\d{8}/cp_log/reset.log",
+        "featureId":"04_MODEMCRASH_00,04_MODEM_REBOOTSYS_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"brief:", "v_f1":"brief:(.*)"},
+            {"namespace":"BasicParam", "matchKey":"task_name:", "v_f2":"task_name:(.*)"},
+            {"namespace":"BasicParam", "matchKey":"modid:", "v_f3":"modid:(.*)"}
+        ]
+    },
+    "Rule11":{
+        "DirOrFile":"/data/hisi_logs/running_trace/teeov_logs/last_teemsg",
+        "Subcatalog":"",
+        "featureId":"04_TRUSTZONECRASH_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Crash Task Name = ", "v_pname":"Crash Task Name = (.*)"},
+            {"namespace":"BasicParam", "matchKey":"========== The PC ", "v_f1":"========== The PC (.*)"}
+        ]
+    },
+    "Rule12":{
+        "DirOrFile":"/data/log/reliability/xcollie",
+        "Subcatalog":"xcollie@\\d{1,13}.log",
+        "featureId":"07_ServiceDie_01,07_ServiceDie_02",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":">>> @&@ <<<", "v_pname":">>> (.*) <<<", "v_reason":"[>>> .*/|>>> .*\\.]([a-zA-Z0-9\\.]+)[ <<<|@.*? <<<]"},
+            {"namespace":"BasicParam", "matchKey":"timeout tid:", "v_pid":"timeout tid: (\\d+)"},
+            {"namespace":"BasicParam", "matchKey":"timeout function:@|@timeout name:", "v_funcname":"timeout.*: (.*)"},
+            {"namespace":"MainCallTrace", "matchKey":"@R@(^tid = |sysTid=){1}@{BasicParam.v_pid}@", "v_maintrace":"@T@\\s+\\S* #\\d+ pc \\d+(.*)|\\s+at (.*)"},
+            {"namespace":"CallTrace", "matchKey":"kernel stack:", "v_calltrace":"@T@xcollie: #\\d+: (.*)"}
+        ]
+    },
+    "Rule13":{
+        "DirOrFile":"/log/reliability/boot_fail/uploading/",
+        "Subcatalog":"bootfail_\\d{14}_0(x|X)[0-9a-zA-Z]{1,12}/last_kmsg",
+        "featureId":"07_BootFail_03",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Unhandled fault:@|@Unable to handle kernel@|@kernel BUG at @|@BUG: failure at@|@Bad mode in @|@Internal error:", "v_cpuNum":"pid:\\d+,cpu(\\d+),", "v_subType":"pid:\\d+,cpu\\d+,.*\\](.*)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_cpuNum", "matchKey":"PC is at ", "v_f1":"PC is at ([^\\+ ]+.*)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_cpuNum", "matchKey":"LR is at ", "v_f2":"LR is at ([^\\+ ]+.*)"},
+            {"namespace":"CallTrace", "depend":"BasicParam.v_cpuNum", "matchKey":"Call trace:", "v_trace":"@T@[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+(.*)"},
+            {"namespace":"OtherParam", "depend":"CallTrace", "matchKey":"Code: ", "v_code":"Code:\\s(.*)\\s$"}
+        ]
+    },
+    "Rule14":{
+        "DirOrFile":"/log/reliability/boot_fail/uploading/",
+        "Subcatalog":"bootfail_\\d{14}_0(x|X)[0-9a-zA-Z]{1,12}/tombstone_00",
+        "featureId":"07_BootFail_02",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":">>> @&@ <<<", "v_subType":">>> (.*) <<<"},
+            {"namespace":"SignalParam", "matchKey":"signal ","v_sig":"signal\\s([0-9]+).*"},
+            {"namespace":"ExceptionReason", "depend":"SignalParam", "matchKey":"Cause: ","v_cause":"Cause:(.*)"},
+            {"namespace":"MainCallTrace", "matchKey":"backtrace:", "v_trace":"@T@\\s+#\\d+(.*)"}
+        ]
+    },
+    "Rule15":{
+        "DirOrFile":"/data/hisi_logs/",
+        "Subcatalog":"\\d{14}-\\d{8}/ap_log/dmesg-ramoops-0",
+        "featureId":"04_HWWATCHDOG_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"fiq triggered by: Watchdog", "v_fiq":"(.*)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_fiq","matchKey":"PC is at ", "v_f1":"PC is at ([^\\+ ]+.*)", "v_pname":"cpu[0-9],(.*?)[,:\\]]"},
+            {"namespace":"MainCallTrace", "depend":"BasicParam.v_fiq", "matchKey":"Call trace:", "v_trace":"@T@[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+(.*)"}
+        ]
+    },
+    "Rule16":{
+        "DirOrFile":"/data/hisi_logs/",
+        "Subcatalog":"\\d{14}-\\d{8}/sochifi_logs/hifi_ddr.bin",
+        "featureId":"04_HIFICRASH_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"panic addr", "v_panicAddr":"panic addr:(.*?),", "v_curPc":"cur_pc:(.*?),", "v_prePc":"pre_pc:(.*?),", "v_cause":"cause:(.*)"},
+            {"namespace":"BasicParam", "matchKey":"OM_FAULTINJECT_MsgMain", "v_f2":"(OM_FAULTINJECT_MsgMain)"}
+        ]
+    },
+    "Rule17":{
+        "DirOrFile":"/data/hisi_logs/",
+        "Subcatalog":"\\d{14}-\\d{8}/codechifi_logs/codec_log.bin",
+        "featureId":"04_HIFICRASH_01",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"panic addr", "v_panicAddr":"panic addr:(.*?),", "v_curPc":"cur_pc:(.*?),", "v_prePc":"pre_pc:(.*?),", "v_cause":"cause:(.*)"},
+            {"namespace":"BasicParam", "matchKey":"exception_pointer start@|@bit1 count error", "v_f2":"\\:(.*exception_pointer start)", "v_f3":"(bit1 count error)"}
+        ]
+    },
+    "Rule18":{
+        "DirOrFile":"/data/log/sensorhub-log/history.log",
+        "Subcatalog":"",
+        "featureId":"04_SENSORHUBCRASH_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"reason", "v_reason":"@L@reason \\[(.*?)\\],", "v_regs":"@L@regs \\[(pc.*,lr.*),fsr.*"}
+        ]
+    },
+    "Rule19":{
+        "DirOrFile":"/data/hisi_logs/",
+        "Subcatalog":"\\d{14}-\\d{8}/ap_log/bl31_mntn_memory.bin",
+        "featureId":"04_HARDWARE_FAULT_01",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"====ddr @&@ int parse begin====", "v_ddrSec":"====(ddr.*begin)===="},
+            {"namespace":"DdrcParam", "depend":"BasicParam.v_ddrSec", "matchKey":"not ddr error,", "v_error":"not ddr error"},
+            {"namespace":"DdrcParam", "depend":"DdrcParam.v_error", "matchKey":"@R@PORT is (\\d+)", "v_port":"PORT is (\\d+)"},
+            {"namespace":"DdrcParam", "depend":"DdrcParam.v_error", "matchKey":"operation", "v_op":"\\](.*) operation"},
+            {"namespace":"DdrcParam", "depend":"DdrcParam.v_error", "matchKey":"Master is", "v_master":"Master is (.*)"},
+            {"namespace":"DdrcParam", "depend":"DdrcParam.v_error", "matchKey":"Sub master is", "v_subMaster":"Sub master is (.*)"}
+        ]
+    },
+    "Rule20":{
+        "DirOrFile":"/data/hisi_logs/",
+        "Subcatalog":"\\d{14}-\\d{8}/ap_log/fastboot_log",
+        "featureId":"04_HARDWARE_FAULT_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"reboot_reason: get_exception_info", "v_subType":"get_exception_info is (.*)"}
+        ]
+    },
+    "Rule21":{
+        "DirOrFile":"/data/hisi_logs/",
+        "Subcatalog":"\\d{14}-\\d{8}/ap_log/dmesg-ramoops-0",
+        "featureId":"04_MODEM_REBOOTSYS_01",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"system_error@&@balong_modem", "v_pname":",cpu[0-9],(.*?)[,:\\]]"},
+            {"namespace":"MainCallTrace", "depend":"BasicParam.v_pname", "matchKey":",@{BasicParam.v_pname}@", "v_trace":"@T@[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+(.*)"}
+        ]
+    },
+    "Rule22":{
+        "DirOrFile":"/data/log/mtklog/mobilelog/APLog_0/last_kmsg",
+        "Subcatalog":"",
+        "featureId":"04_PANIC_03",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Unhandled fault:@|@Unable to handle kernel@|@kernel BUG at @|@BUG: failure at@|@Bad mode in @|@Internal error:@|@mali gpu: Unhandled Page@|@stp trace log:@|@Kernel panic - not syncing:", "v_f3":"\\[\\d+:\\w+.*\\]([a-zA-Z].*)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_f3", "matchKey":"PC is at ", "v_f1":"PC is at ([^\\+ ]+.*)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_f3", "matchKey":"LR is at ", "v_f2":"LR is at ([^\\+ ]+.*)"},
+            {"namespace":"MainCallTrace", "depend":"BasicParam", "matchKey":"Call trace:", "v_trace":"@T@[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+(.*)"}
+        ]
+    },
+    "Rule23":{
+        "DirOrFile":"/data/vendor/log/mtklog/aee_exp/",
+        "Subcatalog":"\\d{14}-\\d{8}/last_kmsg",
+        "featureId":"02_PANIC_04",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Unhandled fault:@|@Unable to handle kernel@|@kernel BUG at @|@BUG: failure at@|@Bad mode in @|@Internal error:@|@mali gpu: Unhandled Page@|@stp trace log:@|@Kernel panic - not syncing:", "v_f3":"\\[\\d+:\\w+.*\\]([a-zA-Z].*)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_f3", "matchKey":"PC is at ", "v_f1":"PC is at ([^\\+ ]+.*)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_f3", "matchKey":"LR is at ", "v_f2":"LR is at ([^\\+ ]+.*)"},
+            {"namespace":"MainCallTrace", "depend":"BasicParam", "matchKey":"Call trace:", "v_trace":"@T@[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+(.*)"}
+        ]
+    },
+    "Rule24":{
+        "DirOrFile":"/data/log/mtklog/mobilelog/APLog_0/pl_lk",
+        "Subcatalog":"",
+        "featureId":"02_HARDWARE_FAULT_02",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"[PMIC]PG_SDN_STS0", "v_pg_sdn_sts0":"\\[PMIC\\](PG_SDN_STS0.*)"},
+            {"namespace":"BasicParam", "matchKey":"[PMIC]PG_SDN_STS1", "v_pg_sdn_sts1":"\\[PMIC\\](PG_SDN_STS1.*)"},
+            {"namespace":"BasicParam", "matchKey":"[PMIC]OC_SDN_STS0", "v_oc_sdn_sts0":"\\[PMIC\\](OC_SDN_STS0.*)"},
+            {"namespace":"BasicParam", "matchKey":"[PMIC]OC_SDN_STS1", "v_oc_sdn_sts1":"\\[PMIC\\](OC_SDN_STS1.*)"}
+        ]
+    },
+    "Rule25":{
+        "DirOrFile":"/data/vendor/log/mtklog/aee_exp/",
+        "Subcatalog":"\\d{14}-\\d{8}/ZZ_INTERNAL",
+        "featureId":"02_MODEMCRASH_01,02_SENSORHUBCRASH_01,02_CONNEXCEPTION_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Fatal error", "v_fatal":"\\[(Fatal error\\(.*\\))\\]", "v_err_code1":"err_code1:(.*?) ", "v_err_code2":"err_code2:(.*?) ", "v_err_code3":"err_code3:(.*)"},
+            {"namespace":"BasicParam", "matchKey":"[ASSERT]", "v_assert":"(\\[ASSERT\\])", "v_assert_Rule":"/(\\w+.c line:\\d+)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_assert", "matchKey":"p1", "v_p1":"p1:(0x\\w+)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_assert", "matchKey":"p2", "v_p2":"p2:(0x\\w+)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_assert", "matchKey":"p3", "v_p3":"p3:(0x\\w+)"},
+            {"namespace":"BasicParam", "matchKey":";CONSYS FW CORE.", "v_consys":".*(CONSYS FW CORE\\..*),\\w+ .*"}
+        ]
+    },
+    "Rule26":{
+        "DirOrFile":"/data/vendor/log/reliability/dumplog/",
+        "Subcatalog":"\\d{14}-\\d{8}/last_kmsg",
+        "featureId":"01_PANIC_07",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Unhandled fault:@|@Unable to handle kernel@|@kernel BUG at@|@BUG: failure at@|@Bad mode in@|@DPM device timeout@|@invoked oom-killer@|@Synchronous External Abort:@|@,init]potentially unexpected fatal signal@|@Internal error:@|@NoC Error Probe:@|@mali gpu: Unhandled Page@|@CFI failure@|@Kernel panic - not syncing:", "v_pname":".*\\[\\d+:(.*?)\\][a-zA-Z].*", "v_cause":"\\(\\d+\\)([a-zA-Z].*)|\\(\\d+\\)\\[\\d+:.*?\\]([a-zA-Z].*)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_cause", "matchKey":"pc : ", "v_f1":"pc : (.*)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_cause", "matchKey":"lr : ", "v_f2":"lr : (.*)"}
+        ]
+    },
+    "Rule27":{
+        "DirOrFile":"/data/log/modem_crash/modem_exception",
+        "Subcatalog":"",
+        "featureId":"01_MODEMCRASH_02,01_MODEM_CRASH_01",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":":", "v_f1":"@L@([a-zA-Z]+.*):", "v_f2":".*:(.*)"}
+        ]
+    },
+    "Rule28":{
+        "DirOrFile":"/data/log/faultlog/",
+        "Subcatalog":"sysfreeze\\-.*?\\-[0-9]+\\-[0-9]{14}",
+        "featureId":"63_SystemHungFault_00",
+        "segmentType":"TwoLayers",
+        "startSeg":["system_server", "main"],
+        "segStack":["^\\s+at\\s+.*|^\\s+-\\s\\w.*", "^\\s+at\\s+.*|^\\s+-\\s\\w.*"],
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"PID:", "v_pid":"PID:(\\S+)"},
+            {"namespace":"BasicParam", "matchKey":"UID:", "v_uid":"UID:(\\S+)"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"----- pid ", "num":2, "v_id":"^----- pid (\\d+) at", "v_name":"^Cmd line: (.*)"},
+            {"namespace":"LayerTwoCmd", "matchKey":" prio=@&@ tid=", "num":3, "v_id":"tid=(\\d+) ", "v_name":"^\"(.*)\" ", "v_sysTid":"sysTid=(\\d+) "}
+        ]
+    },
+    "Rule29":{
+        "DirOrFile":"/data/log/dropbox/",
+        "Subcatalog":".*?(js_crash)@[0-9]{13}\\.txt(\\.gz)?",
+        "featureId":"07_JsCrash_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Lifetime:", "v_lifeTime":"Lifetime: (.*)s"},
+            {"namespace":"BasicParam", "matchKey":"Ability: ", "v_ability":"Ability: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"page: ", "v_page":"page: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Js-Engine: ", "v_vm":"Js-Engine: (.*)"},
+            {"namespace":"BasicParam", "matchKey":"Stacktrace: ", "v_error": "ReferenceError: (.*)", "v_trace":"@T@at (.*)"}
+        ]
+    },
+    "Rule30":{
+        "DirOrFile":"/data/log/faultlog/",
+        "Subcatalog":"sysfreeze\\-.*?\\-[0-9]+\\-[0-9]{14}",
+        "featureId":"63_SystemHungWarning_00",
+        "segmentType":"TwoLayers",
+        "startSeg":["system_server", "main"],
+        "segStack":["^\\s+at\\s+.*|^\\s+-\\s\\w.*", "^\\s+at\\s+.*|^\\s+-\\s\\w.*"],
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"PID:", "v_pid":"PID:(\\S+)"},
+            {"namespace":"BasicParam", "matchKey":"UID:", "v_uid":"UID:(\\S+)"},
+            {"namespace":"BasicParam", "matchKey":"PROCESS_NAME:", "v_process":"PROCESS_NAME:(\\S+)"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"----- pid ", "num":2, "v_id":"^----- pid (\\d+) at", "v_name":"^Cmd line: (.*)"},
+            {"namespace":"LayerTwoCmd", "matchKey":" prio=@&@ tid=", "num":3, "v_id":"tid=(\\d+) ", "v_name":"^\"(.*)\" ", "v_sysTid":"sysTid=(\\d+) "}
+        ]
+    },
+    "Rule31":{
+        "DirOrFile":"/data/log/faultlog/",
+        "Subcatalog":"appfreeze\\-.*?\\-[0-9]+\\-[0-9]{14}",
+        "featureId":"63_AppFreezeWarning_00",
+        "segmentType":"TwoLayers",
+        "startSeg":["BasicParam.v_process", "main"],
+        "segStack":["^\\s+at\\s+.*|^\\s+-\\s\\w.*", "^\\s+at\\s+.*|^\\s+-\\s\\w.*"],
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"PROCESS_NAME", "v_process":"PROCESS_NAME = (.*)"},
+            {"namespace":"BasicParam", "matchKey":"PID = ", "v_pid":"PID = (.*)"},
+            {"namespace":"BasicParam", "matchKey":"UID = ", "v_uid":"UID = (.*)"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"----- pid ", "num":2, "v_id":"^----- pid (\\d+) at", "v_name":"^Cmd line: (.*)"},
+            {"namespace":"LayerTwoCmd", "matchKey":" prio=@&@ tid=", "num":3, "v_id":"tid=(\\d+) ", "v_name":"^\"(.*)\" ", "v_sysTid":"sysTid=(\\d+) "}
+        ]
+    },
+    "Rule34":{
+        "DirOrFile":"/data/hisi_logs/",
+        "Subcatalog":"\\d{14}-\\d{8}/ap_log/kernel_logbuff.bin",
+        "featureId":"04_PANIC_02",
+        "segmentType":"OneLayer",
+        "startSeg":["HungtaskParam.v_taskId"],
+        "segStack":["[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+.*", "Call trace:"],
+        "rules":[
+            {"namespace":"HungtaskParam", "matchKey":"blocked@&@is causing panic", "v_taskId":"[tT]ask.*:(\\d+).*is causing panic", "v_taskName":"[tT]ask (.*):.*is causing panic"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"khungtaskd@&@]hungtask:name=", "num":1, "v_id":",PID=(\\d+),", "v_name":"hungtask:name=(.*),PID="}
+        ]
+    },
+    "Rule35":{
+        "DirOrFile":"/data/log/eventlog/",
+        "Subcatalog":"XCOLLIE-\\d{14}\\.log",
+        "featureId":"07_ServiceDie_03",
+        "segmentType":"TwoLayers",
+        "startSeg":["BasicParam.v_process", "main"],
+        "segStack":["^\\s+at\\s+.*|^\\s+-\\s\\w.*", "^\\s+at\\s+.*|^\\s+-\\s\\w.*"],
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"PID = ", "v_pid":"PID = (.*)"},
+            {"namespace":"BasicParam", "matchKey":"PACKAGE_NAME = ", "v_process":"PACKAGE_NAME = (.*)"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"----- pid ", "num":2, "v_id":"^----- pid (\\d+) at", "v_name":"^Cmd line: (.*)"},
+            {"namespace":"LayerTwoCmd", "matchKey":" prio=@&@ tid=", "num":3, "v_id":"tid=(\\d+) ", "v_name":"^\"(.*)\" ", "v_sysTid":"sysTid=(\\d+) "}
+        ]
+    },
+    "Rule37":{
+        "DirOrFile":"/data/log/faultlog/",
+        "Subcatalog":"appfreeze\\-.*?\\-[0-9]+\\-[0-9]{14}",
+        "featureId":"63_AppFreeze_03",
+        "segmentType":"TwoLayers",
+        "startSeg":["BasicParam.v_process", "main"],
+        "segStack":["^\\s+at\\s+.*|^\\s+-\\s\\w.*", "^\\s+at\\s+.*|^\\s+-\\s\\w.*"],
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"PROCESS_NAME", "v_process":"PROCESS_NAME = (.*)"},
+            {"namespace":"BasicParam", "matchKey":"PID = ", "v_pid":"PID = (.*)"},
+            {"namespace":"BasicParam", "matchKey":"UID = ", "v_uid":"UID = (.*)"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"----- pid ", "num":2, "v_id":"^----- pid (\\d+) at", "v_name":"^Cmd line: (.*)"},
+            {"namespace":"LayerTwoCmd", "matchKey":" prio=@&@ tid=", "num":3, "v_id":"tid=(\\d+) ", "v_name":"^\"(.*)\" ", "v_sysTid":"sysTid=(\\d+) "}
+        ]
+    },
+    "Rule38":{
+        "DirOrFile":"/data/log/eventlog/",
+        "Subcatalog":"WATCHDOG-\\d{14}\\.log",
+        "featureId":"07_ServiceDie_04",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":">>> @&@ <<<", "v_pname":">>> (.*) <<<", "v_reason":"[>>> .*/|>>> .*\\.]([a-zA-Z0-9\\.]+)[ <<<|@.*? <<<]"},
+            {"namespace":"BasicParam", "matchKey":"timeout tid:", "v_pid":"timeout tid: (\\d+)"},
+            {"namespace":"BasicParam", "matchKey":"timeout function:@|@timeout name:", "v_funcname":"timeout.*: (.*)"},
+            {"namespace":"MainCallTrace", "matchKey":"@R@(^tid = |sysTid=){1}@{BasicParam.v_pid}@", "v_maintrace":"@T@\\s+\\S* #\\d+ pc \\d+(.*)|\\s+at (.*)"},
+            {"namespace":"CallTrace", "matchKey":"kernel stack:", "v_calltrace":"@T@xcollie: #\\d+: (.*)"}
+        ]
+    },
+    "Rule39":{
+        "DirOrFile":"/data/vendor/log/ramdump/",
+        "Subcatalog":"ramdump_bt_state_\\d{4}-\\d{2}-\\d{2}_\\d{2}-\\d{2}-\\d{2}.log",
+        "featureId":"01_CONNEXCEPTION_01",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"BtPrimaryCrashReason:", "v_primary":"BtPrimaryCrashReason:(.*)"},
+            {"namespace":"BasicParam", "matchKey":"BtSecondaryCrashReason:", "v_secondary":"BtSecondaryCrashReason:(.*)"}
+        ]
+    },
+    "Rule40":{
+        "DirOrFile":"/data/vendor/log/reliability/dumplog/",
+        "Subcatalog":"\\d{14}-\\d{8}/last_kmsg",
+        "featureId":"01_PANIC_06",
+        "segmentType":"OneLayer",
+        "startSeg":["HungtaskParam.v_taskId"],
+        "segStack":["[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+.*", "Call trace:"],
+        "rules":[
+            {"namespace":"HungtaskParam", "matchKey":"blocked@&@is causing panic", "v_taskId":"[tT]ask.*:(\\d+).*is causing panic", "v_taskName":"[tT]ask (.*):.*is causing panic"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"khungtaskd@&@]hungtask:name=", "num":1, "v_id":",PID=(\\d+),", "v_name":"hungtask:name=(.*),PID="}
+        ]
+    },
+    "Rule41":{
+        "DirOrFile":"/data/log/bbox/",
+        "Subcatalog":"\\d{14}-\\d{8}/last_kmsg",
+        "featureId":"01_PANIC_08",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Unhandled fault:@|@Unable to handle kernel@|@kernel BUG at@|@BUG: failure at@|@Bad mode in@|@DPM device timeout@|@invoked oom-killer@|@Synchronous External Abort:@|@,init]potentially unexpected fatal signal@|@Internal error:@|@NoC Error Probe:@|@mali gpu: Unhandled Page@|@CFI failure@|@Kernel panic - not syncing:", "v_pname":".*\\[\\d+:(.*?)\\][a-zA-Z].*", "v_cause":"\\(\\d+\\)([a-zA-Z].*)|\\(\\d+\\)\\[\\d+:.*?\\]([a-zA-Z].*)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_cause", "matchKey":"pc : ", "v_f1":"pc : (.*)"},
+            {"namespace":"BasicParam", "depend":"BasicParam.v_cause", "matchKey":"lr : ", "v_f2":"lr : (.*)"},
+            {"namespace":"MainCallTrace", "depend":"BasicParam", "matchKey":"Call trace:", "v_trace":"@T@[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+(.*)"}
+        ]
+    },
+    "Rule42":{
+        "DirOrFile":"/data/log/bbox/",
+        "Subcatalog":"\\d{14}-\\d{8}/last_kmsg",
+        "featureId":"01_PANIC_09",
+        "segmentType":"OneLayer",
+        "startSeg":["HungtaskParam.v_taskId"],
+        "segStack":["[0-9a-zA-Z_.]+\\+0x[0-9a-f]+/0x[0-9a-f]+.*", "Call trace:"],
+        "rules":[
+            {"namespace":"HungtaskParam", "matchKey":"blocked@&@is causing panic", "v_taskId":"[tT]ask.*:(\\d+).*is causing panic", "v_taskName":"[tT]ask (.*):.*is causing panic"}
+        ],
+        "segmentRule":[
+            {"namespace":"LayerOneCmd", "matchKey":"khungtaskd@&@]hungtask:name=", "num":1, "v_id":",PID=(\\d+),", "v_name":"hungtask:name=(.*),PID="}
+        ]
+    },
+    "Rule43":{
+        "DirOrFile":"/data/ohos_data/log/faultlog/faultlogger/",
+        "Subcatalog":"cppcrash-.*-\\d+-\\d+",
+        "featureId":"07_CPP_CRASH_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Module name:", "v_process":"Module name:(.*)"},
+            {"namespace":"MainCallTrace", "matchKey":"Tid:", "v_trace":"@T@#\\d+ pc [0-9a-zA-Z]+ (.*)"}
+        ]
+    },
+    "Rule44":{
+        "DirOrFile":"/data/ohos_data/log/faultlog/faultlogger/",
+        "Subcatalog":"jscrash-.*-\\d+-\\d+",
+        "featureId":"07_JS_ERROR_00",
+        "rules":[
+            {"namespace":"BasicParam", "matchKey":"Module name:", "v_process":"Module name:(.*)"},
+            {"namespace":"MainCallTrace", "matchKey":"at ",  "v_trace":"@T@at (.*)"}
+        ]
+    }
+}

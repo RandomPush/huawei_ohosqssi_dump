@@ -1,0 +1,4266 @@
+{
+    "DISTSCHEDULE": {
+        "DUBAI_TAG_DIST_SCHED_TO_REMOTE": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "distributed schedule ability to remote"
+            },
+            "type": {
+                "type": "STRING",
+                "desc": "type"
+            },
+            "uid": {
+                "type": "INT32",
+                "desc": "calling uid"
+            },
+            "pid": {
+                "type": "INT32",
+                "desc": "calling pid"
+            },
+            "toPkg": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        },
+        "DUBAI_TAG_DIST_SCHED_FROM_REMOTE": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "distributed schedule ability from remote"
+            },
+            "type": {
+                "type": "STRING",
+                "desc": "type"
+            },
+            "fromUid": {
+                "type": "INT32",
+                "desc": "from uid"
+            },
+            "pkg": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        }
+    },
+    "NOTIFICATION": {
+        "SUBSCRIBER_EXIT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "SubscriberExit"
+            },
+            "SUBSCRIBER_PID": {
+                "type": "STRING",
+                "desc": "subscriber pid"
+            },
+            "ANS_PID": {
+                "type": "STRING",
+                "desc": "ans pid"
+            }
+        },
+        "ANS_EXIT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "AnsExit"
+            }
+        },
+        "PUBLISH_To_REMOTE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "PublishToRemote"
+            },
+            "LOG_LEVEL": {
+                "type": "INT8",
+                "desc": "log level"
+            },
+            "DUBAI_TAG_REMOTE_COMMONEVENT": {
+                "type": "STRING",
+                "desc": "dubai tag for remote commonevent"
+            }
+        },
+        "REMOTE_SUBSCRIBE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "RemoteSubscribe"
+            },
+            "LOG_LEVEL": {
+                "type": "INT8",
+                "desc": "log level"
+            },
+            "DUBAI_TAG_REMOTE_COMMONEVENT": {
+                "type": "STRING",
+                "desc": "dubai tag for remote commonevent"
+            }
+        },
+        "SUBSCRIBER_ABNORMAL_EXIT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "SubscriberAbnormalExit"
+            },
+            "SUBSCRIBER_PID": {
+                "type": "STRING",
+                "desc": "subscriber pid"
+            },
+            "CES_PID": {
+                "type": "STRING",
+                "desc": "ces pid"
+            }
+        },
+        "CES_ABNORMAL_EXIT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "CesAbnormalExit"
+            }
+        }
+    },
+    "AAFWK": {
+        "CONTINUE_ABILITY": {
+            "__BASE": {
+                "type": "BEHAVIOR",
+                "level": "CRITICAL",
+                "desc": "continue ability"
+            },
+            "BUNDLE_NAME": {
+                "type": "STRING",
+                "desc": "bundle Name"
+            },
+            "ABILITY_NAME": {
+                "type": "STRING",
+                "desc": "ability Name"
+            },
+            "VERSION_NAME": {
+                "type": "STRING",
+                "desc": "version Name"
+            },
+            "TYPE": {
+                "type": "INT32",
+                "desc": "continue Type"
+            }
+        },
+        "ASSIST_ABILITY": {
+            "__BASE": {
+                "type": "BEHAVIOR",
+                "level": "CRITICAL",
+                "desc": "assist ability"
+            },
+            "BUNDLE_NAME": {
+                "type": "STRING",
+                "desc": "bundle name"
+            },
+            "ABILITY_NAME": {
+                "type": "STRING",
+                "desc": "ability name"
+            },
+            "EVENT_TYPE": {
+                "type": "STRING",
+                "desc": "event type"
+            }
+        },
+        "DISPATCHING_EVENT_FAILED": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "ability dispatching event"
+            },
+            "BUNDLE_NAME": {
+                "type": "STRING",
+                "desc": "bundle name"
+            },
+            "ABILITY_NAME": {
+                "type": "STRING",
+                "desc": "ability name"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "dispatching event Type"
+            }
+        },
+        "EVENT_ID_WINDOW_OP_FAILED": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "window operation event"
+            },
+            "BUNDLE_NAME": {
+                "type": "STRING",
+                "desc": "bundle name"
+            },
+            "ABILITY_NAME": {
+                "type": "STRING",
+                "desc": "ability name"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "window operation event Type"
+            }
+        },
+        "EVENT_ID_ABILITY_SLICE_FAILD": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "ability slice event"
+            },
+            "BUNDLE_NAME": {
+                "type": "STRING",
+                "desc": "bundle name"
+            },
+            "ABILITY_NAME": {
+                "type": "STRING",
+                "desc": "ability name"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "ability slice event Type"
+            }
+        },
+        "ACQUIRE_FORM": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "desc": "acquire form time"
+            },
+            "SESSION_ID": {
+                "type": "STRING",
+                "desc": "session id of this acquiring"
+            },
+            "FORM_ID": {
+                "type": "STRING",
+                "desc": "session id of this acquiring"
+            },
+            "BUNDLE_NAME": {
+                "type": "STRING",
+                "desc": "bundle Name"
+            },
+            "MODULE_NAME": {
+                "type": "STRING",
+                "desc": "module Name"
+            },
+            "ABILITY_NAME": {
+                "type": "STRING",
+                "desc": "ability Name"
+            },
+            "FORM_NAME": {
+                "type": "STRING",
+                "desc": "form Name"
+            },
+            "DIMISSION": {
+                "type": "INT32",
+                "desc": "dimission of form"
+            },
+            "ACQUIRE_DURATION": {
+                "type": "FLOAT",
+                "desc": "total acquire time"
+            },
+            "BIND_DURATION": {
+                "type": "FLOAT",
+                "desc": "async bind time"
+            },
+            "GET_DURATION": {
+                "type": "FLOAT",
+                "desc": "async get from supplier time"
+            }
+        },
+        "FIRST_REFRESH_FORM": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "desc": "first refresh form time"
+            },
+            "SESSION_ID": {
+                "type": "STRING",
+                "desc": "session id of this acquiring"
+            },
+            "FORM_ID": {
+                "type": "STRING",
+                "desc": "session id of this acquiring"
+            },
+            "DURATION": {
+                "type": "FLOAT",
+                "desc": "first refresh time"
+            },
+            "TYPE": {
+                "type": "INT32",
+                "desc": "report type"
+            }
+        },
+        "LIFECYCLE_TIMEOUT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "STABILITY",
+                "desc": "ability timeout"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            },
+            "MARK": {
+                "type": "STRING",
+                "desc": "mark in container"
+            }
+        },
+        "APP_LIFECYCLE_TIMEOUT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "STABILITY",
+                "desc": "application timeout"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            },
+            "MARK": {
+                "type": "STRING",
+                "desc": "mark in container"
+            }
+        },
+        "THREAD_BLOCK_3S": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "STABILITY",
+                "desc": "application freeze"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            },
+            "MARK": {
+                "type": "STRING",
+                "desc": "mark in container"
+            }
+        },
+        "THREAD_BLOCK_6S": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "STABILITY",
+                "desc": "application freeze"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            },
+            "MARK": {
+                "type": "STRING",
+                "desc": "mark in container"
+            }
+        }
+    },
+    "KERNEL_VENDOR": {
+        "LONG_PRESS": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "long press"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            }
+        },
+        "SUSPEND_RESUME": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "suspend resume"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            }
+        },
+        "POWER_KEY": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "power key"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "FENCE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check fence frezze"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "INIT_FREEZE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check init process freeze"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "HUNGTASK_WARING": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "print import process D_state and print stack"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "HUNGTASK": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check import process D_state and trigger panic"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "SCREEN_OFF": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check LCD ON"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "SCREEN_ON": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check LCD OFF"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "CDC_HUNGTASK": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check import process D_state and trigger panic"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "CDC_SCREEN_OFF": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check LCD OFF"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "CDC_SCREEN_ON": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check LCD ON"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "SOFT_LOCKUP": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check cpu lockup"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "DMD_TP_I2C": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check touch"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "DMD_TP_HP": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check touch"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "DMD_LCD_DDR": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check UFS"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "DMD_EMMC_TUNING": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check UFS"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "DMD_EXT4": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check UFS"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "DMD_F2FS_UNLINK": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check UFS"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "DMD_UFS_FASTBOOT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check UFS"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "DMD_FSCK_F2FS": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "check UFS"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "SLUB_OBJ": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "slub leak"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "CMA": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "cma leak"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "LOWMEM": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "cma leak"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        },
+        "BLOCK_GC": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "BLOCK_GC"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "HEAP_CAPACITY": {
+                "type": "INT32",
+                "desc": "HEAP_CAPACITY"
+            },
+            "USED_SIZE": {
+                "type": "INT32",
+                "desc": "USED_SIZE"
+            }
+        }
+    },
+    "RELIABILITY": {
+        "APP_CRASH": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "reliability",
+                "desc": "application crash"
+            },
+            "SUB_EVENT_TYPE": {
+                "type": "STRING",
+                "desc": "sub event type"
+            },
+            "EVENT_TAG": {
+                "type": "STRING",
+                "desc": "event tag"
+            },
+            "EVENT_TIME": {
+                "type": "STRING",
+                "desc": "event time"
+            },
+            "PACKAGE": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "APPVERSION": {
+                "type": "STRING",
+                "desc": "application version"
+            },
+            "PNAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "FWK_TYPE": {
+                "type": "STRING",
+                "desc": "framework type"
+            },
+            "APP_TYPE": {
+                "type": "STRING",
+                "desc": "application type"
+            },
+            "REASON": {
+                "type": "STRING",
+                "desc": "fault reason"
+            },
+            "LIFETIME": {
+                "type": "UINT32",
+                "desc": "time from startup to crash"
+            },
+            "DIAG_INFO": {
+                "type": "STRING",
+                "desc": "diagnose info"
+            },
+            "DETAILED_LOG": {
+                "type": "STRING",
+                "desc": "detailed log"
+            },
+            "FG": {
+                "type": "INT8",
+                "desc": "foreground"
+            },
+            "FINGERPRINT": {
+                "type": "STRING",
+                "desc": "fingerprint"
+            }
+        },
+        "APP_FREEZE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "reliability",
+                "desc": "application freeze"
+            },
+            "SUB_EVENT_TYPE": {
+                "type": "STRING",
+                "desc": "sub event type"
+            },
+            "EVENT_TAG": {
+                "type": "STRING",
+                "desc": "event tag"
+            },
+            "EVENT_TIME": {
+                "type": "STRING",
+                "desc": "event time"
+            },
+            "PACKAGE": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "APPVERSION": {
+                "type": "STRING",
+                "desc": "application version"
+            },
+            "PNAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "FWK_TYPE": {
+                "type": "STRING",
+                "desc": "framework type"
+            },
+            "APP_TYPE": {
+                "type": "STRING",
+                "desc": "application type"
+            },
+            "FREEZE_NAME": {
+                "type": "STRING",
+                "desc": "activity name"
+            },
+            "REASON": {
+                "type": "STRING",
+                "desc": "fault reason"
+            },
+            "DIAG_INFO": {
+                "type": "STRING",
+                "desc": "diagnose info"
+            },
+            "STACK": {
+                "type": "STRING",
+                "desc": "stack"
+            },
+            "DETAILED_LOG": {
+                "type": "STRING",
+                "desc": "detailed log"
+            },
+            "FG": {
+                "type": "INT8",
+                "desc": "foreground"
+            },
+            "FINGERPRINT": {
+                "type": "STRING",
+                "desc": "fingerprint"
+            },
+            "MODULE": {
+                "type": "STRING",
+                "desc": "module"
+            },
+            "HIVIEW_LOG_FILE_PATHS": {
+                "type": "STRING",
+                "arrsize": 10,
+                "desc": "log paths"
+            },
+            "DOMAIN": {
+                "type": "STRING",
+                "desc": "event domain"
+            },
+            "STRING_ID": {
+                "type": "STRING",
+                "desc": "event stringid"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            },
+            "SUMMARY": {
+                "type": "STRING",
+                "desc": "fault summary"
+            },
+            "FAULT_TYPE": {
+                "type": "STRING",
+                "desc": "fault type"
+            },
+            "LOG_PATH": {
+                "type": "STRING",
+                "desc": "fault log path"
+            },
+            "PANME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "FIRST_FRAME": {
+                "type": "STRING",
+                "desc": "first stack info"
+            },
+            "SECOND_FRAME": {
+                "type": "STRING",
+                "desc": "second stack info"
+            },
+            "LAST_FRAME": {
+                "type": "STRING",
+                "desc": "last stack info"
+            }
+        },
+        "SYSTEM_ERROR": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "reliability",
+                "desc": "system crash"
+            },
+            "SUB_EVENT_TYPE": {
+                "type": "STRING",
+                "desc": "sub event type"
+            },
+            "EVENT_TAG": {
+                "type": "STRING",
+                "desc": "event tag"
+            },
+            "EVENT_TIME": {
+                "type": "STRING",
+                "desc": "event time"
+            },
+            "MODULE": {
+                "type": "STRING",
+                "desc": "module name"
+            },
+            "REASON": {
+                "type": "STRING",
+                "desc": "fault reason"
+            },
+            "DIAG_INFO": {
+                "type": "STRING",
+                "desc": "diagnose info"
+            },
+            "DETAILED_LOG": {
+                "type": "STRING",
+                "desc": "detailed log"
+            },
+            "FINGERPRINT": {
+                "type": "STRING",
+                "desc": "fingerprint"
+            },
+            "LOG_PATH": {
+                "type": "STRING",
+                "desc": "fault log path"
+            },
+            "EVENT_MASSAGE": {
+                "type": "STRING",
+                "desc": "fault record"
+            }
+        },
+        "SYSTEM_FREEZE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "reliability",
+                "desc": "system freeze"
+            },
+            "SUB_EVENT_TYPE": {
+                "type": "STRING",
+                "desc": "sub event type"
+            },
+            "EVENT_TAG": {
+                "type": "STRING",
+                "desc": "event tag"
+            },
+            "EVENT_TIME": {
+                "type": "STRING",
+                "desc": "event time"
+            },
+            "MODULE": {
+                "type": "STRING",
+                "desc": "module name"
+            },
+            "PNAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "REASON": {
+                "type": "STRING",
+                "desc": "fault reason"
+            },
+            "DIAG_INFO": {
+                "type": "STRING",
+                "desc": "diagnose info"
+            },
+            "STACK": {
+                "type": "STRING",
+                "desc": "stack"
+            },
+            "DETAILED_LOG": {
+                "type": "STRING",
+                "desc": "detailed log"
+            },
+            "FINGERPRINT": {
+                "type": "STRING",
+                "desc": "fingerprint"
+            }
+        },
+        "CPP_CRASH": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "reliability",
+                "desc": "application crash"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "uid"
+            },
+            "MODULE": {
+                "type": "STRING",
+                "desc": "module name"
+            },
+            "REASON": {
+                "type": "STRING",
+                "desc": "fault reason"
+            },
+            "VERSION": {
+                "type": "STRING",
+                "desc": "module version"
+            },
+            "SUMMARY": {
+                "type": "STRING",
+                "desc": "fault summary"
+            },
+            "FAULT_TYPE": {
+                "type": "STRING",
+                "desc": "fault type"
+            },
+            "HAPPEN_TIME": {
+                "type": "STRING",
+                "desc": "fault trigger time"
+            },
+            "APP_TYPE": {
+                "type": "STRING",
+                "desc": "application type"
+            },
+            "LIFETIME": {
+                "type": "UINT32",
+                "desc": "time from startup to crash"
+            },
+            "LOG_PATH": {
+                "type": "STRING",
+                "desc": "fault log path"
+            },
+            "FG": {
+                "type": "INT8",
+                "desc": "foreground"
+            },
+            "FINGERPRINT": {
+                "type": "STRING",
+                "desc": "fingerprint"
+            }
+        }
+    },
+    "FRAMEWORK": {
+        "WATCHDOG": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "long press"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            }
+        }
+    },
+    "APP_AIRSHARING": {
+        "CONNECT_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "tag": "castplus",
+                "desc": "connect exception fault event"
+            },
+            "ERRCODE": {
+                "type": "INT32",
+                "desc": "error code"
+            },
+            "SUBERRCODE": {
+                "type": "INT32",
+                "desc": "sub error code"
+            },
+            "EXTERRCODE": {
+                "type": "INT32",
+                "desc": "extended error info"
+            },
+            "VERSION": {
+                "type": "STRING",
+                "desc": "versoin name"
+            },
+            "APPNAME": {
+                "type": "STRING",
+                "desc": "app name"
+            },
+            "AUTHMODE": {
+                "type": "INT32",
+                "desc": "authentication mode"
+            },
+            "DEVTYPE": {
+                "type": "INT32",
+                "desc": "device type"
+            },
+            "DEVSUBTYPE": {
+                "type": "INT32",
+                "desc": "device sub type"
+            },
+            "CONNECTTYPE": {
+                "type": "INT32",
+                "desc": "connect type"
+            },
+            "CAPABILITY": {
+                "type": "INT32",
+                "desc": "device capability"
+            },
+            "FREQ": {
+                "type": "INT32",
+                "desc": "frequency"
+            },
+            "RSSI": {
+                "type": "INT32",
+                "desc": "rssi"
+            },
+            "LINKSPEED": {
+                "type": "INT32",
+                "desc": "linkSpeed"
+            }
+        },
+        "DISCONNECT_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "tag": "castplus",
+                "desc": "abnormal disconnect"
+            },
+            "ERRCODE": {
+                "type": "INT32",
+                "desc": "error code"
+            },
+            "SUBERRCODE": {
+                "type": "INT32",
+                "desc": "sub error code"
+            },
+            "EXTERRCODE": {
+                "type": "INT32",
+                "desc": "extended error info"
+            },
+            "VERSION": {
+                "type": "STRING",
+                "desc": "versoin name"
+            },
+            "APPNAME": {
+                "type": "STRING",
+                "desc": "app name"
+            },
+            "DEVTYPE": {
+                "type": "INT32",
+                "desc": "device type"
+            },
+            "DEVSUBTYPE": {
+                "type": "INT32",
+                "desc": "device sub type"
+            },
+            "CONNECTTYPE": {
+                "type": "INT32",
+                "desc": "connect type"
+            },
+            "CAPABILITY": {
+                "type": "INT32",
+                "desc": "device capability"
+            },
+            "FREQ": {
+                "type": "INT32",
+                "desc": "frequency"
+            },
+            "RSSI": {
+                "type": "INT32",
+                "desc": "rssi"
+            },
+            "LINKSPEED": {
+                "type": "INT32",
+                "desc": "linkSpeed"
+            }
+        },
+        "REMOTE_CONTROL_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "tag": "castplus",
+                "desc": "remote control exception fault event"
+            },
+            "ERRCODE": {
+                "type": "INT32",
+                "desc": "error code"
+            },
+            "SUBERRCODE": {
+                "type": "INT32",
+                "desc": "sub error code"
+            },
+            "INPUTCATEGORY": {
+                "type": "INT32",
+                "desc": "input category"
+            },
+            "INPUTTYPE": {
+                "type": "INT32",
+                "desc": "input type"
+            },
+            "SCREENHEIGHT": {
+                "type": "INT32",
+                "desc": "screen height"
+            },
+            "SCREENWIDTH": {
+                "type": "INT32",
+                "desc": "screen width"
+            },
+            "REMOTEHEIGHT": {
+                "type": "INT32",
+                "desc": "remote device height"
+            },
+            "REMOTEWIDTH": {
+                "type": "INT32",
+                "desc": "remote device width"
+            },
+            "ISSUPPORTUBIC": {
+                "type": "INT32",
+                "desc": "is support uibc"
+            },
+            "ISSUPPORTGENERIC": {
+                "type": "INT32",
+                "desc": "is support generic"
+            },
+            "ISSUPPORTVENDOR": {
+                "type": "INT32",
+                "desc": "is support vendor"
+            },
+            "VERSION": {
+                "type": "STRING",
+                "desc": "versoin name"
+            },
+            "APPNAME": {
+                "type": "STRING",
+                "desc": "app name"
+            },
+            "DEVTYPE": {
+                "type": "INT32",
+                "desc": "device type"
+            },
+            "DEVSUBTYPE": {
+                "type": "INT32",
+                "desc": "device sub type"
+            },
+            "CONNECTTYPE": {
+                "type": "INT32",
+                "desc": "connect type"
+            },
+            "CAPABILITY": {
+                "type": "INT32",
+                "desc": "device capability"
+            },
+            "FREQ": {
+                "type": "INT32",
+                "desc": "frequency"
+            },
+            "RSSI": {
+                "type": "INT32",
+                "desc": "rssi"
+            },
+            "LINKSPEED": {
+                "type": "INT32",
+                "desc": "linkSpeed"
+            }
+        },
+        "MEDIA_PLAY_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "tag": "castplus",
+                "desc": "player control fault event"
+            },
+            "ERRCODE": {
+                "type": "INT32",
+                "desc": "error code"
+            },
+            "ACTION": {
+                "type": "INT32",
+                "desc": "play action"
+            },
+            "PLAYER": {
+                "type": "STRING",
+                "desc": "palyer name"
+            },
+            "MEDIATYPE": {
+                "type": "INT32",
+                "desc": "media type"
+            },
+            "MIMETYPE": {
+                "type": "INT32",
+                "desc": "mime type"
+            },
+            "VERSION": {
+                "type": "STRING",
+                "desc": "versoin name"
+            },
+            "DEVTYPE": {
+                "type": "INT32",
+                "desc": "device type"
+            },
+            "DEVSUBTYPE": {
+                "type": "INT32",
+                "desc": "device sub type"
+            },
+            "CONNECTTYPE": {
+                "type": "INT32",
+                "desc": "connect type"
+            },
+            "CAPABILITY": {
+                "type": "INT32",
+                "desc": "device capability"
+            },
+            "FREQ": {
+                "type": "INT32",
+                "desc": "frequency"
+            },
+            "RSSI": {
+                "type": "INT32",
+                "desc": "rssi"
+            },
+            "LINKSPEED": {
+                "type": "INT32",
+                "desc": "linkSpeed"
+            }
+        },
+        "PERFORMANCE_STATICS": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "castplus",
+                "desc": "performance exception statistics event"
+            },
+            "APPNAME": {
+                "type": "STRING",
+                "desc": "app name"
+            },
+            "CONNPERFCNT": {
+                "type": "INT32",
+                "arrsize": 10,
+                "desc": "connection performance"
+            },
+            "PLAYCTRLCNT": {
+                "type": "INT32",
+                "arrsize": 50,
+                "desc": "play control statics"
+            },
+            "MIRRORFRAMECNT": {
+                "type": "INT32",
+                "arrsize": 10,
+                "desc": "mirror media statics"
+            }
+        },
+        "KPI_STATICS": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "castplus",
+                "desc": "KPI statistics event"
+            },
+            "APPNAME": {
+                "type": "STRING",
+                "desc": "app name"
+            },
+            "VERSION": {
+                "type": "STRING",
+                "desc": "apk version"
+            },
+            "CONNCNT": {
+                "type": "INT32",
+                "desc": "connect count"
+            },
+            "CONNSUCCCNT": {
+                "type": "INT32",
+                "desc": "connect success count"
+            },
+            "CONNECTINGDURA": {
+                "type": "INT32",
+                "desc": "connecting process duration"
+            },
+            "CONNECTEDDURA": {
+                "type": "INT32",
+                "desc": "connected duration"
+            },
+            "PLAYCTRLCNT": {
+                "type": "INT32",
+                "desc": "player control function count"
+            },
+            "PLAYCTRLSUCCCNT": {
+                "type": "INT32",
+                "desc": "player control function success count"
+            },
+            "PLAYCTRLDURA": {
+                "type": "INT32",
+                "desc": "player control function consume time"
+            },
+            "REMOTECTRLCNT": {
+                "type": "INT32",
+                "desc": "remote control cmd count"
+            },
+            "REMOTECTRLSUCCCNT": {
+                "type": "INT32",
+                "desc": "remote control cmd success count"
+            },
+            "REMOTECTRLDURA": {
+                "type": "INT32",
+                "desc": "remote control cmd consume time"
+            }
+        },
+        "MEDIA_FLOW_STATICS": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "castplus",
+                "desc": "Media link quality statistics event"
+            },
+            "EVENTTYPE": {
+                "type": "INT32",
+                "desc": "event type"
+            },
+            "PROTOCOLTYPE": {
+                "type": "INT32",
+                "desc": "transmission protocol type"
+            },
+            "FLOWTYPE": {
+                "type": "INT32",
+                "desc": "flow type"
+            },
+            "FLOWINFO": {
+                "type": "INT32",
+                "desc": "flow info"
+            },
+            "EXTFLOWINFO": {
+                "type": "INT32",
+                "desc": "extended flow info"
+            },
+            "FREQ": {
+                "type": "INT32",
+                "desc": "frequency"
+            },
+            "RSSI": {
+                "type": "INT32",
+                "desc": "rssi"
+            },
+            "LINKSPEED": {
+                "type": "INT32",
+                "desc": "linkSpeed"
+            }
+        },
+        "MEDIA_KPI_STATICS": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "castplus",
+                "desc": "Media KPI statistics event"
+            },
+            "APPNAME": {
+                "type": "STRING",
+                "desc": "app name"
+            },
+            "VERSION": {
+                "type": "STRING",
+                "desc": "apk version"
+            },
+            "DEVTYPE": {
+                "type": "INT32",
+                "desc": "device type"
+            },
+            "DEVSUBTYPE": {
+                "type": "INT32",
+                "desc": "device sub type"
+            },
+            "CONNECTTYPE": {
+                "type": "INT32",
+                "desc": "connect type"
+            },
+            "CAPABILITY": {
+                "type": "INT32",
+                "desc": "device capability"
+            },
+            "CONNECTINGDURA": {
+                "type": "INT32",
+                "desc": "connecting process duration"
+            },
+            "CONNECTEDDURA": {
+                "type": "INT32",
+                "desc": "connected duration"
+            },
+            "ANTIINTERFERENCE": {
+                "type": "INT32",
+                "desc": "enable anti interference feature"
+            },
+            "FRAMEINTERVALTOOLONGCNT": {
+                "type": "INT32",
+                "arrsize": 5,
+                "desc": "count when frame interval is too long"
+            },
+            "AVSYNCLOSTCNT": {
+                "type": "INT32",
+                "desc": "count when audio and video lost sync"
+            },
+            "FPSBADCNT": {
+                "type": "INT32",
+                "desc": "count when video fps is bad"
+            }
+        },
+        "PROJECTION_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "tag": "castplus",
+                "desc": "projection error report"
+            },
+            "SN": {
+                "type": "STRING",
+                "desc": "serial number associated with projection event"
+            },
+            "CAST_SESSION_ID": {
+                "type": "INT32",
+                "desc": "projection session id"
+            },
+            "ERROR_CODE": {
+                "type": "INT32",
+                "desc": "error code"
+            },
+            "SUB_ERR_CODE": {
+                "type": "INT32",
+                "desc": "sub error code"
+            },
+            "EXT_ERR_INFO": {
+                "type": "INT32",
+                "desc": "extended error info"
+            },
+            "FREQ": {
+                "type": "INT32",
+                "desc": "frequency"
+            },
+            "RSSI": {
+                "type": "INT32",
+                "desc": "rssi"
+            },
+            "LINKSPEED": {
+                "type": "INT32",
+                "desc": "linkSpeed"
+            },
+            "BIZ_PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name of airsharing"
+            },
+            "REMOTE_BIZ_TRUNCATED_UUID": {
+                "type": "STRING",
+                "desc": "UUID of remote device"
+            }
+        },
+        "PROJECTION_INFO": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "castplus",
+                "desc": "projection event report"
+            },
+            "SN": {
+                "type": "STRING",
+                "desc": "serial number"
+            },
+            "CAST_SESSION_ID": {
+                "type": "INT32",
+                "desc": "projection session id"
+            },
+            "ERROR_CODE": {
+                "type": "INT32",
+                "desc": "error code"
+            },
+            "SUB_ERR_CODE": {
+                "type": "INT32",
+                "desc": "sub error code"
+            },
+            "EXT_ERR_INFO": {
+                "type": "INT32",
+                "desc": "extended error info"
+            },
+            "DEVICE_VERSION": {
+                "type": "STRING",
+                "desc": "projection app version"
+            },
+            "DEVICE_MODEL": {
+                "type": "STRING",
+                "desc": "projection device model"
+            },
+            "DEVICE_NAME": {
+                "type": "STRING",
+                "desc": "projection device name"
+            },
+            "DEVICE_TYPE": {
+                "type": "INT32",
+                "desc": "projection device type"
+            },
+            "DEVICE_SUB_TYPE": {
+                "type": "INT32",
+                "desc": "projection device sub type"
+            },
+            "DEVICE_CAPABILITY": {
+                "type": "INT32",
+                "desc": "projection device capabilities"
+            },
+            "DEVICE_PKG_NAME": {
+                "type": "STRING",
+                "desc": "calling package name"
+            },
+            "DEVICE_PKG_VERSION": {
+                "type": "STRING",
+                "desc": "calling package version"
+            },
+            "DEVICE_IS_VIRGIN": {
+                "type": "INT32",
+                "desc": "is device first connected to"
+            },
+            "DISCOVERY_TYPE": {
+                "type": "INT32",
+                "desc": "discover type"
+            },
+            "REMOTE_SN": {
+                "type": "STRING",
+                "desc": "remote peer serial number"
+            },
+            "CAST_SOURCE": {
+                "type": "INT32",
+                "desc": "cast source"
+            },
+            "CONNECT_TYPE": {
+                "type": "INT32",
+                "desc": "connect type"
+            },
+            "CONNECT_PROTOCOL": {
+                "type": "INT32",
+                "desc": "projection protocol"
+            },
+            "PROJECTION_MODE": {
+                "type": "INT32",
+                "desc": "projection mode"
+            },
+            "AUTH_MODE": {
+                "type": "INT32",
+                "desc": "authentication mode"
+            },
+            "AUTH_CHANNEL_SETUP_TIME": {
+                "type": "INT32",
+                "desc": "authentication channel setup time"
+            },
+            "NETWORK_INTERFACE_SETUP_TIME": {
+                "type": "INT32",
+                "desc": "network interface setup time"
+            },
+            "AUTH_TIME": {
+                "type": "INT32",
+                "desc": "authentication time"
+            },
+            "RTSP_SETUP_TIME": {
+                "type": "INT32",
+                "desc": "RTSP connection setup time"
+            },
+            "RTSP_HANDSHAKE_TIME": {
+                "type": "INT32",
+                "desc": "RTSP handshake time"
+            },
+            "CONNECT_TOTAL_TIME": {
+                "type": "INT32",
+                "desc": "total connect time"
+            },
+            "PLAY_PARAMS": {
+                "type": "STRING",
+                "desc": "json string of negotiated play parameters"
+            },
+            "RENDER_TIME": {
+                "type": "INT32",
+                "desc": "time cost when first frame rendered in mirror mode or first time onPositionChanged is called in media mode"
+            },
+            "TOTAL_DURATION": {
+                "type": "INT32",
+                "desc": "play duration in mirror or media mode"
+            },
+            "MEDIA_TYPE_PLAY_CNT": {
+                "type": "STRING",
+                "desc": "play count group by media mime type in media mode"
+            },
+            "PLAY_CTRL_CNT": {
+                "type": "INT32",
+                "arrsize": 40,
+                "desc": "command execution count group by play control interfaces in media mode"
+            },
+            "PLAY_CTRL_FAIL_CNT": {
+                "type": "INT32",
+                "arrsize": 40,
+                "desc": "command fail count group by play control interfaces in media mode"
+            },
+            "PLAY_CTRL_TIME_COST": {
+                "type": "INT32",
+                "arrsize": 40,
+                "desc": "command total time cost group by play control interfaces in media mode"
+            },
+            "MIRROR_ANTI_INTERFERENCE": {
+                "type": "INT32",
+                "desc": "enable anti interference feature in mirror mode"
+            },
+            "MIRROR_FRAME_INTERVAL_POOR_CNT": {
+                "type": "INT32",
+                "arrsize": 5,
+                "desc": "count when frame interval is too long in mirror mode"
+            },
+            "MIRROR_AV_SYNC_LOST_CNT": {
+                "type": "INT32",
+                "desc": "count when audio and video lost sync in mirror mode"
+            },
+            "MIRROR_FPS_POOR_CNT": {
+                "type": "INT32",
+                "desc": "count when video fps is bad in mirror mode"
+            },
+            "MIRROR_RTT_BAD_CNT": {
+                "type": "INT32",
+                "arrsize": 2,
+                "desc": "count when RTT is over 300 in mirror mode"
+            },
+            "MIRROR_DROP_QUEUE_CNT": {
+                "type": "INT32",
+                "arrsize": 2,
+                "desc": "count when frame is dropped as queues is jammed in mirror mode"
+            }
+        }
+    },
+    "APP_VIEW": {
+        "NO_DRAW": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "app no draw"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        }
+    },
+    "FRAMEWORK_AMS": {
+        "BOOT_FAIL": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "boot fail"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "APP_CRASH": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "app crash"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "CORE_APP_NOT_RESPONSE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "core app not response"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "MULTIPLE_APP_NOT_RESPONSE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "multiple app not response"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "APP_NOT_RESPONSE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "app not response"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "RESUME": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "resume error"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "XCOLLIE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "xcollie"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "VM_WATCHDOG": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "vm watchdog"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "RECOVER_RESULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "recover result"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "FWK_BLOCK": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "framework block"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "UI_INPUT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "app freeze input"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "PLATFORM": {
+                "type": "STRING",
+                "desc": "application platfrom type"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "FRAME_SKIP": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "CRITICAL",
+                "tag": "performance",
+                "desc": "frame skip"
+            },
+            "APP_NAME": {
+                "type": "STRING",
+                "desc": "application name"
+            },
+            "APP_VER": {
+                "type": "STRING",
+                "desc": "application version"
+            },
+            "PNAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "FWK_TYPE": {
+                "type": "STRING",
+                "desc": "framework type"
+            },
+            "APP_TYPE": {
+                "type": "STRING",
+                "desc": "app type"
+            },
+            "UI_NAME": {
+                "type": "STRING",
+                "desc": "ui name"
+            },
+            "MESSAGE": {
+                "type": "STRING",
+                "desc": "extra message"
+            },
+            "UPTIME": {
+                "type": "STRING",
+                "desc": "system whole time"
+            },
+            "RLTIME": {
+                "type": "STRING",
+                "desc": "real time"
+            }
+        },
+        "SEQ_FRAME_SKIP": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "CRITICAL",
+                "tag": "performance",
+                "desc": "sequent frame skip"
+            },
+            "APP_NAME": {
+                "type": "STRING",
+                "desc": "application name"
+            },
+            "APP_VER": {
+                "type": "STRING",
+                "desc": "application version"
+            },
+            "PNAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "FWK_TYPE": {
+                "type": "STRING",
+                "desc": "framework type"
+            },
+            "APP_TYPE": {
+                "type": "STRING",
+                "desc": "app type"
+            },
+            "UI_NAME": {
+                "type": "STRING",
+                "desc": "ui name"
+            },
+            "MESSAGE": {
+                "type": "STRING",
+                "desc": "extra message"
+            },
+            "UPTIME": {
+                "type": "STRING",
+                "desc": "system whole time"
+            },
+            "RLTIME": {
+                "type": "STRING",
+                "desc": "real time"
+            }
+        }
+    },
+    "FRAMEWORK_POWER": {
+        "SCREEN_ON_FWK": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "screen on"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        }
+    },
+    "FRAMEWORK_WMS": {
+        "NO_FOCUS_WINDOW": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "no focus window"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "TRANSPARENT_WINDOWS": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "transparent windows"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "APP_LAUNCHING_BEGIN": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "CRITICAL",
+                "tag": "performance",
+                "desc": "cold start begin"
+            },
+            "APP_NAME": {
+                "type": "STRING",
+                "desc": "application name"
+            },
+            "APP_VER": {
+                "type": "STRING",
+                "desc": "application version"
+            },
+            "PNAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "FWK_TYPE": {
+                "type": "STRING",
+                "desc": "framework type"
+            },
+            "APP_TYPE": {
+                "type": "STRING",
+                "desc": "app type"
+            },
+            "UI_NAME": {
+                "type": "STRING",
+                "desc": "ui name"
+            },
+            "MESSAGE": {
+                "type": "STRING",
+                "desc": "extra message"
+            },
+            "UPTIME": {
+                "type": "STRING",
+                "desc": "system whole time"
+            },
+            "RLTIME": {
+                "type": "STRING",
+                "desc": "real time"
+            }
+        },
+        "APP_LAUNCHING_END": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "CRITICAL",
+                "tag": "performance",
+                "desc": "cold start end"
+            },
+            "APP_NAME": {
+                "type": "STRING",
+                "desc": "application name"
+            },
+            "APP_VER": {
+                "type": "STRING",
+                "desc": "application version"
+            },
+            "PNAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "FWK_TYPE": {
+                "type": "STRING",
+                "desc": "framework type"
+            },
+            "APP_TYPE": {
+                "type": "STRING",
+                "desc": "app type"
+            },
+            "UI_NAME": {
+                "type": "STRING",
+                "desc": "ui name"
+            },
+            "MESSAGE": {
+                "type": "STRING",
+                "desc": "extra message"
+            },
+            "UPTIME": {
+                "type": "STRING",
+                "desc": "system whole time"
+            },
+            "RLTIME": {
+                "type": "STRING",
+                "desc": "real time"
+            }
+        },
+        "APP_WARMSTART_BEGIN": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "CRITICAL",
+                "tag": "performance",
+                "desc": "warm start begin"
+            },
+            "APP_NAME": {
+                "type": "STRING",
+                "desc": "application name"
+            },
+            "APP_VER": {
+                "type": "STRING",
+                "desc": "application version"
+            },
+            "PNAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "FWK_TYPE": {
+                "type": "STRING",
+                "desc": "framework type"
+            },
+            "APP_TYPE": {
+                "type": "STRING",
+                "desc": "app type"
+            },
+            "UI_NAME": {
+                "type": "STRING",
+                "desc": "ui name"
+            },
+            "MESSAGE": {
+                "type": "STRING",
+                "desc": "extra message"
+            },
+            "UPTIME": {
+                "type": "STRING",
+                "desc": "system whole time"
+            },
+            "RLTIME": {
+                "type": "STRING",
+                "desc": "real time"
+            }
+        },
+        "APP_WARMSTART_END": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "CRITICAL",
+                "tag": "performance",
+                "desc": "warm start end"
+            },
+            "APP_NAME": {
+                "type": "STRING",
+                "desc": "application name"
+            },
+            "APP_VER": {
+                "type": "STRING",
+                "desc": "application version"
+            },
+            "PNAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "FWK_TYPE": {
+                "type": "STRING",
+                "desc": "framework type"
+            },
+            "APP_TYPE": {
+                "type": "STRING",
+                "desc": "app type"
+            },
+            "UI_NAME": {
+                "type": "STRING",
+                "desc": "ui name"
+            },
+            "MESSAGE": {
+                "type": "STRING",
+                "desc": "extra message"
+            },
+            "UPTIME": {
+                "type": "STRING",
+                "desc": "system whole time"
+            },
+            "RLTIME": {
+                "type": "STRING",
+                "desc": "real time"
+            }
+        }
+    },
+    "VEHICLE_CDC": {
+        "CDC_HW_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "CDC hardware fault"
+            },
+            "FAULT_CODE": {
+                "type": "UINT32",
+                "desc": "Fault or Event code"
+            },
+            "FAULT_MODE": {
+                "type": "STRING",
+                "desc": "Fault mode"
+            },
+            "FAULT_TIME": {
+                "type": "UINT64",
+                "desc": "Fault time was detected"
+            },
+            "FAULT_DESC": {
+                "type": "STRING",
+                "desc": "Fault description"
+            },
+            "RECOVERY_METHOD": {
+                "type": "UINT32",
+                "desc": "Recovery suggestion for the A and D of FMP"
+            },
+            "FAULT_STATE": {
+                "type": "UINT32",
+                "desc": "Fault state"
+            },
+            "PASS_THROUGH": {
+                "type": "BOOL",
+                "desc": "Process suggestion for the A and D of FMP"
+            },
+            "EXCEPTION_TYPE": {
+                "type": "STRING",
+                "desc": "Exception type"
+            },
+            "EXCEPTION_SUBTYPE": {
+                "type": "STRING",
+                "desc": "Exception subtype"
+            }
+        },
+        "CDC_SW_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "CDC hardware fault"
+            },
+            "FAULT_CODE": {
+                "type": "UINT32",
+                "desc": "Fault or Event code"
+            },
+            "FAULT_MODE": {
+                "type": "STRING",
+                "desc": "Fault mode"
+            },
+            "FAULT_TIME": {
+                "type": "UINT64",
+                "desc": "Fault time was detected"
+            },
+            "FAULT_DESC": {
+                "type": "STRING",
+                "desc": "Fault description"
+            },
+            "RECOVERY_METHOD": {
+                "type": "UINT32",
+                "desc": "Recovery suggestion for the A and D of FMP"
+            },
+            "FAULT_STATE": {
+                "type": "UINT32",
+                "desc": "Fault state"
+            },
+            "PASS_THROUGH": {
+                "type": "BOOL",
+                "desc": "Process suggestion for the A and D of FMP"
+            },
+            "EXCEPTION_TYPE": {
+                "type": "STRING",
+                "desc": "Exception type"
+            },
+            "EXCEPTION_SUBTYPE": {
+                "type": "STRING",
+                "desc": "Exception subtype"
+            }
+        },
+        "CDC_DATA_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "CDC hardware fault"
+            },
+            "FAULT_CODE": {
+                "type": "UINT32",
+                "desc": "Fault or Event code"
+            },
+            "FAULT_MODE": {
+                "type": "STRING",
+                "desc": "Fault mode"
+            },
+            "FAULT_TIME": {
+                "type": "UINT64",
+                "desc": "Fault time was detected"
+            },
+            "FAULT_DESC": {
+                "type": "STRING",
+                "desc": "Fault description"
+            },
+            "RECOVERY_METHOD": {
+                "type": "UINT32",
+                "desc": "Recovery suggestion for the A and D of FMP"
+            },
+            "FAULT_STATE": {
+                "type": "UINT32",
+                "desc": "Fault state"
+            },
+            "PASS_THROUGH": {
+                "type": "BOOL",
+                "desc": "Process suggestion for the A and D of FMP"
+            },
+            "EXCEPTION_TYPE": {
+                "type": "STRING",
+                "desc": "Exception type"
+            },
+            "EXCEPTION_SUBTYPE": {
+                "type": "STRING",
+                "desc": "Exception subtype"
+            }
+        },
+        "CDC_COMM_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "CDC hardware fault"
+            },
+            "FAULT_CODE": {
+                "type": "UINT32",
+                "desc": "Fault or Event code"
+            },
+            "FAULT_MODE": {
+                "type": "STRING",
+                "desc": "Fault mode"
+            },
+            "FAULT_TIME": {
+                "type": "UINT64",
+                "desc": "Fault time was detected"
+            },
+            "FAULT_DESC": {
+                "type": "STRING",
+                "desc": "Fault description"
+            },
+            "RECOVERY_METHOD": {
+                "type": "UINT32",
+                "desc": "Recovery suggestion for the A and D of FMP"
+            },
+            "FAULT_STATE": {
+                "type": "UINT32",
+                "desc": "Fault state"
+            },
+            "PASS_THROUGH": {
+                "type": "BOOL",
+                "desc": "Process suggestion for the A and D of FMP"
+            },
+            "EXCEPTION_TYPE": {
+                "type": "STRING",
+                "desc": "Exception type"
+            },
+            "EXCEPTION_SUBTYPE": {
+                "type": "STRING",
+                "desc": "Exception subtype"
+            }
+        },
+        "CDC_POWER_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "CDC hardware fault"
+            },
+            "FAULT_CODE": {
+                "type": "UINT32",
+                "desc": "Fault or Event code"
+            },
+            "FAULT_MODE": {
+                "type": "STRING",
+                "desc": "Fault mode"
+            },
+            "FAULT_TIME": {
+                "type": "UINT64",
+                "desc": "Fault time was detected"
+            },
+            "FAULT_DESC": {
+                "type": "STRING",
+                "desc": "Fault description"
+            },
+            "RECOVERY_METHOD": {
+                "type": "UINT32",
+                "desc": "Recovery suggestion for the A and D of FMP"
+            },
+            "FAULT_STATE": {
+                "type": "UINT32",
+                "desc": "Fault state"
+            },
+            "PASS_THROUGH": {
+                "type": "BOOL",
+                "desc": "Process suggestion for the A and D of FMP"
+            },
+            "EXCEPTION_TYPE": {
+                "type": "STRING",
+                "desc": "Exception type"
+            },
+            "EXCEPTION_SUBTYPE": {
+                "type": "STRING",
+                "desc": "Exception subtype"
+            }
+        },
+        "CDC_ENV_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "CDC hardware fault"
+            },
+            "FAULT_CODE": {
+                "type": "UINT32",
+                "desc": "Fault or Event code"
+            },
+            "FAULT_MODE": {
+                "type": "STRING",
+                "desc": "Fault mode"
+            },
+            "FAULT_TIME": {
+                "type": "UINT64",
+                "desc": "Fault time was detected"
+            },
+            "FAULT_DESC": {
+                "type": "STRING",
+                "desc": "Fault description"
+            },
+            "RECOVERY_METHOD": {
+                "type": "UINT32",
+                "desc": "Recovery suggestion for the A and D of FMP"
+            },
+            "FAULT_STATE": {
+                "type": "UINT32",
+                "desc": "Fault state"
+            },
+            "PASS_THROUGH": {
+                "type": "BOOL",
+                "desc": "Process suggestion for the A and D of FMP"
+            },
+            "EXCEPTION_TYPE": {
+                "type": "STRING",
+                "desc": "Exception type"
+            },
+            "EXCEPTION_SUBTYPE": {
+                "type": "STRING",
+                "desc": "Exception subtype"
+            }
+        },
+        "CDC_HF_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "CDC hardware fault"
+            },
+            "FAULT_CODE": {
+                "type": "UINT32",
+                "desc": "Fault or Event code"
+            },
+            "FAULT_MODE": {
+                "type": "STRING",
+                "desc": "Fault mode"
+            },
+            "FAULT_TIME": {
+                "type": "UINT64",
+                "desc": "Fault time was detected"
+            },
+            "FAULT_DESC": {
+                "type": "STRING",
+                "desc": "Fault description"
+            },
+            "RECOVERY_METHOD": {
+                "type": "UINT32",
+                "desc": "Recovery suggestion for the A and D of FMP"
+            },
+            "FAULT_STATE": {
+                "type": "UINT32",
+                "desc": "Fault state"
+            },
+            "PASS_THROUGH": {
+                "type": "BOOL",
+                "desc": "Process suggestion for the A and D of FMP"
+            },
+            "EXCEPTION_TYPE": {
+                "type": "STRING",
+                "desc": "Exception type"
+            },
+            "EXCEPTION_SUBTYPE": {
+                "type": "STRING",
+                "desc": "Exception subtype"
+            }
+        },
+        "CDC_OTHER_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "CDC hardware fault"
+            },
+            "FAULT_CODE": {
+                "type": "UINT32",
+                "desc": "Fault or Event code"
+            },
+            "FAULT_MODE": {
+                "type": "STRING",
+                "desc": "Fault mode"
+            },
+            "FAULT_TIME": {
+                "type": "UINT64",
+                "desc": "Fault time was detected"
+            },
+            "FAULT_DESC": {
+                "type": "STRING",
+                "desc": "Fault description"
+            },
+            "RECOVERY_METHOD": {
+                "type": "UINT32",
+                "desc": "Recovery suggestion for the A and D of FMP"
+            },
+            "FAULT_STATE": {
+                "type": "UINT32",
+                "desc": "Fault state"
+            },
+            "PASS_THROUGH": {
+                "type": "BOOL",
+                "desc": "Process suggestion for the A and D of FMP"
+            },
+            "EXCEPTION_TYPE": {
+                "type": "STRING",
+                "desc": "Exception type"
+            },
+            "EXCEPTION_SUBTYPE": {
+                "type": "STRING",
+                "desc": "Exception subtype"
+            }
+        }
+    },
+    "VENDOR_DUBAI": {
+        "POWER_IDE_AUDIO": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "ide audio message"
+            },
+            "Audio": {
+                "type": "STRING",
+                "desc": "audio message"
+            }
+        },
+        "POWER_IDE_BATTERY": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "ide battery message"
+            },
+            "Battery": {
+                "type": "STRING",
+                "desc": "battery message"
+            }
+        },
+        "POWER_IDE_CPU": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "ide cpu message"
+            },
+            "Cpu": {
+                "type": "STRING",
+                "desc": "cpu message"
+            }
+        },
+        "POWER_IDE_DISPLAY": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "ide display message"
+            },
+            "Display": {
+                "type": "STRING",
+                "desc": "display message"
+            }
+        },
+        "POWER_IDE_LOCATION": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "ide location message"
+            },
+            "Location": {
+                "type": "STRING",
+                "desc": "location message"
+            }
+        },
+        "POWER_IDE_LOCK": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "ide lock message"
+            },
+            "Lock": {
+                "type": "STRING",
+                "desc": "lock message"
+            }
+        },
+        "POWER_IDE_MODEM": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "ide modem message"
+            },
+            "Modem": {
+                "type": "STRING",
+                "desc": "modem message"
+            }
+        },
+        "POWER_IDE_TIMER": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "ide timer message"
+            },
+            "Timer": {
+                "type": "STRING",
+                "desc": "timer message"
+            }
+        },
+        "POWER_IDE_WIFI": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "ide wifi message"
+            },
+            "Wifi": {
+                "type": "STRING",
+                "desc": "wifi message"
+            }
+        }
+    },
+    "VENDOR_WM": {
+        "HOME_KEY": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "stability",
+                "desc": "home key press"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "BACK_KEY": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "stability",
+                "desc": "back key press"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        }
+    },
+    "VNDK_DFX": {
+        "SERVICE_DIE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "xcollie"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "thread id"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "msg buf"
+            }
+        }
+    },
+    "HIVIEWDFX": {
+        "APP_ACTIVATION_DATA": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "App activation data"
+            },
+            "PNAMEID": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PVERSIONID": {
+                "type": "STRING",
+                "desc": "application version"
+            },
+            "PKG": {
+                "type": "STRING",
+                "desc": "Activate app name"
+            },
+            "TIMESTAMP": {
+                "type": "UINT16",
+                "desc": "time stamp"
+            }
+        },
+        "RUNNING_TIME_OF_SYSTEM": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "Running Time of System"
+            },
+            "TEST_TYPE": {
+                "type": "STRING",
+                "desc": "Test Type"
+            },
+            "APR_TIME": {
+                "type": "UINT32",
+                "desc": "Running time"
+            },
+            "START_TIME": {
+                "type": "UINT32",
+                "desc": "start time"
+            },
+            "END_TIME": {
+                "type": "UINT32",
+                "desc": "end time"
+            }
+        },
+        "APP_USAGE": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "Apps usage statistics"
+            },
+            "APP_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "APP_VER": {
+                "type": "STRING",
+                "desc": "package version"
+            },
+            "FWK_TYPE": {
+                "type": "STRING",
+                "desc": "type of frameWork_android or ohos"
+            },
+            "APP_TYPE": {
+                "type": "STRING",
+                "desc": "type of app_js or native"
+            },
+            "DATE": {
+                "type": "UINT32",
+                "desc": "Statistics date"
+            },
+            "TOTAL_DURATION": {
+                "type": "UINT32",
+                "desc": "Application duration"
+            },
+            "FG_DURATION": {
+                "type": "UINT32",
+                "desc": "frontground duration"
+            },
+            "BG_DURATION": {
+                "type": "UINT32",
+                "desc": "Background duration"
+            },
+            "COUNT": {
+                "type": "UINT32",
+                "desc": "Application startup times"
+            }
+        }
+    },
+    "APPEXECFWK": {
+        "UI_BLOCK_3S": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "app freeze 3s"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "PLATFORM": {
+                "type": "STRING",
+                "desc": "application platfrom type"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "UI_BLOCK_6S": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "tag": "stability",
+                "desc": "app freeze 6s"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "PLATFORM": {
+                "type": "STRING",
+                "desc": "application platfrom type"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event info"
+            }
+        },
+        "StartRemoteAbility": {
+            "__BASE": {
+                "type": "BEHAVIOR",
+                "level": "CRITICAL",
+                "desc": "start remote ability"
+            },
+            "SOURCE_BUNDLE": {
+                "type": "STRING",
+                "desc": "source bundle name"
+            },
+            "SOURCE_VERSION": {
+                "type": "STRING",
+                "desc": "source bundle version"
+            },
+            "TARGET_BUNDLE": {
+                "type": "STRING",
+                "desc": "target bundle name"
+            },
+            "TARGET_ABILITY": {
+                "type": "STRING",
+                "desc": "target ability name"
+            },
+            "ERROR_TYPE": {
+                "type": "UINT16",
+                "desc": "result code"
+            }
+        },
+        "ConnectRemoteAbility": {
+            "__BASE": {
+                "type": "BEHAVIOR",
+                "level": "CRITICAL",
+                "desc": "connect remote ability"
+            },
+            "SOURCE_BUNDLE": {
+                "type": "STRING",
+                "desc": "source bundle name"
+            },
+            "SOURCE_VERSION": {
+                "type": "STRING",
+                "desc": "source bundle version"
+            },
+            "TARGET_BUNDLE": {
+                "type": "STRING",
+                "desc": "target bundle name"
+            },
+            "TARGET_ABILITY": {
+                "type": "STRING",
+                "desc": "target ability name"
+            },
+            "ERROR_TYPE": {
+                "type": "UINT16",
+                "desc": "result code"
+            }
+        },
+        "BmsBundleScanFailed": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "bms bundle scan failed"
+            },
+            "BUNDLE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "ERROR_CODE": {
+                "type": "INT32",
+                "desc": "application error code"
+            }
+        },
+        "BmsDistributedFailed": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "bms distributed failed"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "application error type"
+            },
+            "ERROR_CODE": {
+                "type": "INT32",
+                "desc": "application error code"
+            }
+        },
+        "DBSyncResult": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "desc": "database sync time"
+            },
+            "STORE_ID": {
+                "type": "STRING",
+                "desc": "the database store id"
+            },
+            "SYNC_MODE": {
+                "type": "INT32",
+                "desc": "sync mode"
+            },
+            "SYNC_RESULT": {
+                "type": "INT32",
+                "desc": "sync result"
+            },
+            "DURATION": {
+                "type": "INT64",
+                "desc": "duration from sync start to sync complete"
+            }
+        },
+        "FmsFARefreshTimes": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "desc": "fa form refresh times report"
+            },
+            "FORM_ID": {
+                "type": "INT64",
+                "desc": "id of form"
+            },
+            "BUNDLE_NAME": {
+                "type": "STRING",
+                "desc": "bundle name of form"
+            },
+            "MODULE_NAME": {
+                "type": "STRING",
+                "desc": "module name of form"
+            },
+            "FORM_NAME": {
+                "type": "STRING",
+                "desc": "form name"
+            },
+            "DAILY_REFRESH_TIMES": {
+                "type": "INT32",
+                "desc": "form refresh times"
+            },
+            "INVISIBLE_REFRESH_TIMES": {
+                "type": "INT32",
+                "desc": "form refresh times when invisible"
+            }
+        }
+    },
+    "SENSORS": {
+        "DUBAI_TAG_HSENSOR_ENABLE": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "enable sensor"
+            },
+            "uid": {
+                "type": "INT32",
+                "desc": "calling uid"
+            },
+            "pkgName": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "type": {
+                "type": "INT32",
+                "desc": "type"
+            }
+        },
+        "DUBAI_TAG_HSENSOR_DISABLE": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "tag": "power",
+                "desc": "disable sensor"
+            },
+            "uid": {
+                "type": "INT32",
+                "desc": "calling uid"
+            },
+            "pkgName": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "type": {
+                "type": "INT32",
+                "desc": "type"
+            }
+        }
+    },
+    "POWERMGR": {
+        "Lock": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "running lock"
+            },
+            "LOG_LEVEL": {
+                "type": "INT32",
+                "desc": "log level"
+            },
+            "TAG": {
+                "type": "STRING",
+                "desc": "tag runninglock"
+            },
+            "MESSAGE": {
+                "type": "STRING",
+                "desc": "runninglock message"
+            }
+        }
+    },
+    "SECURITY": {
+        "DUID_NOT_ENOUGH": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "DUID is not enough"
+            },
+            "USEAGE": {
+                "type": "UINT32",
+                "desc": "DUID useage"
+            }
+        },
+        "SYNC_TOO_MANY_PERMISSIONS": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "sync more than 1024 permissions"
+            },
+            "COUNT": {
+                "type": "UINT32",
+                "desc": "number of permissions"
+            }
+        },
+        "CALL_OTHER_OS": {
+            "__BASE": {
+                "type": "BEHAVIOR",
+                "level": "MINOR",
+                "desc": "call ZDPMS to check permission"
+            },
+            "UID": {
+                "type": "UINT32",
+                "desc": "the uid need to check permission"
+            }
+        },
+        "SYNC_TIMEOUT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "sync cost more than 200ms"
+            },
+            "UID": {
+                "type": "UINT32",
+                "desc": "sync uid"
+            },
+            "TIME_INTERVAL": {
+                "type": "UINT32",
+                "desc": "cost time"
+            }
+        },
+        "INAPPROPRIATE_APP_PERMISSIONS": {
+            "__BASE": {
+                "type": "BEHAVIOR",
+                "level": "CRITICAL",
+                "desc": "inappropriate application permission"
+            },
+            "PKG_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "VERSION": {
+                "type": "STRING",
+                "desc": "app version"
+            },
+            "PERMISSION": {
+                "type": "STRING",
+                "desc": "permission name"
+            },
+            "VIOLATION_TYPE": {
+                "type": "UINT32",
+                "desc": "violation type"
+            }
+        },
+        "CHECK_DPERMIDSSION_FAIL": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "fail to check distributed permission"
+            },
+            "OBJ_PKG_NAME": {
+                "type": "STRING",
+                "desc": "object package name"
+            },
+            "SUB_PKG_NAME": {
+                "type": "STRING",
+                "desc": "subject package name"
+            },
+            "PERMISSION": {
+                "type": "STRING",
+                "desc": "permission name"
+            },
+            "COUNT": {
+                "type": "UINT32",
+                "desc": "happen times"
+            }
+        },
+        "SENSITIVE_RESOURCE_CHANGE": {
+            "__BASE": {
+                "type": "BEHAVIOR",
+                "level": "CRITICAL",
+                "desc": "change resource switch"
+            },
+            "RES_TYPE": {
+                "type": "UINT32",
+                "desc": "resource type"
+            },
+            "CLICK_TYPE": {
+                "type": "UINT32",
+                "desc": "click type"
+            }
+        }
+    },
+    "HUKS": {
+        "HUKS_FAULT": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "fault event for huks"
+            },
+            "FUNCTION": {
+                "type": "STRING",
+                "desc": "function name"
+            },
+            "USER_ID": {
+                "type": "INT32",
+                "desc": "user id"
+            },
+            "PROCESS_UID": {
+                "type": "INT32",
+                "desc": "process uid"
+            },
+            "KEY_TYPE": {
+                "type": "INT32",
+                "desc": "algorithm of the key"
+            },
+            "ERROR_CODE": {
+                "type": "INT32",
+                "desc": "error code"
+            },
+            "EXTRA": {
+                "type": "STRING",
+                "desc": "extra data"
+            }
+        },
+        "HUKS_STATISTIC": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "CRITICAL",
+                "desc": "statistic event for huks"
+            },
+            "FUNCTION": {
+                "type": "STRING",
+                "desc": "function name"
+            },
+            "USER_ID": {
+                "type": "INT32",
+                "desc": "user id"
+            },
+            "PROCESS_UID": {
+                "type": "INT32",
+                "desc": "process uid"
+            },
+            "KEY_TYPE": {
+                "type": "INT32",
+                "desc": "algorithm of the key"
+            },
+            "RUN_TIME": {
+                "type": "UINT32",
+                "desc": "running time"
+            }
+        }
+    },
+    "ACE": {
+        "JS_CARD_FIRST_RENDER_TIME": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "desc": "js card first render duration"
+            },
+            "SESSION_ID": {
+                "type": "STRING",
+                "desc": "session id"
+            },
+            "DURATION": {
+                "type": "UINT64",
+                "desc": "duration from js card created to first render"
+            }
+        },
+        "JS_CARD_FIRST_UPDATE_TIME": {
+            "__BASE": {
+                "type": "STATISTIC",
+                "level": "MINOR",
+                "desc": "js card first update duration"
+            },
+            "SESSION_ID": {
+                "type": "STRING",
+                "desc": "session id"
+            },
+            "DURATION": {
+                "type": "UINT64",
+                "desc": "duration from js card first update to render"
+            }
+        },
+        "FRAMEWORK_APP_START_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "application start exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        },
+        "FRAMEWORK_PAGE_ROUTER_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "page router exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "PAGE_NAME": {
+                "type": "STRING",
+                "desc": "page name"
+            }
+        },
+        "COMPONENT_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "component exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        },
+        "API_CHANNEL_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "API channel exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        },
+        "RENDER_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "render exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "RENDER_OBJECT_NAME": {
+                "type": "STRING",
+                "desc": "render object name"
+            }
+        },
+        "JS_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "JS exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        },
+        "ANIMATION_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "animation exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        },
+        "EVENT_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "event exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        },
+        "PLUGIN_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "plugin exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        },
+        "INTERNATIONALIZATION_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "internationalization exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        },
+        "ACCESSIBILITY_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "accessibility exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        },
+        "FORM_EXCEPTION": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "form exception"
+            },
+            "ERROR_TYPE": {
+                "type": "INT32",
+                "desc": "error type"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            }
+        },
+        "JS_ERROR": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "MINOR",
+                "desc": "JS runtime exception"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "package name"
+            },
+            "REASON": {
+                "type": "STRING",
+                "desc": "js runtime error reason"
+            },
+            "SUMMARY": {
+                "type": "STRING",
+                "desc": "js runtime error summary"
+            }
+        },
+        "UI_BLOCK_3S": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "The thread is blocked for 3s"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            },
+            "CMD": {
+                "type": "STRING",
+                "desc": "application event cmd"
+            }
+        },
+        "UI_BLOCK_6S": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "The thread is blocked for 6s"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            },
+            "CMD": {
+                "type": "STRING",
+                "desc": "application event cmd"
+            }
+        },
+        "UI_BLOCK_RECOVERED": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "The thread is recovered"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            },
+            "CMD": {
+                "type": "STRING",
+                "desc": "application event cmd"
+            }
+        },
+        "UI_BLOCK_DIALOG": {
+            "__BASE": {
+                "type": "FAULT",
+                "level": "CRITICAL",
+                "desc": "Dialog is displayed when the thread is blocked"
+            },
+            "PID": {
+                "type": "INT32",
+                "desc": "application pid"
+            },
+            "UID": {
+                "type": "INT32",
+                "desc": "application uid"
+            },
+            "PACKAGE_NAME": {
+                "type": "STRING",
+                "desc": "application package name"
+            },
+            "PROCESS_NAME": {
+                "type": "STRING",
+                "desc": "application process name"
+            },
+            "MSG": {
+                "type": "STRING",
+                "desc": "application event message"
+            }
+        }
+    }
+}

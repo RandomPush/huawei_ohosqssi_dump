@@ -1,0 +1,7 @@
+# itrustee adapt service for system CA
+service teeauth /system/bin/tee_auth_daemon
+    class early_hal
+    user system
+    group root system readproc
+    seclabel u:r:system_teecd:s0
+

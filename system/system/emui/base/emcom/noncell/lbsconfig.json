@@ -1,0 +1,38 @@
+{
+    "header": {
+        "emui": "10",
+        "version": "3"
+    },
+    "configration": [
+        {
+            "type": "param",
+            "name": "iaware_switch",
+            "value": "true"
+        },
+        {
+            "type": "param",
+            "name": "supl_server_cn",
+            "value": "supl.bd-caict.com"
+        },
+        {
+            "type": "param",
+            "name": "supl_port_cn",
+            "value": "7275"
+        },
+        {
+            "type": "param",
+            "name": "secure_random_seed_1",
+            "value": "98,94,-52,117,-82,28,-44,66,28,61,-110,-119,-75,70,2,85"
+        },
+        {
+            "type": "param",
+            "name": "secure_random_seed_2",
+            "value": "-89,82,3,85,-88,-104,57,-10,-103,108,-88,122,-38,-12,-55,-2"
+        },
+        {
+            "type": "param",
+            "name": "secure_random_seed_3",
+            "value": "-9,-86,60,-113,122,-7,-55,69,23,119,87,-83,89,-1,-113,29"
+        }
+    ]
+}

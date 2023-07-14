@@ -1,0 +1,115 @@
+#for connectivity
+on boot
+    setprop ro.connectivity.chiptype ${ro.boot.odm.conn.chiptype}
+    setprop ro.connectivity.sub_chiptype ${ro.boot.odm.conn.schiptype}
+
+    mkdir /data/misc/hwpush
+    chmod 0770 /data/misc/hwpush
+    chown system system /data/misc/hwpush
+    restorecon_recursive /data/misc/hwpush
+
+#bluetooth
+    mkdir /data/log/bt
+    chown bluetooth bluetooth /data/log/bt
+    chmod 775 /data/log/bt
+
+#audio framework
+    mkdir /data/log/audiofwklog
+    chown audio audio /data/log/audiofwklog
+    chmod 775 /data/log/audiofwklog
+
+on post-fs-data
+
+    mkdir /data/systemfeature
+    chmod 770 /data/systemfeature
+    chown system system /data/systemfeature
+    restorecon_recursive /data/systemfeature
+
+    mkdir /data/systemfeature/systemfeature
+    chmod 770 /data/systemfeature/systemfeature
+    chown system system /data/systemfeature/systemfeature
+    restorecon_recursive /data/systemfeature/systemfeature
+
+    mkdir /data/misc/hwpki
+    chmod 770 /data/misc/hwpki
+    chown vendor_securityserver vendor_securityserver /data/misc/hwpki
+    chown_recursive vendor_securityserver vendor_securityserver /data/misc/hwpki
+    restorecon_recursive /data/misc/hwpki
+
+    mkdir /data/misc/hsm
+    chmod 0770 /data/misc/hsm
+    chown system system /data/misc/hsm
+    restorecon_recursive /data/misc/hsm
+
+    mkdir /data/misc/installer
+    chmod 2770 /data/misc/installer
+    chown system vendor_installer /data/misc/installer
+    restorecon_recursive /data/misc/installer
+
+    mkdir /data/log/ramdump 0775 system system
+
+    mkdir /data/log/reliability/xcollie
+    chown system log /data/log/reliability/xcollie
+    chmod 2775 /data/log/reliability/xcollie
+    restorecon_recursive /data/log/reliability/xcollie
+
+    mkdir /data/log/modem_crash
+    chmod 0755 /data/log/modem_crash
+    chown root system /data/log/modem_crash
+
+    mkdir /data/cota
+    chmod 0775 /data/cota
+    chown system system /data/cota
+    restorecon_recursive /data/cota
+
+    mkdir /data/cota/ecota
+    chmod 0755 /data/cota/ecota
+    chown root root /data/cota/ecota
+    restorecon_recursive /data/cota/ecota
+
+    mkdir /data/cota/cloud
+    chmod 0770 /data/cota/cloud
+    chown system system /data/cota/cloud
+    restorecon_recursive /data/cota/cloud
+
+    mkdir /data/custom
+    chmod 0755 /data/custom
+    chown root root /data/custom
+    restorecon_recursive /data/custom
+
+    mkdir /data/custom/cust
+    chmod 0755 /data/custom/cust
+    chown root root /data/custom/cust
+    restorecon_recursive /data/custom/cust
+    symlink /data/custom/cust /data/cust
+    restorecon /data/cust
+
+on property:sys.user.0.ce_available=true
+    mkdir /data/misc_ce/0/asset
+    chmod 770 /data/misc_ce/0/asset
+    chown vendor_securityserver vendor_securityserver /data/misc_ce/0/asset
+    chown_recursive vendor_securityserver vendor_securityserver /data/misc_ce/0/asset
+    restorecon_recursive /data/misc_ce/0/asset
+
+on property:sys.user.0.ce_available=true
+    mkdir /data/misc_ce/0/ticket
+    chmod 770 /data/misc_ce/0/ticket
+    chown system media_rw /data/misc_ce/0/ticket
+    chown_recursive system media_rw /data/misc_ce/0/ticket
+    restorecon_recursive /data/misc_ce/0/ticket
+
+on property:ro.config.hw_emcom=true && property:ro.build.characteristics=default
+    start emcomd
+
+on property:ro.config.hw_emcom=true && property:ro.build.characteristics=tablet
+    start emcomd
+
+service emcomd /system/bin/emcomd
+    class main
+    socket emcomd stream 0600 system system
+    user root
+    group root system vpn
+    seclabel u:r:emcomd:s0
+    disabled
+on property:sys.boot_completed=1
+    write /proc/self/reclaim file

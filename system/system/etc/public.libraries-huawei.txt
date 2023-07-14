@@ -1,0 +1,5 @@
+libiGraphicsCore.huawei.so
+libsoftbus_jni.huawei.so
+libteec.huawei.so
+libmindspore-lite.huawei.so
+libdlliteclient_hnn_ms.huawei.so

@@ -1,0 +1,11 @@
+{
+    "DistanceLevel": [
+        {
+            // the value of level can be 0, 1, and 2. For example: "2AQO": 2.
+        }
+    ],
+    "NearFind1.0Swich": true,
+    "NearFind2.0Swich": true,
+    "NonHomeLauncherSwich": true,
+    "WifiNearFindTimerSwich": false
+}

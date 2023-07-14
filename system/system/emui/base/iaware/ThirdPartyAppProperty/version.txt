@@ -1,0 +1,5 @@
+version=1.95.19.185
+type=ThirdPartyAppProperty
+subtype=generic
+compatibleVersion=1
+classify=1

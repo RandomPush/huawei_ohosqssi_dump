@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <blockapp
+        name="暗黑破坏神：不朽"
+        package="com.netease.g67"
+        signature="a63629206bb53c5f8b731c72b8f6827a7de481a5f438fdf841988744be471719" />
+    <blockapp
+        name="文明与征服"
+        package="com.zhfx.wmyzfgw"
+        signature="2ec1dba759c2b76f13c092cc519d63a00fde537f3aad97c11c0f7bac72590419" />
+    <blockapp
+        name="原神"
+        package="com.miHoYo.Yuanshen"
+        signature="f2d8dcddd05056151347b5f319605229885c71461809ab58ed90d8347e3b4a49" />
+    <blockapp
+        name="唱吧"
+        package="com.changba"
+        signature="6c5380d7b42207fea75d97d2309bd9da6baf2867bdab2d5af37797d82764090d" />
+    <blockapp
+        name="全民K歌"
+        package="com.tencent.karaoke"
+        signature="1eca870138801e6f094655c630cb4cbc270d63ff7678e719f0e8bef0be490a2e" />
+    <blockapp
+        name="K歌达人"
+        package="com.app.hero.ui"
+        signature="3b8a1b3b4bea37f86fee11e3e9bc871e60906630ebdff56ce874ce40c445afbe" />
+    <blockapp
+        name="爱唱"
+        package="cn.banshenggua.aichang"
+        signature="50d8bb89dd9f6da80e1393ed0858ab04e354195b53846b1a93576c11504f1ef5" />
+    <blockapp
+        name="美拍"
+        package="com.meitu.meipaimv"
+        signature="fbf80b9d1e44cc257b3ff3e51abece20d911fe76c0210b21ff58602c734c0153" />
+    <blockapp
+        name="一直播"
+        package="tv.xiaoka.live"
+        signature="ecb129c274c941e9ef3bb405f806bf78a4479b5948ff9e5d205c24bba5652683" />
+    <blockapp
+        name="花椒"
+        package="com.huajiao"
+        signature="ab901690589065fbc12f44eddcda7f521bc615305c995fb2770f94e6e1d8b5d4" />
+    <blockapp
+        name="陌陌"
+        package="com.immomo.momo"
+        signature="df487d839fee8a72b88199ca70c6c8360d3bee8e7c365a3e71dcc836bc66548f" />
+    <blockapp
+        name="快手"
+        package="com.smile.gifmaker"
+        signature="0a350c6fbf39a939b34d4a4f470a93d961d554890ba8c37ff8ccceba0a3b1d7d" />
+    <blockapp
+        name="虎牙助手"
+        package="com.duowan.live"
+        signature="d6c3ef17b995f567cc55381ad31e5b56d9b761fbed75c957e0e049337678b1eb" />
+    <blockapp
+        name="小爱直播间-K歌版"
+        package="com.fungo.loveshow.tuhao"
+        signature="19006ae0c50e6a3d1a31e9b1b344504b70410ebf6743fcbb9628cd8e4d569a45" />
+    <blockapp
+        name="酷狗唱唱"
+        package="com.kugou.android.ktvapp"
+        signature="f408be4bbac9cfa1646b0bfcfb224c13bc2c51b9068df830b609dcabbc7859b6" />
+    <blockapp
+        name="VV音乐"
+        package="com.vv51.mvbox"
+        signature="4c125ebcb6e5b0c425e20d96af92a3b18f1141c59d4f999406908ba8b18f0447" />
+    <blockapp
+        name="全民K歌极速版"
+        package="com.tencent.kg.android.lite"
+        signature="9e12d37da3c4a3937a22cbd6f47c777e6709e0836f62e172396ac695d7b7fa79" />
+</resources>

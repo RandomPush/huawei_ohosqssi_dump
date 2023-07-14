@@ -1,0 +1,12 @@
+service voiceauth /system/bin/sa_main /system/profile/voiceauth.xml
+    class z_core
+    user vendor_useriam
+    group vendor_useriam shell
+    seclabel u:r:useriam:s0
+    disabled
+
+on property:sys.voiceauth=start
+    start voiceauth
+
+on property:sys.voiceauth=stop
+    stop voiceauth

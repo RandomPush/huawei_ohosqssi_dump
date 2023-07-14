@@ -1,0 +1,1047 @@
+{
+  "Attributes": [
+    {
+      "Name": "LowCapacityCPUs",
+      "Controller": "cpuset",
+      "File": "background/cpus"
+    },
+    {
+      "Name": "HighCapacityCPUs",
+      "Controller": "cpuset",
+      "File": "foreground/cpus"
+    },
+    {
+      "Name": "MaxCapacityCPUs",
+      "Controller": "cpuset",
+      "File": "top-app/cpus"
+    },
+    {
+      "Name": "MemLimit",
+      "Controller": "memory",
+      "File": "memory.limit_in_bytes"
+    },
+    {
+      "Name": "MemSoftLimit",
+      "Controller": "memory",
+      "File": "memory.soft_limit_in_bytes"
+    },
+    {
+      "Name": "MemSwappiness",
+      "Controller": "memory",
+      "File": "memory.swappiness"
+    },
+    {
+      "Name": "UClampMin",
+      "Controller": "cpu",
+      "File": "cpu.uclamp.min"
+    },
+    {
+      "Name": "UClampMax",
+      "Controller": "cpu",
+      "File": "cpu.uclamp.max"
+    },
+    {
+      "Name": "UClampLatencySensitive",
+      "Controller": "cpu",
+      "File": "cpu.uclamp.latency_sensitive"
+    },
+    {
+      "Name": "FreezerState",
+      "Controller": "freezer",
+      "File": "cgroup.freeze"
+    }
+  ],
+
+  "Profiles": [
+    {
+      "Name": "HighEnergySaving",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "UclampBackground",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Frozen",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "FreezerState",
+            "Value": "1"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Unfrozen",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "FreezerState",
+            "Value": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "NormalPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "system"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ServicePerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "schedtune",
+            "Path": "system-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "HighPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "UclampForeground",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "GraphicPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "schedtune",
+            "Path": "graphic"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "UclampGraphic",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "graphic"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MaxPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "top-app"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "UclampTopApp",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "top-app"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "RealtimePerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "rt"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CameraServicePerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "camera-daemon"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "NNApiHALPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "nnapi-hal"
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "CpuPolicySpread",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "UClampLatencySensitive",
+            "Value": "1"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "CpuPolicyPack",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "UClampLatencySensitive",
+            "Value": "0"
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "VrKernelCapacity",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": ""
+          }
+        }
+      ]
+    },
+    {
+      "Name": "VrServiceCapacityLow",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "system/background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "VrServiceCapacityNormal",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "system"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "VrServiceCapacityHigh",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "system/performance"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "VrProcessCapacityLow",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "application/background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "VrProcessCapacityNormal",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "application"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "VrProcessCapacityHigh",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "application/performance"
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "ProcessCapacityLow",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityNormal",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": ""
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityHigh",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityMax",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "top-app"
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "ServiceCapacityLow",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "system-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "UclampSystemBackground",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "system-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ServiceCapacityRestricted",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "restricted"
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "CameraServiceCapacity",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "camera-daemon"
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "LowIoPriority",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "blkio",
+            "Path": "background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BlkioKbg",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "blkio",
+            "Path": "key-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BlkioSbg",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "blkio",
+            "Path": "system-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "NormalIoPriority",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "blkio",
+            "Path": ""
+          }
+        }
+      ]
+    },
+    {
+      "Name": "HighIoPriority",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "blkio",
+            "Path": "foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "MaxIoPriority",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "blkio",
+            "Path": "top-app"
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "TimerSlackHigh",
+      "Actions": [
+        {
+          "Name": "SetTimerSlack",
+          "Params":
+          {
+            "Slack": "40000000"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "TimerSlackNormal",
+      "Actions": [
+        {
+          "Name": "SetTimerSlack",
+          "Params":
+          {
+            "Slack": "50000"
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "SFMainPolicy",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SFRenderEnginePolicy",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "foreground"
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "PerfBoost",
+      "Actions": [
+        {
+          "Name": "SetClamps",
+          "Params":
+          {
+            "Boost": "50%",
+            "Clamp": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "PerfClamp",
+      "Actions": [
+        {
+          "Name": "SetClamps",
+          "Params":
+          {
+            "Boost": "0",
+            "Clamp": "30%"
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "LowMemoryUsage",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "MemSoftLimit",
+            "Value": "16MB"
+          }
+        },
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "MemSwappiness",
+            "Value": "150"
+
+          }
+        }
+      ]
+    },
+    {
+      "Name": "HighMemoryUsage",
+      "Actions": [
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "MemSoftLimit",
+            "Value": "512MB"
+          }
+        },
+        {
+          "Name": "SetAttribute",
+          "Params":
+          {
+            "Name": "MemSwappiness",
+            "Value": "100"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SystemMemoryProcess",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "memory",
+            "Path": "system"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "KbgEnergySaving",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "schedtune",
+            "Path": "key-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "UclampKeyBackground",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "cpu",
+            "Path": "key-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityKbg",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "cpuset",
+            "Path": "key-background"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "BoostPerformance",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "schedtune",
+            "Path": "boost"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "UclampBoost",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "cpu",
+            "Path": "boost"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityBoost",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "cpuset",
+            "Path": "boost"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "VipPerformance",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "schedtune",
+            "Path": "vip"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "UclampVip",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "cpu",
+            "Path": "vip"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityVip",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "cpuset",
+            "Path": "vip"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityGraphicNormal",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "cpuset",
+            "Path": "graphic-normal"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityGraphicHigh",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "cpuset",
+            "Path": "graphic-high"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityCrm1",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "cpuset",
+            "Path": "crm1"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityCrm2",
+      "Actions" : [
+        {
+          "Name" : "JoinCgroup",
+          "Params" :
+          {
+            "Controller": "cpuset",
+            "Path": "crm2"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "UclampCrm1",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "crm1"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "UclampCrm2",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
+            "Path": "crm2"
+          }
+        }
+      ]
+    }
+  ],
+
+  "AggregateProfiles": [
+    {
+      "Name": "SCHED_SP_DEFAULT",
+      "Profiles": [ "TimerSlackNormal" ]
+    },
+    {
+      "Name": "SCHED_SP_BACKGROUND",
+      "Profiles": [ "HighEnergySaving", "LowIoPriority", "TimerSlackHigh" ]
+    },
+    {
+      "Name": "SCHED_SP_FOREGROUND",
+      "Profiles": [ "HighPerformance", "HighIoPriority", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "SCHED_SP_TOP_APP",
+      "Profiles": [ "MaxPerformance", "MaxIoPriority", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "SCHED_SP_SYSTEM",
+      "Profiles": [ "ServicePerformance", "BlkioSbg", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "SCHED_SP_RT_APP",
+      "Profiles": [ "RealtimePerformance", "MaxIoPriority", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "SCHED_SP_KEY_BACKGROUND",
+      "Profiles": [ "KbgEnergySaving", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "SCHED_SP_BOOSTGROUP",
+      "Profiles": [ "BoostPerformance", "HighIoPriority", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "SCHED_SP_VIP",
+      "Profiles": [ "VipPerformance", "MaxIoPriority", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "SCHED_SP_CRM1",
+      "Profiles": [ "UclampCrm1" ]
+    },
+    {
+      "Name": "SCHED_SP_CRM2",
+      "Profiles": [ "UclampCrm2" ]
+    },
+    {
+      "Name": "CPUSET_SP_DEFAULT",
+      "Profiles": [ "TimerSlackNormal" ]
+    },
+    {
+      "Name": "CPUSET_SP_BACKGROUND",
+      "Profiles": [ "HighEnergySaving", "ProcessCapacityLow", "LowIoPriority", "TimerSlackHigh" ]
+    },
+    {
+      "Name": "CPUSET_SP_FOREGROUND",
+      "Profiles": [ "HighPerformance", "ProcessCapacityHigh", "HighIoPriority", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "CPUSET_SP_TOP_APP",
+      "Profiles": [ "MaxPerformance", "ProcessCapacityMax", "MaxIoPriority", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "CPUSET_SP_SYSTEM",
+      "Profiles": [ "ServiceCapacityLow", "BlkioSbg", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "CPUSET_SP_RESTRICTED",
+      "Profiles": [ "ServiceCapacityRestricted", "LowIoPriority", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "CPUSET_SP_KEY_BACKGROUND",
+      "Profiles": [ "KbgEnergySaving", "ProcessCapacityKbg", "BlkioKbg", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "CPUSET_SP_BOOSTGROUP",
+      "Profiles": [ "BoostPerformance", "ProcessCapacityBoost", "HighIoPriority", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "CPUSET_SP_VIP",
+      "Profiles": [ "VipPerformance", "ProcessCapacityVip", "MaxIoPriority", "TimerSlackNormal" ]
+    },
+    {
+      "Name": "CPUSET_SP_GRAPHIC",
+      "Profiles": [ "GraphicPerformance" ]
+    },
+    {
+      "Name": "CPUSET_SP_GRAPHIC_NORMAL",
+      "Profiles": [ "GraphicPerformance", "ProcessCapacityGraphicNormal" ]
+    },
+    {
+      "Name": "CPUSET_SP_GRAPHIC_HIGH",
+      "Profiles": [ "GraphicPerformance", "ProcessCapacityGraphicHigh" ]
+    },
+    {
+      "Name": "CPUSET_SP_CRM1",
+      "Profiles": [ "UclampCrm1", "ProcessCapacityCrm1" ]
+    },
+    {
+      "Name": "CPUSET_SP_CRM2",
+      "Profiles": [ "UclampCrm2", "ProcessCapacityCrm2" ]
+    },
+    {
+      "Name": "CPUCTL_SP_RESTRICTED",
+      "Profiles": [ ]
+    },
+    {
+      "Name": "CPUCTL_SP_BACKGROUND",
+      "Profiles": [ "UclampBackground" ]
+    },
+    {
+      "Name": "CPUCTL_SP_FOREGROUND",
+      "Profiles": [ "UclampForeground" ]
+    },
+    {
+      "Name": "CPUCTL_SP_TOP_APP",
+      "Profiles": [ "UclampTopApp" ]
+    },
+    {
+      "Name": "CPUCTL_SP_SYSTEM",
+      "Profiles": [ "UclampSystemBackground" ]
+    },
+    {
+      "Name": "CPUCTL_SP_KEY_BACKGROUND",
+      "Profiles": [ "UclampKeyBackground" ]
+    },
+    {
+      "Name": "CPUCTL_SP_BOOSTGROUP",
+      "Profiles": [ "UclampBoost" ]
+    },
+    {
+      "Name": "CPUCTL_SP_VIP",
+      "Profiles": [ "UclampVip" ]
+    },
+    {
+      "Name": "CPUCTL_SP_GRAPHIC",
+      "Profiles": [ "UclampGraphic" ]
+    },
+    {
+      "Name": "CPUCTL_SP_GRAPHIC_NORMAL",
+      "Profiles": [ "UclampGraphic" ]
+    },
+    {
+      "Name": "CPUCTL_SP_GRAPHIC_HIGH",
+      "Profiles": [ "UclampGraphic" ]
+    },
+    {
+      "Name": "CPUCTL_SP_CRM1",
+      "Profiles": [ "UclampCrm1" ]
+    },
+    {
+      "Name": "CPUCTL_SP_CRM2",
+      "Profiles": [ "UclampCrm2" ]
+    },
+    {
+      "Name": "Dex2OatBootComplete",
+      "Profiles": [ "SCHED_SP_BACKGROUND" ]
+    }
+  ]
+}

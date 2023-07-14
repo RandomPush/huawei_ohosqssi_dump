@@ -1,0 +1,55 @@
+<device name="Android">
+  <array name="app">
+        <value>com.huawei.android.launcher</value>
+        <value>com.tencent.mm</value>
+        <value>com.huawei.contacts</value>
+        <value>com.android.incallui</value>
+        <value>com.android.mms</value>
+        <value>com.android.gallery3d</value>
+        <value>com.huawei.camera</value>
+        <value>com.android.settings</value>
+        <value>com.android.permissioncontroller</value>
+        <value>com.huawei.vassistant</value>
+        <value>com.huawei.search</value>
+        <value>com.taobao.taobao</value>
+        <value>com.eg.android.alipaygphone</value>
+        <value>com.huawei.appmarket</value>
+        <value>com.android.deskclock</value>
+        <value>com.android.browser</value>
+        <value>com.huawei.browser</value>
+        <value>com.ss.android.ugc.aweme</value>
+        <value>com.huawei.calculator</value>
+        <value>com.huawei.calendar</value>
+  </array>
+  <array name="blacklist">
+        <value>com.huawei.hiai</value>
+  </array>
+  <array name="persist-pkg">
+        <value>com.android.systemui</value>
+        <value>com.baidu.input_huawei</value>
+        <value>com.android.settings</value>
+        <value>com.huawei.webview</value>
+        <value>com.huawei.android.extdisplay</value>
+        <value>com.huawei.systemmanager</value>
+        <value>com.huawei.lbs</value>
+        <value>com.huawei.systemserver</value>
+        <value>com.huawei.hwid</value>
+        <value>com.huawei.iaware</value>
+        <value>com.huawei.android.totemweather</value>
+        <value>com.android.bluetooth</value>
+        <value>com.huawei.securityserver</value>
+        <value>com.huawei.harmonyos.foundation</value>
+        <value>com.huawei.hiview</value>
+        <value>com.huawei.security2</value>
+        <value>com.android.phone</value>
+        <value>com.huawei.android.pushagent</value>
+        <value>com.huawei.nearby</value>
+        <value>com.huawei.hiai</value>
+        <value>com.huawei.hiaction</value>
+        <value>com.android.nfc</value>
+        <value>com.huawei.health</value>
+        <value>com.huawei.recsys</value>
+        <value>com.huawei.intelligent</value>
+        <value>com.huawei.vassistant</value>
+  </array>
+</device>

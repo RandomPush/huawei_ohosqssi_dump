@@ -1,0 +1,1116 @@
+[
+  {
+    "SESSION_NAME": "com\\.huawei\\.recsys.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.recsys",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.onehopsvcclient\\.TagService.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.onehopsvcclient",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.onehopsvchost",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.profile.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "5516",
+        "PKG_NAME": "com.huawei.profile",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.harmonyos\\.foundation.*",
+    "REGEXP": "true",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.def.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "5521",
+        "PKG_NAME": "com.huawei.def",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.hwddmp.*",
+    "REGEXP": "true",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.hwddmp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.dmsdp+softbussession",
+    "DEVID": "NETWORKID",
+    "CLOSE_OFFLINE_P2P": "false",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.homevision.deviceinteract",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.devicegroupmanage",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.devicegroupmanage",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.homevision\\.multicast.*",
+    "REGEXP": "true",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.homevision.multicast",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.dmsdp+dmsdpsession",
+    "DEVID": "UDID",
+    "CLOSE_OFFLINE_P2P": "false",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.dmsdp",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.dmsdpdevice",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.dmsdp+dmsdp",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.dmsdp",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.dmsdpdevice",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.dmsdp+dmsdpserver",
+    "DEVID": "UDID",
+    "SEC_LEVEL": "public",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.dmsdpdevice",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.dmsdp+dmsdpclient",
+    "DEVID": "UDID",
+    "SEC_LEVEL": "public",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.dmsdp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.dmsdp.*",
+    "REGEXP": "true",
+    "DEVID": "UDID",
+    "SEC_LEVEL": "public",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.dmsdp",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.dmsdpdevice",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "DBinderService",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "native_app",
+        "UID": "1000",
+        "PKG_NAME": "DBinderService",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "DBinder.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "SEC_LEVEL": "public",
+    "APP_INFO": [
+      {
+        "TYPE": "granted_app",
+        "PKG_NAME": "DBinderBus",
+        "ACTIONS": "open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "DDMP_CTRL_BUS",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.hwddmp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "DDMP_FILE_LCD_THUMB",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.hwddmp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "objectstore",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.harmonyos.foundation",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "DDMP_FILE_MINI_THUMB",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.hwddmp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "DDMP_P2P_CTRL",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.hwddmp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "DDMP_FILE_TRANS",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.hwddmp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "DDS.*",
+    "REGEXP": "true",
+    "DEVID": "UUID",
+    "SEC_LEVEL": "public",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.hwddmp",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.photos",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.android.gallery3d",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.hihonor.photos",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.photos_PERMISSION_CHECK",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.photos",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.android.gallery3d",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.hihonor.photos",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "SPE",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "self_app",
+        "UID": "5525",
+        "PKG_NAME": "com.huawei.nearby",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "self_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.nearby",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.nearby.MsgMiddleware",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "self_app",
+        "UID": "5525",
+        "PKG_NAME": "com.huawei.nearby",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "self_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.nearby",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "distributeddata.*",
+    "REGEXP": "true",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.hwddmp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "notepad",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.notepad",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.example.android.notepad",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.android.airsharing+CastPlusDiscoveryModule",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.android.airsharing",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.android.mirrorshare",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.hisilicon.miracast",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.homevision.deviceinteract",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "CastPlusSessionName",
+    "DEVID": "UDID",
+    "CLOSE_OFFLINE_P2P": "false",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.android.airsharing",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.android.mirrorshare",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.hisilicon.miracast",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.homevision.deviceinteract",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "harmonyos\\.distributed\\.display.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "CastPlusNetSession.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "SystemAbilityManager_DDC.*",
+    "REGEXP": "true",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "native_app",
+        "UID": "1000",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "DistributedSchedule_DDC.*",
+    "REGEXP": "true",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "native_app",
+        "UID": "5522",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "hiview_distributed_network_softbus",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "native_app",
+        "UID": "1000",
+        "PKG_NAME": "hiview_distributed_network_softbus",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "DistributedFileService.*",
+    "REGEXP": "true",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "native_app",
+        "UID": "1000",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "DMSDP_RemoteCtrl",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.dmsdp",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.dmsdpdevice",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.systemserver\\.onehop\\.TagService.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.systemserver_CHANNEL_DPMS",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "UID": "5520",
+        "PKG_NAME": "com.huawei.securityserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.systemserver_CHANNEL_DBINDER",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.systemserver_TRANSMISSION_DBINDER",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.systemserver.dmaccess",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.devicemanager.dynamic",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.devicemanager",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.devicemanager.resident",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.devicemanager",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "ohos\\.media\\.medialibrary.*",
+    "REGEXP": "true",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.android.providers.media.module",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.hiai.*",
+    "REGEXP": "true",
+    "DEVID": "UUID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.hiai",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.boosterd.autohandshake",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.boosterd.manualhandshake",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.boosterd.ble",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.boosterd.signal",
+    "DEVID": "NETWORKID",
+    "BR_AGING_TIMEOUT":"-1",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.boosterd.user",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.boosterd.bye",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.boosterd.inner",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.boosterd.voice.speaker",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "native_app",
+        "PKG_NAME": "boosterd",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.boosterd.voice.mic",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "native_app",
+        "PKG_NAME": "boosterd",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.android.server.telecom_CHANNEL_DBINDER",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.android.server.telecom",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.systemserver\\.distributedpasteboard.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.distributedpasteboard.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.distributedpasteboard",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.hms.dupdateengine.dupdate",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "ACTIONS": "create,open",
+        "PKG_NAME": "com.huawei.hms.dupdateengine"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.pengine.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.pengine",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.iconnect.*",
+    "REGEXP": "true",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "self_app",
+        "UID": "5525",
+        "PKG_NAME": "com.huawei.iconnect",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "self_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.iconnect",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.harmonyos.security.devicesec",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "native_app",
+        "UID": "1000",
+        "PKG_NAME": "com.huawei.harmonyos.security",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "native_app",
+        "UID": "5520",
+        "PKG_NAME": "com.huawei.harmonyos.security",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "super_launcher_session",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.android.launcher",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.homevision.launcher",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.ohos.collaborationcenter.session",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.ohos.collaborationcenter",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "ohos\\.distributedschedule\\.dms.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "native_app",
+        "UID": "5522",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "MSDPSpatialAwareCollabrationSession",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.msdp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "MSDPSpatialAwareCollabrationSessionBR",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.msdp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.pcassistant.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.pcassistant",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.ohos.cardsde.channel-session",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.ohos.cardsde",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "MSDPUserStatusCollaborationSessionWifi",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.msdp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "MSDPUserStatusCollaborationSessionBR",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.msdp",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "hwPrintSession",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.printservice",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.hwdiagnosis.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.hwdiagnosis",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "Media_Session_RemoteCtrl",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "UID": "1000",
+        "PKG_NAME": "android",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.mediacontroller",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "Media_Session_RemoteCtrl_SenseTv",
+    "DEVID": "NETWORKID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.mediacontroller",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com\\.huawei\\.distributed\\.kms.*",
+    "REGEXP": "true",
+    "DEVID": "NETWORKID",
+    "SEC_LEVEL": "public",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.distributed.kms",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.searchservice.DistributeServerSession",
+    "DEVID": "NETWORKID",
+    "SEC_LEVEL": "public",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.searchservice",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.searchservice.DistributeClientSession",
+    "DEVID": "NETWORKID",
+    "SEC_LEVEL": "public",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.searchservice",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.search.DistributeSearch",
+    "DEVID": "NETWORKID",
+    "SEC_LEVEL": "public",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.search",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "coAuth",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.coauthservice",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.controlcenter.client",
+    "SEC_LEVEL": "public",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.controlcenter",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "com.huawei.systemserver.server",
+    "DEVID": "UDID",
+    "SEC_LEVEL": "public",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.systemserver",
+        "ACTIONS": "create,open"
+      }
+    ]
+  },
+  {
+    "SESSION_NAME": "Wakeup_Coordinator_Session",
+    "DEVID": "UDID",
+    "APP_INFO": [
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.vassistant",
+        "ACTIONS": "create,open"
+      },
+      {
+        "TYPE": "system_app",
+        "PKG_NAME": "com.huawei.wakeup",
+        "ACTIONS": "create,open"
+      }
+    ]
+  }
+]

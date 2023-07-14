@@ -1,0 +1,492 @@
+{
+    "drivingCareList": [
+        {
+            "model": "default",
+            "regionList": [
+                {
+                    "region": "CN",
+                    "displayId": "center",
+                    "disabled": [
+                        {
+                            "appList": [
+                                {
+                                    "app": "com.huawei.himovie.car",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.qiyi.video",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.qiyi.video.lite",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "cn.cmvideo.car.play",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.youku.car",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.tencent.qqlive",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.netease.aceracer.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.mytalkingtomfriends.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.lucidagames.kreator.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.tencent.qqlivepad",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.bilibili.bilithings",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.changba.sd",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.baidu.haokan",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.kwai.car",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.letv.android.client",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.ss.android.ugc.aweme",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.ss.android.ugc.aweme.lite",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.ss.android.article.video",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.sohu.sohuvideo",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.sup.android.superb",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.ssports.mobile.video",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.taige.mygold",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "cn.xiaoniangao.bxdapp",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.le123.ysdq",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.babycloud.hanju",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.tencent.submarine",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.yuncheapp.android.pearl",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "tv.pps.mobile",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.cctv.yangshipin.app.androidp",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.guess.video",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.zhongduomei.rrmj.society",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.cmcc.cmvideo",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.all.video",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "cn.cntv",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "tv.acfundanmaku.video",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.baidu.video",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.pplive.androidphone",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.hunantv.imgo.activity",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.m1905.mobilefree",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.cctv.harmony.phone",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.shinyv.pandamtv",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.jisetv.iptv.activity",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.douyu.xl.douyucar",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.thunder.carplay",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.cy.czxm.hlzrmj.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.kwai.game.ddz",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.gf.client.harmony",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "air.com.gongfubb.wksz.car",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "cn.emagsoftware.gamehall",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.netease.aceracer",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.tencent.qqlive.audiobox",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.ledou.mhhy",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "cn.com.pconline.harmony.browser",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.cy.czxy.kwddz.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "cn.flytalk.m2048.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "yuanqiqishi.game.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.netease.aceracer.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.talkingtomgoldrun.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.wepie.snake.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "zhmr.game.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.cjapp.usbcameracar",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.tencent.karaokehwcar",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.mgtv.auto.hmos",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.sohu.automotive",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.youkuchild.android",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.tuyoo.gomokucheji.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.example.chinesechesscheji.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.wedobest.cyjl.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.wedobest.shudu.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.wedobest.szhrd.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.qileyx.ddz.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.netease.yqyn.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.netease.l22.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.netease.l22.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.netease.mc.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.netease.pes.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.huawei.browser",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.huawei.car.browser",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.flcar.ygbbxyy.HUAWEI",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.qiyi.video.iv",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.tencent.qqlive.audiobox",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.tencent.qqlive.car.audiobox",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.talkingtomgoldrun.car.HUAWEI",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.mytalkingtom2.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.mytalkingtomfriends.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.herodash.new.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.mytalkingtomfree.car.HUAWEI",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.mytalkingangelafree.car.HUAWEI",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.mytalkinghank.car.HUAWEI",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.mytalkingtomcandyrun.new.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.talkingtompool.car.HUAWEI",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.talkingtomjetski2.car.HUAWEI",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.talkingtom2free.car.HUAWEI",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.talkingtom.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.talkingangelafree.new.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.TalkingGinger.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.gingersbirthdayfree.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.mytalkingangela2.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.jinke.talkingtomclub.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.jinke.tomddqb.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.outfit7.jinke.talkingtomkarting.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.tencent.car.qqlive",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.qiyi.video.car.pad",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.qiyi.car.video",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.yyzy.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.bf.sgs.hdexp.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.minitech.miniworld.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.popcap.car.pvz2cthdhwct",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.feiyu.luobo4.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.tencent.tmgp.car.sgame",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.netease.g67.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.kiloo.car.subwaysurf",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.kiloo.car.subwaysurf.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.netease.wotb.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.netease.wowsb.car.huawei",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "cn.emagsoftware.car.gamehall",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.cmgame.car.gamehalltv",
+                                    "extra": {"policy": "force"}
+                                },
+                                {
+                                    "app": "com.huawei.experience.cockpit",
+                                    "extra": {"policy": "force"}
+                                }
+                            ]
+                        }
+                    ],
+                    "suggested": []
+                }
+            ]
+        }
+    ]
+}

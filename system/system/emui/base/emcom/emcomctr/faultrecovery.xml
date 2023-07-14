@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faultrecovery version="001.001">
+    <product_config region="oversea" chipset="qcom">           <!-- 1级标签，芯片和片区范围配置，多个芯片通过逗号分隔；如果不配置芯片或片区，则需要通过name配置产品范围 -->
+        <feature name="FaultRecovery">1</feature>                <!-- 0:off; 1:on; 2:force off; 3:force on; Note: setting feature to force on/off, will disable further overwrite for this feature -->
+        <app name="com.whatsapp"></app>            <!-- 2级标签，产品支持的应用配置，必须配置在feature标签之后，支持FaultRecovery特性才会解析 -->
+    </product_config>
+    <product_config name="JAD-LX9,BAL-L49,PAL-LX9,ABR-LX9,NAM-LX9,JLN-LX1,JLN-LX3,CTR-LX1,CTR-LX2,CTR-LX3,NCO-LX1,NCO-LX3,GLA-LX1,GLA-LX3,BNE-LX1,BNE-LX2,BNE-LX3,CET-LX9,DCO-LX9,GOT-AL09,GOT-W29,AGS5-L09,AGS5-W09,AGS5-L03">
+<!-- 1级标签，产品范围配置，必须配置在app标签之前，否则app标签不会解析 -->
+        <feature name="FaultRecovery">1</feature>                <!-- 0:off; 1:on; 2:force off; 3:force on; Note: setting feature to force on/off, will disable further overwrite for this feature -->
+        <app name="com.whatsapp"></app>            <!-- 2级标签，产品支持的应用配置，必须配置在feature标签之后，支持FaultRecovery特性才会解析 -->
+    </product_config>
+    <app name="com.whatsapp">            <!-- 1级标签，app恢复策略配置，必须配置在product_config标签之后，支持FaultRecovery特性才会解析 -->
+        <faultrecovery_features_config>
+            <recoveryPolicy>
+                <flowType>14</flowType>            <!-- 可以配置多个流类型，逗号分隔，与ficonfig.xml的流类型对应 -->
+                <faultType>1</faultType>            <!-- 可以配置多个错误类型，逗号分隔，0：无故障，1：网络故障，2：应用故障 -->
+                <recoveryAction>2</recoveryAction>            <!-- 可以配置多个恢复手段，逗号分隔，依次尝试，1: 通知LISTEN类型网络可用，2: 通知TRACK_DEFAULT类型网络可用，3: 通知REQUEST类型网络可用，4: 通知所有类型网络可用 -->
+                <recoveryInterval>1800</recoveryInterval>            <!-- 策略抑制时间，单位是s，默认是30min -->
+            </recoveryPolicy>
+        </faultrecovery_features_config>
+    </app>
+</faultrecovery>

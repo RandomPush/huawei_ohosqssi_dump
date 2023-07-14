@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+    <process>useridm</process>
+    <loadlibs>
+        <libpath>libuseridmsrv.z.so</libpath>
+    </loadlibs>
+    <systemability>
+        <name>901</name>
+        <libpath>libuseridmsrv.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+</info>

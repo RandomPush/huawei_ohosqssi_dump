@@ -1,0 +1,620 @@
+{
+  "components": [
+    {
+      "component": "ability_base",
+      "syscap": [
+        "SystemCapability.Ability.AbilityBase"
+      ]
+    },
+    {
+      "component": "ability_base",
+      "syscap": [
+        "SystemCapability.Ability.AbilityBase"
+      ]
+    },
+    {
+      "component": "ability_runtime",
+      "syscap": [
+        "SystemCapability.Ability.AbilityRuntime.AbilityCore",
+        "SystemCapability.Ability.AbilityRuntime.Core",
+        "SystemCapability.Ability.AbilityRuntime.FAModel",
+        "SystemCapability.Ability.AbilityRuntime.Mission"
+      ]
+    },
+    {
+      "component": "ability_runtime",
+      "syscap": [
+        "SystemCapability.Ability.AbilityRuntime.AbilityCore",
+        "SystemCapability.Ability.AbilityRuntime.Core",
+        "SystemCapability.Ability.AbilityRuntime.FAModel",
+        "SystemCapability.Ability.AbilityRuntime.Mission"
+      ]
+    },
+    {
+      "component": "ability_tools",
+      "syscap": []
+    },
+    {
+      "component": "ability_tools",
+      "syscap": []
+    },
+    {
+      "component": "access_token",
+      "syscap": [
+        "SystemCapability.Security.AccessToken"
+      ]
+    },
+    {
+      "component": "accessibility",
+      "syscap": [
+        "SystemCapability.BarrierFree.Accessibility.Core",
+        "SystemCapability.BarrierFree.Accessibility.Hearing",
+        "SystemCapability.BarrierFree.Accessibility.Vision"
+      ]
+    },
+    {
+      "component": "ace_engine",
+      "syscap": [
+        "SystemCapability.ArkUI.ArkUI.Full"
+      ]
+    },
+    {
+      "component": "app_file_service",
+      "syscap": [
+        "SystemCapability.FileManagement.RemoteFileShare"
+      ]
+    },
+    {
+      "component": "appverify",
+      "syscap": [
+        "SystemCapability.Security.AppVerify"
+      ]
+    },
+    {
+      "component": "background_task_mgr",
+      "syscap": [
+        "SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask",
+        "SystemCapability.ResourceSchedule.BackgroundTaskManager.EfficiencyResourcesApply",
+        "SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask"
+      ]
+    },
+    {
+      "component": "battery_manager",
+      "syscap": [
+        "SystemCapability.PowerManager.BatteryManager.Core",
+        "SystemCapability.PowerManager.BatteryManager.Extension"
+      ]
+    },
+    {
+      "component": "battery_statistics",
+      "syscap": [
+        "SystemCapability.PowerManager.BatteryStatistics"
+      ]
+    },
+    {
+      "component": "bluetooth",
+      "syscap": [
+        "SystemCapability.Communication.Bluetooth.Core",
+        "SystemCapability.Communication.Bluetooth.Lite"
+      ]
+    },
+    {
+      "component": "bundle_framework",
+      "syscap": [
+        "SystemCapability.BundleManager.BundleFramework",
+        "SystemCapability.BundleManager.BundleFramework.AppControl",
+        "SystemCapability.BundleManager.BundleFramework.Core",
+        "SystemCapability.BundleManager.BundleFramework.DefaultApp",
+        "SystemCapability.BundleManager.BundleFramework.FreeInstall",
+        "SystemCapability.BundleManager.BundleFramework.Launcher",
+        "SystemCapability.BundleManager.BundleFramework.Resource",
+        "SystemCapability.BundleManager.Zlib"
+      ]
+    },
+    {
+      "component": "bundle_tool",
+      "syscap": [
+        "SystemCapability.BundleManager.BundleTool"
+      ]
+    },
+    {
+      "component": "call_manager",
+      "syscap": [
+        "SystemCapability.Telephony.CallManager"
+      ]
+    },
+    {
+      "component": "cellular_data",
+      "syscap": [
+        "SystemCapability.Telephony.CellularData"
+      ]
+    },
+    {
+      "component": "common_event_service",
+      "syscap": [
+        "SystemCapability.Notification.CommonEvent"
+      ]
+    },
+    {
+      "component": "config_policy",
+      "syscap": [
+        "SystemCapability.Customization.ConfigPolicy"
+      ]
+    },
+    {
+      "component": "core_service",
+      "syscap": [
+        "SystemCapability.Telephony.CoreService"
+      ]
+    },
+    {
+      "component": "crypto_framework",
+      "syscap": [
+        "SystemCapability.Security.Cert",
+        "SystemCapability.Security.CryptoFramework"
+      ]
+    },
+    {
+      "component": "data_object",
+      "syscap": [
+        "SystemCapability.DistributedDataManager.DataObject.DistributedObject"
+      ]
+    },
+    {
+      "component": "data_share",
+      "syscap": [
+        "SystemCapability.DistributedDataManager.DataShare.Consumer",
+        "SystemCapability.DistributedDataManager.DataShare.Core",
+        "SystemCapability.DistributedDataManager.DataShare.Provider"
+      ]
+    },
+    {
+      "component": "dataclassification",
+      "syscap": []
+    },
+    {
+      "component": "device_manager",
+      "syscap": [
+        "SystemCapability.DistributedHardware.DeviceManager"
+      ]
+    },
+    {
+      "component": "device_security_level",
+      "syscap": []
+    },
+    {
+      "component": "device_status",
+      "syscap": [
+        "SystemCapability.Msdp.DeviceStatus"
+      ]
+    },
+    {
+      "component": "device_usage_statistics",
+      "syscap": [
+        "SystemCapability.ResourceSchedule.UsageStatistics.App",
+        "SystemCapability.ResourceSchedule.UsageStatistics.AppGroup"
+      ]
+    },
+    {
+      "component": "display_manager",
+      "syscap": [
+        "SystemCapability.PowerManager.DisplayPowerManager"
+      ]
+    },
+    {
+      "component": "distributed_notification_service",
+      "syscap": [
+        "SystemCapability.Notification.Notification",
+        "SystemCapability.Notification.ReminderAgent"
+      ]
+    },
+    {
+      "component": "distributedfilejs",
+      "syscap": [
+        "SystemCapability.FileManagement.File.DistributedFile",
+        "SystemCapability.FileManagement.File.Environment",
+        "SystemCapability.FileManagement.File.FileIO"
+      ]
+    },
+    {
+      "component": "dsoftbus",
+      "syscap": [
+        "SystemCapability.Communication.SoftBus.Core"
+      ]
+    },
+    {
+      "component": "ets_utils",
+      "syscap": [
+        "SystemCapability.Utils.Lang"
+      ]
+    },
+    {
+      "component": "eventhandler",
+      "syscap": [
+        "SystemCapability.Notification.Emitter"
+      ]
+    },
+    {
+      "component": "file_api",
+      "syscap": [
+        "SystemCapability.FileManagement.File.DistributedFile",
+        "SystemCapability.FileManagement.File.Environment",
+        "SystemCapability.FileManagement.File.FileIO"
+      ]
+    },
+    {
+      "component": "form_fwk",
+      "syscap": [
+        "SystemCapability.Ability.Form"
+      ]
+    },
+    {
+      "component": "form_fwk",
+      "syscap": [
+        "SystemCapability.Ability.Form"
+      ]
+    },
+    {
+      "component": "graphic_standard",
+      "syscap": [
+        "SystemCapability.Graphic.Graphic2D.ColorManager.Core",
+        "SystemCapability.Graphic.Graphic2D.EGL",
+        "SystemCapability.Graphic.Graphic2D.GLES3",
+        "SystemCapability.Graphic.Graphic2D.NativeDrawing",
+        "SystemCapability.Graphic.Graphic2D.NativeWindow",
+        "SystemCapability.Graphic.Graphic2D.WebGL",
+        "SystemCapability.Graphic.Graphic2D.WebGL2"
+      ]
+    },
+    {
+      "component": "hiappevent_js",
+      "syscap": [
+        "SystemCapability.HiviewDFX.HiAppEvent"
+      ]
+    },
+    {
+      "component": "hiappevent_native",
+      "syscap": [
+        "SystemCapability.HiviewDFX.HiAppEvent"
+      ]
+    },
+    {
+      "component": "hichecker_js",
+      "syscap": [
+        "SystemCapability.HiviewDFX.HiChecker"
+      ]
+    },
+    {
+      "component": "hichecker_native",
+      "syscap": [
+        "SystemCapability.HiviewDFX.HiChecker"
+      ]
+    },
+    {
+      "component": "hidumper",
+      "syscap": [
+        "SystemCapability.HiviewDFX.HiDumper"
+      ]
+    },
+    {
+      "component": "hilog_native",
+      "syscap": [
+        "SystemCapability.HiviewDFX.HiLog"
+      ]
+    },
+    {
+      "component": "hisysevent_native",
+      "syscap": [
+        "SystemCapability.HiviewDFX.HiSysEvent"
+      ]
+    },
+    {
+      "component": "hitrace_native",
+      "syscap": [
+        "SystemCapability.HiviewDFX.HiTrace"
+      ]
+    },
+    {
+      "component": "hiview",
+      "syscap": [
+        "SystemCapability.HiviewDFX.Hiview",
+        "SystemCapability.HiviewDFX.Hiview.FaultLogger"
+      ]
+    },
+    {
+      "component": "hiviewdfx_hilog_native",
+      "syscap": [
+        "SystemCapability.HiviewDFX.HiLog"
+      ]
+    },
+    {
+      "component": "huks",
+      "syscap": [
+        "SystemCapability.Security.Huks"
+      ]
+    },
+    {
+      "component": "i18n",
+      "syscap": [
+        "SystemCapability.Global.I18n"
+      ]
+    },
+    {
+      "component": "imf",
+      "syscap": [
+        "SystemCapability.MiscServices.InputMethodFramework"
+      ]
+    },
+    {
+      "component": "init",
+      "syscap": [
+        "SystemCapability.Startup.SystemInfo"
+      ]
+    },
+    {
+      "component": "input",
+      "syscap": [
+        "SystemCapability.MultimodalInput.Input.Cooperator",
+        "SystemCapability.MultimodalInput.Input.Core",
+        "SystemCapability.MultimodalInput.Input.InputConsumer",
+        "SystemCapability.MultimodalInput.Input.InputDevice",
+        "SystemCapability.MultimodalInput.Input.InputMonitor",
+        "SystemCapability.MultimodalInput.Input.InputSimulator",
+        "SystemCapability.MultimodalInput.Input.Pointer"
+      ]
+    },
+    {
+      "component": "ipc",
+      "syscap": [
+        "SystemCapability.Communication.IPC.Core"
+      ]
+    },
+    {
+      "component": "kv_store",
+      "syscap": [
+        "SystemCapability.DistributedDataManager.KVStore.Core",
+        "SystemCapability.DistributedDataManager.KVStore.DistributedKVStore",
+        "SystemCapability.DistributedDataManager.KVStore.Lite"
+      ]
+    },
+    {
+      "component": "location",
+      "syscap": [
+        "SystemCapability.Location.Location.Core",
+        "SystemCapability.Location.Location.Geocoder",
+        "SystemCapability.Location.Location.Geofence",
+        "SystemCapability.Location.Location.Gnss",
+        "SystemCapability.Location.Location.Lite"
+      ]
+    },
+    {
+      "component": "media_library",
+      "syscap": [
+        "SystemCapability.FileManagement.UserFileManager.Core",
+        "SystemCapability.FileManagement.UserFileManager.DistributedCore",
+        "SystemCapability.Multimedia.MediaLibrary.Core",
+        "SystemCapability.Multimedia.MediaLibrary.DistributedCore"
+      ]
+    },
+    {
+      "component": "miscdevice",
+      "syscap": [
+        "SystemCapability.Sensors.MiscDevice"
+      ]
+    },
+    {
+      "component": "multimedia_audio_framework",
+      "syscap": [
+        "SystemCapability.Multimedia.Audio.Capturer",
+        "SystemCapability.Multimedia.Audio.Communication",
+        "SystemCapability.Multimedia.Audio.Core",
+        "SystemCapability.Multimedia.Audio.Device",
+        "SystemCapability.Multimedia.Audio.Interrupt",
+        "SystemCapability.Multimedia.Audio.Renderer",
+        "SystemCapability.Multimedia.Audio.Tone",
+        "SystemCapability.Multimedia.Audio.Volume"
+      ]
+    },
+    {
+      "component": "multimedia_camera_framework",
+      "syscap": [
+        "SystemCapability.Multimedia.Camera.Core"
+      ]
+    },
+    {
+      "component": "multimedia_image_framework",
+      "syscap": [
+        "SystemCapability.Multimedia.Image.Core",
+        "SystemCapability.Multimedia.Image.ImageCreator",
+        "SystemCapability.Multimedia.Image.ImagePacker",
+        "SystemCapability.Multimedia.Image.ImageReceiver",
+        "SystemCapability.Multimedia.Image.ImageSource"
+      ]
+    },
+    {
+      "component": "multimedia_player_framework",
+      "syscap": [
+        "SystemCapability.Multimedia.Media.AudioPlayer",
+        "SystemCapability.Multimedia.Media.AudioRecorder",
+        "SystemCapability.Multimedia.Media.Core",
+        "SystemCapability.Multimedia.Media.VideoPlayer",
+        "SystemCapability.Multimedia.Media.VideoRecorder"
+      ]
+    },
+    {
+      "component": "napi",
+      "syscap": [
+        "SystemCapability.ArkUI.ArkUI.Libuv",
+        "SystemCapability.ArkUI.ArkUI.Napi"
+      ]
+    },
+    {
+      "component": "netmanager_base",
+      "syscap": [
+        "SystemCapability.Communication.NetManager.Core"
+      ]
+    },
+    {
+      "component": "netstack",
+      "syscap": [
+        "SystemCapability.Communication.NetStack"
+      ]
+    },
+    {
+      "component": "nfc",
+      "syscap": [
+        "SystemCapability.Communication.NFC.Core"
+      ]
+    },
+    {
+      "component": "os_account",
+      "syscap": [
+        "SystemCapability.Account.AppAccount",
+        "SystemCapability.Account.OsAccount"
+      ]
+    },
+    {
+      "component": "pasteboard",
+      "syscap": [
+        "SystemCapability.MiscServices.Pasteboard"
+      ]
+    },
+    {
+      "component": "power_manager",
+      "syscap": [
+        "SystemCapability.PowerManager.PowerManager.Core",
+        "SystemCapability.PowerManager.PowerManager.Extension"
+      ]
+    },
+    {
+      "component": "preferences",
+      "syscap": [
+        "SystemCapability.DistributedDataManager.Preferences.Core"
+      ]
+    },
+    {
+      "component": "profiler",
+      "syscap": [
+        "SystemCapability.HiviewDFX.HiProfiler.HiDebug"
+      ]
+    },
+    {
+      "component": "relational_store",
+      "syscap": [
+        "SystemCapability.DistributedDataManager.RelationalStore.Core"
+      ]
+    },
+    {
+      "component": "request",
+      "syscap": [
+        "SystemCapability.MiscServices.Download",
+        "SystemCapability.MiscServices.Upload"
+      ]
+    },
+    {
+      "component": "resource_management",
+      "syscap": [
+        "SystemCapability.Global.ResourceManager"
+      ]
+    },
+    {
+      "component": "screenlock_mgr",
+      "syscap": [
+        "SystemCapability.MiscServices.ScreenLock"
+      ]
+    },
+    {
+      "component": "sensor",
+      "syscap": [
+        "SystemCapability.Sensors.Sensor"
+      ]
+    },
+    {
+      "component": "sms_mms",
+      "syscap": [
+        "SystemCapability.Telephony.SmsMms"
+      ]
+    },
+    {
+      "component": "state_registry",
+      "syscap": [
+        "SystemCapability.Telephony.StateRegistry"
+      ]
+    },
+    {
+      "component": "storage_service",
+      "syscap": [
+        "SystemCapability.FileManagement.StorageService.Encryption",
+        "SystemCapability.FileManagement.StorageService.SpatialStatistics",
+        "SystemCapability.FileManagement.StorageService.Volume"
+      ]
+    },
+    {
+      "component": "syscap_codec",
+      "syscap": [
+        "SystemCapability.Developtools.Syscap"
+      ]
+    },
+    {
+      "component": "thermal_manager",
+      "syscap": [
+        "SystemCapability.PowerManager.ThermalManager"
+      ]
+    },
+    {
+      "component": "time_service",
+      "syscap": [
+        "SystemCapability.MiscServices.Time"
+      ]
+    },
+    {
+      "component": "usb_manager",
+      "syscap": [
+        "SystemCapability.USB.USBManager"
+      ]
+    },
+    {
+      "component": "user_auth_framework",
+      "syscap": [
+        "SystemCapability.UserIAM.UserAuth.Core"
+      ]
+    },
+    {
+      "component": "wallpaper_mgr",
+      "syscap": [
+        "SystemCapability.MiscServices.Wallpaper"
+      ]
+    },
+    {
+      "component": "webview",
+      "syscap": [
+        "SystemCapability.Web.Webview.Core"
+      ]
+    },
+    {
+      "component": "wifi",
+      "syscap": [
+        "SystemCapability.Communication.WiFi.AP.Core",
+        "SystemCapability.Communication.WiFi.Core",
+        "SystemCapability.Communication.WiFi.P2P",
+        "SystemCapability.Communication.WiFi.STA"
+      ]
+    },
+    {
+      "component": "window_manager",
+      "syscap": [
+        "SystemCapability.WindowManager.WindowManager.Core"
+      ]
+    },
+    {
+      "component": "work_scheduler",
+      "syscap": []
+    },
+    {
+      "component": "settings_standard",
+      "syscap": [
+        "SystemCapability.Applications.settings.Core"
+      ]
+    }
+  ]
+}

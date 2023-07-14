@@ -1,0 +1,8 @@
+service netmask /system/bin/netmask -f 5
+    user system
+    group system net_raw net_admin
+    capabilities NET_RAW NET_ADMIN
+    disabled
+    oneshot
+on boot
+    mkdir /data/log/netmask 0775 system system

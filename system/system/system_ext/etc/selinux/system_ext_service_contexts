@@ -1,0 +1,431 @@
+#line 1 "device/qcom/sepolicy/generic/private/service_contexts"
+# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+cneservice                                           u:object_r:vendor_cne_service:s0
+com.qualcomm.qti.ustaservice.USTAServiceImpl         u:object_r:vendor_usta_app_service:s0
+dpmservice                                     u:object_r:vendor_dpmservice:s0
+MinkBinderSvc                                  u:object_r:vendor_MinkBinderSvc:s0
+vendor.perfservice                             u:object_r:vendor_perf_service:s0
+vendor.qdtservice                              u:object_r:vendor_qdt_service:s0
+sms-sec                                        u:object_r:radio_service:s0
+extphone                                       u:object_r:radio_service:s0
+qti.radio.extphone                             u:object_r:radio_service:s0
+com.qualcomm.location.izat.IzatService         u:object_r:vendor_izat_service:s0
+qti.security.seempspa                          u:object_r:vendor_seemp_service:s0
+vendor.audio.vrservice                         u:object_r:audioserver_service:s0
+com.qti.snapdragon.sdk.display.IColorService   u:object_r:vendor_color_service:s0
+wfdservice                                     u:object_r:vendor_wfdservice_service:s0
+wfdservice64                                   u:object_r:vendor_wfdservice_service:s0
+wigigp2p                                       u:object_r:vendor_wigigp2p_service:s0
+wigig                                          u:object_r:vendor_wigig_service:s0
+display.smomoservice                           u:object_r:surfaceflinger_service:s0
+vendor.vpsservice                              u:object_r:vendor_vps_service:s0
+vendor.qspmsvc                                 u:object_r:vendor_qspmsvc_service:s0
+vendor.qti.gnss.ILocAidlGnss/default           u:object_r:hal_gnss_service:s0
+vendor.qvirtmgr                                u:object_r:vendor_qvirtmgr_service:s0
+vendor.qti.qesdsys.IQesdSys/default            u:object_r:vendor_qesdk_service:s0
+#line 1 "vendor/huawei/chipset_common/sepolicy/common/service_contexts"
+# RCS begin
+RenderComposer  u:object_r:rcs_service:s0
+RenderBufferProducer u:object_r:rbp_service:s0
+# RCS end
+
+
+com.huawei.turing        u:object_r:turing_service:s0
+com.huawei.vision        u:object_r:vision_service:s0
+
+IAwareSdkService        u:object_r:iaware_sdk_service:s0
+
+# for AGP Service
+AGPService u:object_r:agp_service:s0
+
+# for pg
+Binder.Pged        u:object_r:hwpged_service:s0
+
+
+DisplayEngineExService  u:object_r:displayengineex_service:s0
+DisplayEngineService    u:object_r:display_engine_service:s0
+
+hwSaveDataService                                u:object_r:hw_savedata_service:s0
+
+media_assist        u:object_r:media_assist_service:s0
+
+HiMPEngineService      u:object_r:hi_mp_engine:s0
+
+APKPatchService         u:object_r:apkpatch_service:s0
+
+DubaiService                              u:object_r:dubai_service:s0
+
+game_assist        u:object_r:game_assist_service:s0
+
+hwaftpolicy                                u:object_r:hwaftpolicy:s0
+
+hwswing                          u:object_r:hwswing:s0
+
+# common communication
+DdmpDeviceMonitorService u:object_r:ddmp_device_monitor_svc:s0
+DdmpDataBusService u:object_r:ddmp_databus_svc:s0
+DdmpTrustEngineService u:object_r:ddmp_trustengine_svc:s0
+
+com.huawei.bd.BDService   u:object_r:hwue_bdservice:s0
+
+# for distributeddata
+DdmpDistributedData u:object_r:ddmp_distributed_data_svc:s0
+
+# for fusionsearch
+fusion_search u:object_r:fusion_search_svc:s0
+
+vr_system               u:object_r:vr_system_service:s0
+
+hwPcManager           u:object_r:hwPcManager_service:s0
+
+HwFileMonitorService          u:object_r:hw_filemonitor_service:s0
+
+#for hotfixchecker
+hotfixchecker-daemon.service     u:object_r:hotfixchecker-daemon_service:s0
+hwrmeservice     u:object_r:hwrme_service:s0
+
+hwsync                   u:object_r:hwsync_service:s0
+turbozoned                   u:object_r:turbo_service:s0
+BootAnimationBinderServer           u:object_r:bootanim_server_service:s0
+
+HwCommBoosterService u:object_r:hw_commbooster_service:s0
+
+# FOR MR1
+internet_audio                                                         u:object_r:internet_audio_service:s0
+
+hwGeneralService                                                       u:object_r:hw_general_service:s0
+
+hwAntiTheftService                                                       u:object_r:hw_antitheft_service:s0
+
+hwBootanimExService                                                       u:object_r:hw_bootanimex_service:s0
+
+system.hsmcore  u:object_r:system_hsmcore_service:s0
+
+# com.huawei.cryptosms.service begin
+com.huawei.cryptosms.service            u:object_r:crypto_sms_service:s0
+# com.huawei.cryptosms.service end
+
+# com.huawei.cryptosms.service                            u:object_r:system_app_service:s0
+smartDisplay_service                                    u:object_r:smart_display_service:s0
+
+hwPfwService                                            u:object_r:hw_pfw_service:s0
+
+# telephony services begin
+phone_apdu                                u:object_r:radio_service:s0
+phone_huawei                              u:object_r:radio_service:s0
+isms_interception                         u:object_r:radio_service:s0
+ihwvsim                                   u:object_r:radio_service:s0
+# telephony services end
+
+com.huawei.harassmentinterception.service.HarassmentInterceptionService         u:object_r:hsm_harassmentinterception_service:s0
+com.huawei.netassistant.service.netassistantservice                             u:object_r:hsm_netassistant_service:s0
+com.huawei.netassistant.binder.notificationcallbackbinder                       u:object_r:hsm_netassistant_callback_service:s0
+com.huawei.systemmanager.netassistant.netpolicy.NatNetworkPolicyService         u:object_r:hsm_natnetworkpolicy_service:s0
+com.huawei.systemmanager.netassistant.netnotify.policy.NatTrafficNotifyService  u:object_r:hsm_nattrafficnotify_service:s0
+com.huawei.systemmanager.rainbow.service                          u:object_r:hsm_rainbow_service:s0
+com.huawei.systemmanager.preventmode.PreventModeService           u:object_r:hsm_dnd_service:s0
+HsmStat                                                           u:object_r:hsm_stat_service:s0
+
+# HwSystemManager services begin
+com.huawei.permissionmanager.service.holdservice                  u:object_r:hsm_hold_service:s0
+# HwSystemManager services end
+
+# AR000AA4BH AIProtectionAnalyzer services begin
+huawei.android.security.IAppBehaviorDataAnalyzer                  u:object_r:hsm_aiprotection_analyzer_service:s0
+# AR000AA4BH AIProtectionAnalyzer services end
+
+# AR000C0VPC HwSecService begin
+com.huawei.securitycenter.mainservice.HwSecService           u:object_r:hsc_security_center_service:s0
+# AR000C0VPC HwSecService end
+
+# AR000CUI5B dPermissionManagerService begin
+com.huawei.security.dpermission.service.HwDPermissionService           u:object_r:dpermission_manager_service:s0
+# AR000CUI5B dPermissionManagerService end
+
+# AR000DAOCA DistributedPermissionManagerService begin
+distributedPermission           u:object_r:distributed_permission_manager_service:s0
+# AR000DAOCA DistributedPermissionManagerService end
+
+# AR000GM8N3 SecGuardDataMgr begin
+SecGuardDataMgr                 u:object_r:securityguard_data_manager:s0
+# AR000GM8N3 SecGuardDataMgr end
+
+input_method_secure u:object_r:input_method_secure_service:s0
+
+attestation_service                                     u:object_r:attestation_service:s0
+cover                                                   u:object_r:cover_service:s0
+SelfbuildIRService                                      u:object_r:SelfbuildIR_service:s0
+hwUsbExService                                          u:object_r:hwUsbEx_service:s0
+hwAlarmService                                          u:object_r:hwAlarm_service:s0
+hwConnectivityExService                                 u:object_r:hwConnectivityEx_service:s0
+easywakeup                                              u:object_r:easywakeup_service:s0
+aps_service                                             u:object_r:aps_service:s0
+
+pgservice                                               u:object_r:pgservice_service:s0
+
+gmsservice                                               u:object_r:gms_service:s0
+iostatsservice                                          u:object_r:iostatsservice_service:s0
+
+# fido authentication service
+fido_authenticator  u:object_r:fido_authenticator_service:s0
+
+# huawei keystore service
+com.huawei.security.IHwKeystoreService  		u:object_r:huawei_keystore_service:s0
+
+# authentication_service
+authentication_service u:object_r:authentication_service:s0
+
+# Added to register multi window service
+multiwin                                                u:object_r:hw_multiwin_service:s0
+
+# multitask add a service
+multi_task                                              u:object_r:hw_multitask_service:s0
+
+hwfm_service                                            u:object_r:hw_fm_service:s0
+
+securityserver u:object_r:securityserver_service:s0
+
+# zhudengkui begin
+EmcomManager u:object_r:emcommanager_service:s0
+# zhudengkui end
+CommunicationManager u:object_r:communicationmanager_service:s0
+forceRotationService                             u:object_r:force_rotation_service:s0
+
+hwservicebusmanager               u:object_r:hwservicebusmanager_service:s0
+
+#SELinux : avc: denied  { add } for service=powergenius  pid=2971 uid=1001 scontext=u:r:system_app:s0 tcontext=u:object_r:default_android_service:s0 tclass=service_manager
+powergenius u:object_r:powergenius_service:s0
+
+# for ChrService
+chr_service             u:object_r:chr_service:s0
+
+# BEGIN PN: AR000FRQEF, Added by l00496052, 2021/05/29
+# for BleNotify
+BleNotify             u:object_r:BleNotify:s0
+# END PN: AR000FRQEF, Added by l00496052, 2021/05/29
+
+smartcardservice                                        u:object_r:smartcard_service:s0
+
+hwsysresmanager                                         u:object_r:hwsysresmanager_service:s0
+
+# Add for postCamera
+post.camera                                             u:object_r:mediaserver_service:s0
+
+Hwmedia.monitor u:object_r:hw_mediamonitor_service:s0
+
+# DTS HPX service
+dts_hpx_service                           u:object_r:dtshpxservice_service:s0
+
+com.huawei.servicehost                                 u:object_r:hwservicehost_service:s0
+
+# SELinux : avc:  denied  { find } for service=hwthermal pid=649 uid=1000 scontext=u:r:thermal-daemon:s0 tcontext=u:object_r:hwthermal_service:s0 tclass=service_manager
+hwthermal                                 u:object_r:hwthermal_service:s0
+
+aod_service               u:object_r:aod_service:s0
+
+# add felica
+felica                                    u:object_r:nfc_service:s0
+
+#st54h
+nfc.st_ext                                u:object_r:nfc_service:s0
+nfc_settings                              u:object_r:nfc_service:s0
+
+facerecognition u:object_r:facerecognition:s0
+
+voicerecognition u:object_r:voicerecognition:s0
+
+# for hwCarrierConfig
+hwCarrierConfig u:object_r:hwCarrierConfig_service:s0
+
+com.huawei.security.tpm2attest.IHwTpm2AttestService                    u:object_r:tpm2_attest_service:s0
+
+com.huawei.iconnect.ConnectService        u:object_r:iconnect_connect_service:s0
+
+callrecord      u:object_r:syssvccallrecord_service:s0
+
+com.huawei.pcassistant.handoffsdk.HandoffSdkService      u:object_r:handoffsdk_service:s0
+
+HwHiShowManagerService           u:object_r:hwhishowmanagerservice_service:s0
+
+HwMagicWindowService             u:object_r:hwmagicwindow_service:s0
+
+com.huawei.goldeneye                      u:object_r:goldeneye_service:s0
+com.huawei.goldeneye.service              u:object_r:goldeneye_service:s0
+
+hinetwork    u:object_r:hinetwork_service:s0
+
+fold_screen  u:object_r:fold_screen_service:s0
+
+hwExtDisplayUI u:object_r:hw_ext_display_ui:s0
+
+security_server u:object_r:hw_security_server:s0
+
+appassistant u:object_r:appassistant_service:s0
+
+pluginmanager u:object_r:pluginmanager_service:s0
+
+HwWatchConnectivityService u:object_r:hw_watch_connectivity_service:s0
+
+trustcircle_manager_service u:object_r:hw_trust_circle_manager:s0
+
+hwFaultNotifyService u:object_r:fault_notify_service:s0
+
+com.huawei.mdfs.DistributedFileService u:object_r:distributedfileservice:s0
+com.huawei.mdfs.DistributedFileDaemon u:object_r:distributedfiledaemon:s0
+IDistributedGatewayService u:object_r:distributedgateway_service:s0
+IDistributedNetworkService u:object_r:distributednetwork_service:s0
+IDistributedDeviceProfileService u:object_r:distributed_device_profile_service:s0
+hw_device_profile u:object_r:hw_device_profile_service:s0
+
+# for hw distributed network native service
+DistributedNetNativeService u:object_r:distributed_net_service:s0
+com.huawei.android.distributed.net.IDistributedNetNativeService u:object_r:distributed_net_native_service:s0
+
+# for SimpleperfService
+SimpleperfService  u:object_r:hiview_service:s0
+
+higeo_service u:object_r:hw_higeo_service:s0
+
+# AR000F095D huangshijun
+HiViewBinderService u:object_r:hiview_binder_service:s0
+
+# Group Authenticate Service
+group_authenticate_service u:object_r:hw_groupauth_service:s0
+
+# for hdc sync service
+com.huawei.nemo.age.HdcAgeService u:object_r:hwhdcserver:s0
+
+# for hiviewdfx service
+hiviewdfx u:object_r:hiview_service:s0
+
+# for Wifi Enhance Service
+wifienhance u:object_r:wifienhance_service:s0
+
+# for Wifi Hml Service
+wifihml u:object_r:wifihml_service:s0
+
+# for tui Service
+tui u:object_r:tui_service:s0
+
+# for BastetService  Service
+BastetService u:object_r:Bastet_service:s0
+
+# for boosterd
+BoosterdNativeService u:object_r:boosterd_native_service:s0
+
+# for ivi manager
+hwIviManager u:object_r:hwIviManager_service:s0
+
+# for iGraphicsservice
+iGraphicsservice u:object_r:igraphics_service:s0
+
+# AR000H8SD5 baifangyuan for HwWatchServices and ext Service
+HwWatchServices u:object_r:hwwatch_services_service:s0
+HwWatchServicesExt u:object_r:hwwatch_services_ext_service:s0
+
+# for DcpdService
+DcpdService u:object_r:dcpd_service:s0
+
+# add useriamproxy service
+useriamproxy u:object_r:useriamproxy:s0
+#line 1 "vendor/huawei/chipset_common/sepolicy/qcom/service_contexts"
+#################[APK]####################
+ioinfo					  u:object_r:jankservice_service:s0
+jank					  u:object_r:jankservice_service:s0
+jankshield                u:object_r:jankshield_service:s0
+
+ims_ut                   u:object_r:ims_ut_service:s0
+
+#authentication_service     u:object_r:authentication_service:s0
+# Binder.Pged        u:object_r:hwpged_service:s0
+# com.huawei.goldeneye                      u:object_r:goldeneye_service:s0
+# com.huawei.goldeneye.service              u:object_r:goldeneye_service:s0
+SysinfoService                  u:object_r:systeminfo_service:s0
+IAwareCMSService        u:object_r:iawarecmservice:s0
+BdatService             u:object_r:bdat_service:s0
+#nonhardaccelpkgs                          u:object_r:nonhardaccelpkgs_service:s0
+hwext_device_service    u:object_r:hwext_device_service:s0
+
+#chr_service             u:object_r:chr_service:s0
+faultdetectservice                        u:object_r:hiview_service:s0
+hiview                                    u:object_r:hiview_service:s0
+# AR000AK4LG sync selinux config for qcom begin
+powerprofile                              u:object_r:powerprofile_service:s0
+# AR000AK4LG sync selinux config for qcom end
+
+ITouchservice                             u:object_r:itouch_service:s0
+
+# for get the electronic barcode information
+deviceinfoex u:object_r:deviceinfoex_service:s0
+#add for qcom libteec_adapt
+ITeecService                              u:object_r:iteec_service:s0
+#add for auth_cert_manager
+auth_cert_manager                         u:object_r:auth_cert_manager_service:s0
+
+#for smc_service
+smc_service    u:object_r:smc_service:s0
+#line 1 "vendor/huawei/zidane/sepolicy/system/common/service_contexts"
+# for MSDP
+com.huawei.msdp.devicestatus u:object_r:msdp_devicestatus:s0
+com.huawei.msdp.movement u:object_r:msdp_movement:s0
+com.huawei.msdp.space u:object_r:msdp_space:s0
+# for location SA
+locationhub u:object_r:locationhub_sa:s0
+
+#for SamgrService
+SamgrService u:object_r:samgrservice:s0
+
+DataBusService u:object_r:databus_service:s0
+
+#for MultimodalInputService
+InputChannelService u:object_r:inputchannelservice:s0
+WindowStateService u:object_r:windowstateservice:s0
+
+#for hispeechserver SA
+hispeechserver u:object_r:hispeechserver_sa:s0
+
+# for faultdetectservice
+hiviewdfx_faultlogger u:object_r:hiviewdfx_faultlogger_service:s0
+
+#for syseventservice
+hiviewdfx_syseventservice u:object_r:hiviewdfx_syseventservice_service:s0
+
+#for evs_cc
+Evscc_Service u:object_r:Evscc_Service:s0
+#line 1 "vendor/huawei/chipset_common/sepolicy/common/ohos/sepolicy/system/prvite/common/service_contexts"
+# for HwContainerManagerService
+containermanager      u:object_r:ohco_containermanager_service:s0
+
+# for gateway
+ability_gateway       u:object_r:ohco_ability_gateway_service:s0
+package_oh            u:object_r:ohco_package_oh_service:s0
+wm_gateway_service    u:object_r:ohco_wm_gateway_service:s0
+gw_bundle_mgr         u:object_r:ohco_gw_bundle_mgr_service:s0
+gw_permission_mgr     u:object_r:ohco_gw_permission_mgr_service:s0
+input_manager_gateway u:object_r:ohco_input_manager_gateway_service:s0
+nativeinputgateway    u:object_r:ohco_nativeinputgateway_service:s0

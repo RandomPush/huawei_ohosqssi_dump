@@ -1,0 +1,44 @@
+{
+    "simple_rule": [
+        {
+            "event_name": "ServiceFault",
+            "eventid": 950001100
+        },
+        {
+            "event_name": "RuntimeFault",
+            "eventid": 950001101
+        },
+        {
+            "event_name": "DatabaseFault",
+            "eventid": 950001102
+        },
+        {
+            "event_name": "CommunicationFault",
+            "eventid": 950001103
+        },
+        {
+            "event_name": "DatabaseStatistic",
+            "eventid": 950001104
+        },
+        {
+            "event_name": "VisitStatistic",
+            "eventid": 950001105
+        },
+        {
+            "event_name": "TrafficStatistic",
+            "eventid": 950001106
+        },
+        {
+            "event_name": "DatabasePerformanceStatistic",
+            "eventid": 950001107
+        },
+        {
+            "event_name": "ApiPerformanceStatistic",
+            "eventid": 950001110
+        },
+        {
+            "event_name": "ApiPerformanceInterface",
+            "eventid": 950001111
+        }
+    ]
+}

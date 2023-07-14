@@ -1,0 +1,36 @@
+{
+    "simple_rule": [
+        {
+            "event_name": "SystemEnvironmentError",
+            "eventid": 950000601
+        },
+        {
+            "event_name": "NetworkError",
+            "eventid": 950000602
+        },
+        {
+            "event_name": "SkeletonError",
+            "eventid": 950000603
+        },
+        {
+            "event_name": "DbinderServiceError",
+            "eventid": 950000604
+        },
+        {
+            "event_name": "TransmissionError",
+            "eventid": 950000605
+        },
+        {
+            "event_name": "CommonDriverError",
+            "eventid": 950000606
+        },
+        {
+            "event_name": "KernelDriverError",
+            "eventid": 950000607
+        },
+        {
+            "event_name": "SocketDriverError",
+            "eventid": 950000608
+        }
+    ]
+}

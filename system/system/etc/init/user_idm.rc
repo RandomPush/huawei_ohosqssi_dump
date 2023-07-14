@@ -1,0 +1,12 @@
+service useridm /system/bin/sa_main /system/profile/useridm.xml
+    class z_core
+    user vendor_useriam
+    group vendor_useriam shell
+    seclabel u:r:useriam:s0
+    disabled
+
+on property:sys.useridm=start
+    start useridm
+
+on property:sys.useridm=stop
+    stop useridm

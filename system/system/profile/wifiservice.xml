@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+    <process>wifiservice</process>
+    <loadlibs>
+        <libpath>libwifi.z.so</libpath>
+    </loadlibs>
+    <systemability> 
+        <name>1120</name> 
+        <libpath>libwifi.z.so</libpath> 
+        <run-on-create>true</run-on-create> 
+        <distributed>false</distributed> 
+        <dump-level>1</dump-level> 
+    </systemability>
+    <systemability> 
+        <name>1121</name> 
+        <libpath>libwifi.z.so</libpath> 
+        <run-on-create>true</run-on-create> 
+        <distributed>false</distributed> 
+        <dump-level>1</dump-level> 
+    </systemability>
+    <systemability> 
+        <name>1122</name> 
+        <libpath>libwifi.z.so</libpath> 
+        <run-on-create>true</run-on-create> 
+        <distributed>false</distributed> 
+        <dump-level>1</dump-level> 
+    </systemability>
+    <systemability> 
+        <name>1123</name> 
+        <libpath>libwifi.z.so</libpath> 
+        <run-on-create>true</run-on-create> 
+        <distributed>false</distributed> 
+        <dump-level>1</dump-level> 
+    </systemability>
+</info>

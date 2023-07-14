@@ -1,0 +1,1424 @@
+<html><head>
+
+<p class=MsoNormal><span lang=EN-US>Please note we provide an open source software notice along with this product and/or this product firmware (in the following just "this product"). The open source software licenses are granted by the respective right holders. And the open source licenses prevail all other license information with regard to the respective open source software contained in the product, including but not limited to End User Software Licensing Agreement. This notice is provided on behalf of Huawei Device Co., Ltd. and any of its local subsidiaries which may have provided this product to you in your local country.</span></p>
+
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>Warranty Disclaimer</span></b></p>
+
+
+<p class=MsoNormal><b><span lang=EN-US style='text-transform:uppercase'>The open source software in this product is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY, without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the applicable licenses for more details.</span></b></p>
+
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:16.0pt'>Copyright Notice and License Texts</span></b></p>
+
+
+<style type="text/css">
+body { padding: 0; font-family: sans-serif; }
+.same-license { background-color: #eeeeee; border-top: 20px solid white; padding: 10px; }
+.label { font-weight: bold; }
+.file-list { margin-left: 1em; color: blue; }
+</style>
+
+</head><body topmargin="0" leftmargin="0"             rightmargin="0" bottommargin="0">
+<div class="toc">
+<ul>
+<li><a href="#id0">/AndroidX-Annotation</a></li>
+<li><a href="#id1">/checker-qual</a></li>
+<li><a href="#id2">/The-Legion-of-the-Bouncy-Castle</a></li>
+<li><a href="#id3">/guava</a></li>
+<li><a href="#id4">/Google-J2ObjC</a></li>
+</ul>
+</div><!-- table of contents -->
+            <table cellpadding="0" cellspacing="0" border="0">
+<tr id="id0"><td class="same-license">
+            <div class="label">Notices for Software(s):</div>
+            <div class="file-list">
+/AndroidX-Annotation <br/>
+</div><!-- file-list -->
+
+             <pre class="license-text">
+
+
+Software: AndroidX Annotation 1.2.0
+
+Copyright notice:
+Copyright (C) 2020 The Android Open Source Project
+Copyright (C) 2019 The Android Open Source Project
+Copyright (C) 2018 The Android Open Source Project
+Copyright (C) 2017 The Android Open Source Project
+Copyright (C) 2016 The Android Open Source Project
+Copyright (C) 2015 The Android Open Source Project
+Copyright (C) 2014 The Android Open Source Project
+Copyright (C) 2013 The Android Open Source Project
+
+License: Apache License Version 2.0
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      &quot;License&quot; shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      &quot;Licensor&quot; shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      &quot;Legal Entity&quot; shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      &quot;control&quot; means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      &quot;You&quot; (or &quot;Your&quot;) shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      &quot;Source&quot; form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      &quot;Object&quot; form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      &quot;Work&quot; shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      &quot;Derivative Works&quot; shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      &quot;Contribution&quot; shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, &quot;submitted&quot;
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as &quot;Not a Contribution.&quot;
+
+      &quot;Contributor&quot; shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non&ndash;exclusive, no&ndash;charge, royalty&ndash;free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non&ndash;exclusive, no&ndash;charge, royalty&ndash;free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross&ndash;claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a &quot;NOTICE&quot; text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third&ndash;party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an &quot;AS IS&quot; BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON&ndash;INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets &quot;[]&quot;
+      replaced with your own identifying information. (Don&prime;t include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same &quot;printed page&quot; as the copyright notice for easier
+      identification within third&ndash;party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE&ndash;2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</pre><!-- license-text -->
+            </td></tr><!-- same-license -->
+
+
+
+<tr id="id1"><td class="same-license">
+            <div class="label">Notices for Software(s):</div>
+            <div class="file-list">
+/checker-qual <br/>
+</div><!-- file-list -->
+
+             <pre class="license-text">
+
+
+Software: checker&ndash;qual 3.12.0
+
+Copyright notice:
+Copyright 2004&ndash;present by the Checker Framework developers
+
+License: The MIT License
+
+The MIT License
+
+Copyright (c) &lt;year&gt; &lt;copyright holders&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</pre><!-- license-text -->
+            </td></tr><!-- same-license -->
+
+
+
+<tr id="id2"><td class="same-license">
+            <div class="label">Notices for Software(s):</div>
+            <div class="file-list">
+/The-Legion-of-the-Bouncy-Castle <br/>
+</div><!-- file-list -->
+
+             <pre class="license-text">
+
+
+Software: The Legion of the Bouncy Castle 1.71
+
+Copyright notice:
+Copyright 2011, Cisco Systems, Inc
+(c) Nat224.isOne
+Copyright 2008&ndash;2016 Timothy Wall
+copyrighted by the Free Software Foundation
+Copyright Dr B. R Gladman (gladman@seven77.demon.co.uk) and Sam Simpson (s.simpson@mia.co.uk)
+Copyright (c) 2005 The Legion Of The Bouncy Castle (https://www.bouncycastle.org)
+(c) 2006 VeriSign, Inc.
+Copyright (c) 2001 Company
+Copyright (c) 1997, 2021 Oracle and/or its affiliates
+Copyright (c) 1989, 1991 Free Software Foundation, Inc.
+IntegerPolynomial (c) IntegerPolynomial
+(c) ECFieldElement A1
+Copyright (c) 2010, 2019 Oracle and/or its affiliates
+Copyright (c) 2011 Timothy Wall
+TgSS (c) EeVadO
+Copyright (c) 2011 Tim Buktu (tbuktu@hotmail.com)
+Copyright (c) 1997, 2019 Oracle and/or its affiliates
+Copyright (c) 2018 Oracle and/or its affiliates
+Copyright (c) 2000&ndash;2021 The Legion Of The Bouncy Castle Inc. (https://www.bouncycastle.org)
+Copyright (c) 2010 Timothy Wall
+Copyright (c) The Internet Society (2005)
+Copyright (c) 2000&ndash;2021 The Legion of the Bouncy Castle Inc. (https://www.bouncycastle.org)
+
+License: The MIT License
+
+The MIT License
+
+Copyright (c) &lt;year&gt; &lt;copyright holders&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</pre><!-- license-text -->
+            </td></tr><!-- same-license -->
+
+
+
+<tr id="id3"><td class="same-license">
+            <div class="label">Notices for Software(s):</div>
+            <div class="file-list">
+/guava <br/>
+</div><!-- file-list -->
+
+             <pre class="license-text">
+
+
+Software: guava 31.0.1
+
+Copyright notice:
+Copyright (c) 2021 The Guava Authors
+Copyright (c) 2020 The Guava Authors
+Copyright (c) 2019 The Guava Authors
+Copyright (c) 2018 The Guava Authors
+Copyright (c) 2017 The Guava Authors
+Copyright (c) 2016 The Guava Authors
+Copyright (c) 2015 The Guava Authors
+Copyright (c) 2014 The Guava Authors
+Copyright (c) 2013 The Guava Authors
+Copyright (c) 2012 The Guava Authors
+Copyright (c) 2011 The Guava Authors
+Copyright (c) 2010 The Guava Authors
+Copyright (c) 2009 The Guava Authors
+Copyright (c) 2008 The Guava Authors
+Copyright (c) 2007 The Guava Authors
+Copyright (c) 2006 The Guava Authors
+Copyright (c) 2005 The Guava Authors
+
+License: Apache License Version 2.0
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      &quot;License&quot; shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      &quot;Licensor&quot; shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      &quot;Legal Entity&quot; shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      &quot;control&quot; means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      &quot;You&quot; (or &quot;Your&quot;) shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      &quot;Source&quot; form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      &quot;Object&quot; form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      &quot;Work&quot; shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      &quot;Derivative Works&quot; shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      &quot;Contribution&quot; shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, &quot;submitted&quot;
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as &quot;Not a Contribution.&quot;
+
+      &quot;Contributor&quot; shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non&ndash;exclusive, no&ndash;charge, royalty&ndash;free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non&ndash;exclusive, no&ndash;charge, royalty&ndash;free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross&ndash;claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a &quot;NOTICE&quot; text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third&ndash;party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an &quot;AS IS&quot; BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON&ndash;INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets &quot;[]&quot;
+      replaced with your own identifying information. (Don&prime;t include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same &quot;printed page&quot; as the copyright notice for easier
+      identification within third&ndash;party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE&ndash;2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+</pre><!-- license-text -->
+            </td></tr><!-- same-license -->
+
+
+
+<tr id="id4"><td class="same-license">
+            <div class="label">Notices for Software(s):</div>
+            <div class="file-list">
+/Google-J2ObjC <br/>
+</div><!-- file-list -->
+
+             <pre class="license-text">
+
+
+Software: Google J2ObjC 1.3
+
+Copyright notice:
+Copyright 2011 Google Inc.
+Copyright 2012 Google Inc.
+Copyright (c) 2016 com.google
+Copyright (c) 2008 The Android Open Source Project
+Copyright (c) 2006 The Android Open Source Project
+Copyright (c) 2009 The Android Open Source Project
+Copyright (c) 2012 The Android Open Source Project
+Copyright (c) 2013 The Android Open Source Project
+Copyright (c) 2010 The Android Open Source Project
+Copyright (c) 2011 The Android Open Source Project
+Copyright (c) 2007 The Android Open Source Project
+Copyright (c) 2005&ndash;2006, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2010, International Business Machines Corporation and others
+Copyright (c) 2016, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2011, International Business Machines Corporation and others
+Copyright (c) 2009,2016 International Business Machines Corporation and others
+Copyright (c) 2013, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2010, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2015, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2013&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2003&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2009 International Business Machines Corporation and others
+Copyright (c) 2008&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2004&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2010, International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2009, International Business Machines Corporation and others
+Copyright (c) 2005&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2004&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2013, International Business Machines Corporation and others
+Copyright (c) 2003&ndash;2010, International Business Machines Corporation and others
+Copyright (c) 2009, Google, International Business Machines Corporation and others
+Copyright (c) 2006&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2015, Google Inc, International Business Machines Corporation and others
+Copyright (c) 2008&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2003&ndash;2011, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2013, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2007, International Business Machines Corporation and others
+Copyright (c) 2014, International Business Machines Corporation and others
+Copyright (c) 2011, International Business Machines Corporation and others
+Copyright (c) 2006&ndash;2009, Google, International Business Machines Corporation and others
+Copyright (c) 2008&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2009, International Business Machines Corporation and others
+Copyright (c) 2002&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2002&ndash;2014, Google, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2015 International Business Machines Corporation and others
+Copyright (c) 2014&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2010&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2002&ndash;2010, International Business Machines Corporation and others
+Copyright (c) 2003&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2015, Google, Inc., International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2011, International Business Machines Corporation and others
+Copyright (c) 2011&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2009, International Business Machines Corporation and others
+Copyright (c) 2004&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2004, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2015, Google, International Business Machines Corporation and others
+Copyright (c) 2015&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2005&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2010&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2003&ndash;2016 International Business Machines Corporation and others
+Copyright (c) 2010&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2013&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2012&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2012&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2012&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 1999&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2005, International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2013, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2009, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2010, International Business Machines Corporation and others
+Copyright (c) 2007, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2011, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2012, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2010, International Business Machines Corporation and others
+Copyright (c) 2010&ndash;2013, International Business Machines Corporation and others
+Copyright (c) 2010&ndash;2014, Google, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2013, International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2016 International Business Machines Corporation and others
+Copyright (c) 1999&ndash;2014, International Business Machines Corporation and others
+Copyright IBM Corporation, 1996&ndash;2016
+Copyright (c) IBM Corporation 1996, 2000
+Copyright IBM Corporation, 1997, 2000, 2005, 2007
+Copyright (c) 2008&ndash;2016, Google Inc, International Business Machines Corporation and others
+Copyright (c) 2002&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2012, International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2008, International Business Machines Corporation and others
+Copyright (c) 2000&ndash;2009, International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2002&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2011, Google, International Business Machines Corporation and others
+Copyright (c) 2005 &ndash; 2012, International Business Machines Corporation and others
+Copyright (c) 2005&ndash;2012, International Business Machines Corporation and others
+Copyright (c) 2005&ndash;2013, International Business Machines Corporation and others
+Copyright (c) 2005 &ndash; 2014, International Business Machines Corporation and others
+Copyright (c) 2000&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2003&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2016, Google, International Business Machines Corporation and others
+Copyright (c) IBM Corporation 1999
+Copyright (c) 2006&ndash;2016, Google, International Business Machines Corporation and others
+Copyright (c) 2012, International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2011, International Business Machines Corporation and others
+Copyright (c) 2012&ndash;2016, Google, International Business Machines Corporation and others
+Copyright (c) 2011&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2000&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2008&ndash;2015, Google, International Business Machines Corporation and others
+Copyright (c) 2013, Google Inc, International Business Machines Corporation and others
+Copyright (c) 2013&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2002&ndash;2009 International Business Machines Corporation and others
+Copyright (c) 2004&ndash;2009, International Business Machines Corporation and others
+Copyright (c) 2004&ndash;2010, International Business Machines Corporation and others
+Copyright (c) 2005&ndash;2016 International Business Machines Corporation and others
+Copyright (c) IBM Corporation 1999&ndash;2000
+Copyright (c) 2009, Yahoo! Inc.
+Copyright (c) 2010&ndash;2011, Google, International Business Machines Corporation and others
+Copyright (c) 2008&ndash;2016 International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2004, International Business Machines Corporation and others
+Copyright (c) 2002&ndash;2007, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2009, Google, International Business Machines Corporation and others
+Copyright (c) 2008&ndash;2014, Google, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2010, Google, International Business Machines Corporation and others
+Copyright (c) 2002&ndash;2011, International Business Machines Corporation and others
+Copyright (c) 2002, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2012, International Business Machines Corporation and others
+Copyright (c) 2005&ndash;2011, International Business Machines Corporation and others
+Copyright (c) 2008&ndash;2009, International Business Machines Corporation and others
+Copyright (c) 2003&ndash;2016, Google, International Business Machines Corporation and others
+Copyright (c) 2014&ndash;2015, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2012, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2008, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2016, International Business Machines Corporation, Google, Inc. and others
+Copyright (c) 2009&ndash;2016, Google, Inc. International Business Machines Corporation and others
+Copyright (c) 2010&ndash;2016, Google, Inc. International Business Machines Corporation and others
+Copyright (c) 2004&ndash;2013, International Business Machines Corporation and others
+Copyright (c) 2004&ndash;2016, Google Inc, International Business Machines Corporation and others
+Copyright (c) 2011&ndash;2016, International Business Machines Corporation
+Copyright (c) 2005&ndash;2010, International Business Machines Corporation and others
+Copyright (c) 2008&ndash;2009, Google, International Business Machines Corporation and others
+Copyright (c) 2004&ndash;2006, International Business Machines Corporation and others
+Copyright (c) 2016 and later Unicode, Inc. and others
+Copyright (c) 2012&ndash;2015 International Business Machines Corporation and others
+(c) 2016 Unicode(r), Inc.
+Copyright 2003&ndash;2005 http://idnconnect.jdna.jp/testbed.html
+Copyright (c) 2003&ndash;2012, International Business Machines Corporation and others
+Copyright (c) 2003 National Electronics and Computer Technology Center and others
+Copyright (c) 2005&ndash;2008, International Business Machines Corporation and others
+Copyright (c) 2005, International Business Machines Corporation and others
+Copyright (c) 2005&ndash;2009, International Business Machines Corporation and others
+Copyright (c) 2006&ndash;2008, International Business Machines Corporation and others
+Copyright (c) 1999&ndash;2004, International Business Machines Corporation and others
+Copyright (c) 1991&ndash;2013 Unicode, Inc.
+(c) 2002 and later Unicode, Inc. and others
+Copyright (c) 2000&ndash;2005, International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2007, International Business Machines Corporation and others
+Copyright (c) 2006&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 2000&ndash;2004, International Business Machines Corporation and others
+Copyright (c) 2002&ndash;2004, International Business Machines Corporation and others
+Copyright (c) 2008&ndash;2010, International Business Machines Corporation and others
+Copyright (c) 2000&ndash;2015, International Business Machines Corporation and others
+Copyright (c) IBM Corporation 1996&ndash;2010
+Copyright (c) 2000&ndash;2009,2011 International Business Machines Corporation and others
+Copyright (c) 2005&ndash;2015 IBM Corporation and others
+Copyright (c) 1991&ndash;2005 Unicode, Inc.
+Copyright 2006 Google Inc.
+Copyright 2007 Google Inc.
+(c) Copyright Taligent, Inc. 1996, 1997
+(c) Copyright IBM Corp. 1996&ndash;2012
+Copyright (c) 2012&ndash;2013, Google, International Business Machines Corporation and others
+Copyright (c) 2011&ndash;2012, International Business Machines Corporation and others
+(c) Copyright Taligent, Inc. 1996
+(c) Copyright IBM Corp. 1996
+Copyright (c) 2004, 2012 International Business Machines Corporation and others
+Copyright (c) 2004&ndash;2011, International Business Machines Corporation and others
+Copyright (c) 2010, Yahoo! Inc.
+Copyright (c) 2004, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2016, Google, International Business Machines Corporation and others
+Copyright (c) 2001, International Business Machines Corporation and + others
+Copyright (c) 1999&ndash;2010, International Business Machines Corporation and others
+Copyright (c) 1996&ndash;2006, International Business Machines Corporation and others
+Copyright (c) 2004&ndash;2008, International Business Machines Corporation and others
+Copyright (c) 2008, International Business Machines Corporation and others
+Copyright (c) 1998&ndash;2010, International Business Machines Corporation and Unicode, Inc.
+Copyright (c) 2002&ndash;2010, International Business Machines Corporation and Unicode, Inc.
+Copyright (c) 1998&ndash;2007 International Business Machines Corporation and Unicode, Inc.
+Copyright (c) 1998&ndash;2003 International Business Machines Corporation and Unicode, Inc.
+Copyright (c) 2004&ndash;2016 International Business Machines Corporation and others
+Copyright (c) 2001&ndash;2006, International Business Machines Corporation and others
+Copyright (c) 2003&ndash;2007, International Business Machines Corporation and others
+Copyright (c) 2003&ndash;2009, International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2014, Google, International Business Machines Corporation and others
+Copyright (c) 2000&ndash;2013, International Business Machines Corporation and others
+Copyright (c) 2000&ndash;2010, International Business Machines Corporation and others
+Copyright (c) 2007&ndash;2016, International Business Machines Corporation and Others
+Copyright (c) 1996&ndash;2008, International Business Machines Corporation and others
+Copyright (c) 2003&ndash;2012, Google, International Business Machines Corporation and others
+Copyright (c) 2015, Google, Inc., International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2015, Google, Inc. International Business Machines Corporation and others
+Copyright (c) 2009&ndash;2010, Google, Inc. International Business Machines Corporation and others
+Copyright (c) 2011, Google, International Business Machines Corporation and others
+Copyright (c) 2011&ndash;2012, Google, International Business Machines Corporation and others
+Copyright 2005&ndash;2012 IBM.
+Copyright (c) 2012 Google Inc.
+Copyright (c) 2011 Google Inc.
+Copyright (c) 2014 Square, Inc.
+Copyright 2014 Square Inc.
+Copyright (c) 2015 Square, Inc.
+Copyright (c) 1989, 1991 Free Software Foundation, Inc.
+copyrighted by the Free Software Foundation
+Copyright 2005&ndash;2008 The Android Open Source Project
+Copyright 2006 The Apache Software Foundation
+Copyright (c) 1995&ndash;2014 International Business Machines Corporation and others
+Copyright (c) 2002,2003, Stefan Haustein, Oberhausen, Rhld., Germany
+Copyright (c) 2000 World Wide Web Consortium, (Massachusetts Institute of Technology, Institut National de Recherche en Informatique et en Automatique, Keio University)
+Copyright (c) 1993 by Sun Microsystems, Inc.
+Copyright (c) 2018 The Android Open Source Project
+Copyright (c) 2016 The Android Open Source Project
+Copyright (c) 2014 The Android Open Source Project
+Character (c) Character
+Copyright (c) 1991&ndash;2006 Unicode, Inc.
+Copyright (c) 2017 The Android Open Source Project
+Copyright (c) 2019 The Android Open Source Project
+Copyright (c) 2004 World Wide Web Consortium
+Copyright 2016 The Android Open Source Project
+Copyright 2014 The Android Open Source Project
+Copyright (c) 2013 Google Inc.
+Copyright (c) 2010 Google Inc.
+Copyright (c) 2015 The Android Open Source Project
+Copyright 2015 The Android Open Source Project
+Copyright 2013 The Android Open Source Project
+Copyright (c) 2003, International Business Machines Corporation and others
+(c) Copyright IBM Corp. 1996&ndash;2005
+(c) Copyright IBM Corp. and others, 1996&ndash;2009
+Copyright (c) 2003&ndash;2004, International Business Machines Corporation and others
+(c) Copyright IBM Corp. 1996&ndash;2003
+(c) Copyright IBM Corp. 1999&ndash;2003
+(c) Copyright Taligent, Inc. 1996 &ndash; 1997
+(c) Copyright IBM Corp. 1996 &ndash; 1998
+(c) Copyright IBM Corp. 1996&ndash;1998
+(c) Copyright IBM Corp. 1996 &ndash; 1999
+(c) Copyright IBM Corp. 1996 &ndash; 2002
+(c) Copyright IBM Corp. 1996, 1997
+(c) Copyright Taligent, Inc. 1996,1997
+(c) Copyright Taligent, Inc. 1996&ndash;1998
+Copyright (c) 1998, 1999, Oracle and/or its affiliates
+Copyright (c) 1998, 2003, Oracle and/or its affiliates
+Copyright (c) 1998, 2006, Oracle and/or its affiliates
+Copyright (c) 1998, 2010, Oracle and/or its affiliates
+Copyright (c) 1998, 2011, Oracle and/or its affiliates
+Copyright (c) 2000, 2004, Oracle and/or its affiliates
+Copyright (c) 2000, 2009, Oracle and/or its affiliates
+Copyright (c) 2001, 2005, Oracle and/or its affiliates
+Copyright (c) 2001, 2010, Oracle and/or its affiliates
+Copyright (c) 2003, 2006, Oracle and/or its affiliates
+Copyright (c) 1999, 2007, Oracle and/or its affiliates
+Copyright (c) 1999, 2011, Oracle and/or its affiliates
+Copyright (c) 2001, Oracle and/or its affiliates
+Copyright (c) 1998, Oracle and/or its affiliates
+Copyright (c) 1999, 2001, Oracle and/or its affiliates
+Copyright (c) 1999, 2006, Oracle and/or its affiliates
+Copyright (c) 2000, 2006, Oracle and/or its affiliates
+Copyright (c) 2000, 2011, Oracle and/or its affiliates
+Copyright (c) 2000, Oracle and/or its affiliates
+Copyright (c) 2001, 2006, Oracle and/or its affiliates
+Copyright (c) 2005, Oracle and/or its affiliates
+Copyright (c) 2003, 2010, Oracle and/or its affiliates
+Copyright (c) 2003, Oracle and/or its affiliates
+Copyright (c) 1991&ndash;2007 Unicode, Inc.
+Copyright (c) 1991&ndash;2011 Unicode, Inc.
+Copyright (c) 1994, 2006, Oracle and/or its affiliates
+Copyright (c) 1994, 2008, Oracle and/or its affiliates
+Copyright (c) 1994, 2009, Oracle and/or its affiliates
+Copyright (c) 1994, 2010, Oracle and/or its affiliates
+Copyright (c) 1994, 2011, Oracle and/or its affiliates
+Copyright (c) 1994, 2013, Oracle and/or its affiliates
+Copyright (c) 1995, 2000, Oracle and/or its affiliates
+Copyright (c) 1995, 2006, Oracle and/or its affiliates
+Copyright (c) 1995, 2007, Oracle and/or its affiliates
+Copyright (c) 1995, 2008, Oracle and/or its affiliates
+Copyright (c) 1995, 2010, Oracle and/or its affiliates
+Copyright (c) 1995, 2011, Oracle and/or its affiliates
+Copyright (c) 1995, 2013, Oracle and/or its affiliates
+Copyright (c) 1996, 2004, Oracle and/or its affiliates
+Copyright (c) 1996, 2006, Oracle and/or its affiliates
+Copyright (c) 1996, 2008, Oracle and/or its affiliates
+Copyright (c) 1996, 2009, Oracle and/or its affiliates
+Copyright (c) 1996, 2010, Oracle and/or its affiliates
+Copyright (c) 1996, 2011, Oracle and/or its affiliates
+Copyright (c) 1996, 2012, Oracle and/or its affiliates
+Copyright (c) 1996, 2013, Oracle and/or its affiliates
+Copyright (c) 1997, 2005, Oracle and/or its affiliates
+Copyright (c) 1997, 2006, Oracle and/or its affiliates
+Copyright (c) 1997, 2007, Oracle and/or its affiliates
+Copyright (c) 1997, 2008, Oracle and/or its affiliates
+Copyright (c) 1997, 2009, Oracle and/or its affiliates
+Copyright (c) 1997, 2010, Oracle and/or its affiliates
+Copyright (c) 1997, 2011, Oracle and/or its affiliates
+Copyright (c) 1997, 2012, Oracle and/or its affiliates
+Copyright (c) 1997, 2013, Oracle and/or its affiliates
+Copyright (c) 1998, 2005, Oracle and/or its affiliates
+Copyright (c) 1999, 2005, Oracle and/or its affiliates
+Copyright (c) 1999, 2009, Oracle and/or its affiliates
+Copyright (c) 1999, 2010, Oracle and/or its affiliates
+Copyright (c) 2000, 2003, Oracle and/or its affiliates
+Copyright (c) 2000, 2005, Oracle and/or its affiliates
+Copyright (c) 2000, 2008, Oracle and/or its affiliates
+Copyright (c) 2000, 2010, Oracle and/or its affiliates
+Copyright (c) 2000, 2012, Oracle and/or its affiliates
+Copyright (c) 2000, 2013, Oracle and/or its affiliates
+Copyright (c) 2001, 2002, Oracle and/or its affiliates
+Copyright (c) 2001, 2008, Oracle and/or its affiliates
+Copyright (c) 2001, 2012, Oracle and/or its affiliates
+Copyright (c) 2002, 2005, Oracle and/or its affiliates
+Copyright (c) 2002, 2006, Oracle and/or its affiliates
+Copyright (c) 2002, 2010, Oracle and/or its affiliates
+Copyright (c) 2003, 2004, Oracle and/or its affiliates
+Copyright (c) 2003, 2008, Oracle and/or its affiliates
+Copyright (c) 2003, 2009, Oracle and/or its affiliates
+Copyright (c) 2003, 2011, Oracle and/or its affiliates
+Copyright (c) 2004, Oracle and/or its affiliates
+Copyright (c) 2005, 2006, Oracle and/or its affiliates
+Copyright (c) 2005, 2008, Oracle and/or its affiliates
+Copyright (c) 2005, 2010, Oracle and/or its affiliates
+Copyright (c) 2005, 2011, Oracle and/or its affiliates
+Copyright (c) 2005, 2012, Oracle and/or its affiliates
+Copyright (c) 2005, 2013 Oracle and/or its affiliates
+Copyright (c) 2006, Oracle and/or its affiliates
+Copyright (c) 2007, 2008, Oracle and/or its affiliates
+Copyright (c) 2008, 2009, Oracle and/or its affiliates
+Copyright (c) 2009, 2011, Oracle and/or its affiliates
+Copyright (c) 1994, 1995, Oracle and/or its affiliates
+Copyright (c) 1994, 1998, Oracle and/or its affiliates
+Copyright (c) 1994, 2000, Oracle and/or its affiliates
+Copyright (c) 1994, 2001, Oracle and/or its affiliates
+Copyright (c) 1994, 2002, Oracle and/or its affiliates
+Copyright (c) 1994, 2003, Oracle and/or its affiliates
+Copyright (c) 1994, 2004, Oracle and/or its affiliates
+Copyright (c) 1994, 2005, Oracle and/or its affiliates
+Copyright (c) 1995, 1996, Oracle and/or its affiliates
+Copyright (c) 1995, 1997, Oracle and/or its affiliates
+Copyright (c) 1995, 1999, Oracle and/or its affiliates
+Copyright (c) 1995, 2001, Oracle and/or its affiliates
+Copyright (c) 1995, 2003, Oracle and/or its affiliates
+Copyright (c) 1995, 2004, Oracle and/or its affiliates
+Copyright (c) 1995, 2005, Oracle and/or its affiliates
+Copyright (c) 1995, 2012, Oracle and/or its affiliates
+Copyright (c) 1995, Oracle and/or its affiliates
+Copyright (c) 1996, 1997, Oracle and/or its affiliates
+Copyright (c) 1996, 1998, Oracle and/or its affiliates
+Copyright (c) 1996, 1999, Oracle and/or its affiliates
+Copyright (c) 1996, 2000, Oracle and/or its affiliates
+Copyright (c) 1996, 2001, Oracle and/or its affiliates
+Copyright (c) 1996, 2002, Oracle and/or its affiliates
+Copyright (c) 1996, 2003, Oracle and/or its affiliates
+Copyright (c) 1996, 2005, Oracle and/or its affiliates
+Copyright (c) 1996, 2007, Oracle and/or its affiliates
+Copyright (c) 1996, Oracle and/or its affiliates
+Copyright (c) 1997, 1998, Oracle and/or its affiliates
+Copyright (c) 1997, 1999, Oracle and/or its affiliates
+Copyright (c) 1997, 2000, Oracle and/or its affiliates
+Copyright (c) 1997, 2001, Oracle and/or its affiliates
+Copyright (c) 1997, 2002, Oracle and/or its affiliates
+Copyright (c) 1997, 2003, Oracle and/or its affiliates
+Copyright (c) 1997, 2004, Oracle and/or its affiliates
+Copyright (c) 1997, Oracle and/or its affiliates
+Copyright (c) 1998, 2001, Oracle and/or its affiliates
+Copyright (c) 1998, 2002, Oracle and/or its affiliates
+Copyright (c) 1998, 2004, Oracle and/or its affiliates
+Copyright (c) 1998, 2007, Oracle and/or its affiliates
+Copyright (c) 1998, 2008, Oracle and/or its affiliates
+Copyright (c) 1998, 2009, Oracle and/or its affiliates
+Copyright (c) 1998, 2012, Oracle and/or its affiliates
+Copyright (c) 1999, 2000, Oracle and/or its affiliates
+Copyright (c) 1999, 2002, Oracle and/or its affiliates
+Copyright (c) 1999, 2003, Oracle and/or its affiliates
+Copyright (c) 1999, 2004, Oracle and/or its affiliates
+Copyright (c) 1999, 2008, Oracle and/or its affiliates
+Copyright (c) 1999, 2012, Oracle and/or its affiliates
+Copyright (c) 1999, Oracle and/or its affiliates
+Copyright (c) 2000, 2001, Oracle and/or its affiliates
+Copyright (c) 2000, 2002, Oracle and/or its affiliates
+Copyright (c) 2000, 2007, Oracle and/or its affiliates
+Copyright (c) 2001, 2003, Oracle and/or its affiliates
+Copyright (c) 2001, 2004, Oracle and/or its affiliates
+Copyright (c) 2001, 2007, Oracle and/or its affiliates
+Copyright (c) 2001, 2009, Oracle and/or its affiliates
+Copyright (c) 2001, 2011, Oracle and/or its affiliates
+Copyright (c) 2002, 2003, Oracle and/or its affiliates
+Copyright (c) 2002, 2004, Oracle and/or its affiliates
+Copyright (c) 2002, 2007, Oracle and/or its affiliates
+Copyright (c) 2002, 2008, Oracle and/or its affiliates
+Copyright (c) 2002, 2009, Oracle and/or its affiliates
+Copyright (c) 2002, 2011, Oracle and/or its affiliates
+Copyright (c) 2002, 2012, Oracle and/or its affiliates
+Copyright (c) 2002, 2013, Oracle and/or its affiliates
+Copyright (c) 2002, Oracle and/or its affiliates
+Copyright (c) 2003, 2005, Oracle and/or its affiliates
+Copyright (c) 2003, 2007, Oracle and/or its affiliates
+Copyright (c) 2003, 2013, Oracle and/or its affiliates
+Copyright (c) 2003,2010, Oracle and/or its affiliates
+Copyright (c) 2004, 2005, Oracle and/or its affiliates
+Copyright (c) 2004, 2008, Oracle and/or its affiliates
+Copyright (c) 2004, 2009, Oracle and/or its affiliates
+Copyright (c) 2004, 2010, Oracle and/or its affiliates
+Copyright (c) 2004, 2011, Oracle and/or its affiliates
+Copyright (c) 2004, 2012, Oracle and/or its affiliates
+Copyright (c) 2005, 2007, Oracle and/or its affiliates
+Copyright (c) 2005, 2009, Oracle and/or its affiliates
+Copyright (c) 2006, 2007, Oracle and/or its affiliates
+Copyright (c) 2006, 2011, Oracle and/or its affiliates
+Copyright (c) 2006, 2012, Oracle and/or its affiliates
+Copyright (c) 2007, 2009, Oracle and/or its affiliates
+Copyright (c) 2007, 2010, Oracle and/or its affiliates
+Copyright (c) 2007, 2011, Oracle and/or its affiliates
+Copyright (c) 2007, 2012, Oracle and/or its affiliates
+Copyright (c) 2007, Oracle and/or its affiliates
+Copyright (c) 2008, 2010, Oracle and/or its affiliates
+Copyright (c) 2008, 2011, Oracle and/or its affiliates
+Copyright (c) 2008, 2012, Oracle and/or its affiliates
+Copyright (c) 2008, Oracle and/or its affiliates
+Copyright (c) 2009, 2010, Oracle and/or its affiliates
+Copyright (c) 2009, 2013, Oracle and/or its affiliates
+Copyright 2009 Google Inc.
+Copyright (c) 2009, Oracle and/or its affiliates
+Copyright (c) 2010, 2011, Oracle and/or its affiliates
+Copyright (c) 2010, 2012, Oracle and/or its affiliates
+Copyright (c) 2010, 2013, Oracle and/or its affiliates
+Copyright (c) 2010, Oracle and/or its affiliates
+Copyright (c) 2011, Oracle and/or its affiliates
+Copyright (c) 2012, 2013, Oracle and/or its affiliates
+Copyright (c) 2012, Oracle and/or its affiliates
+Copyright (c) 2013, Oracle and/or its affiliates
+Copyright 2015 Google Inc.
+Copyright (c) 2008, 2013, Oracle and/or its affiliates
+Copyright (c) 1998, 2013, Oracle and/or its affiliates
+Copyright (c) 2004, 2013, Oracle and/or its affiliates
+Copyright (c) 2013, 2015, Oracle and/or its affiliates
+Copyright (c) 1994, 2012, Oracle and/or its affiliates
+Copyright (c) 1999, 2013, Oracle and/or its affiliates
+Copyright (c) 2004, 2006, Oracle and/or its affiliates
+Copyright (c) 1996, 2015, Oracle and/or its affiliates
+Copyright (c) 2005, 2013, Oracle and/or its affiliates
+Copyright (c) 1995, 2015, Oracle and/or its affiliates
+Copyright (c) 1995, 2014, Oracle and/or its affiliates
+Copyright (c) 2001, 2013, Oracle and/or its affiliates
+Copyright (c) 2007, 2013, Oracle and/or its affiliates
+Copyright (c) 1995, 2016, Oracle and/or its affiliates
+Copyright (c) 1997, 2015, Oracle and/or its affiliates
+Copyright (c) 1997, 2014, Oracle and/or its affiliates
+Copyright (c) 1996, 2014, Oracle and/or its affiliates
+Copyright (c) 2007, 2014, Oracle and/or its affiliates
+Copyright (c) 2000, 2015, Oracle and/or its affiliates
+Copyright (c) 1996, 2016, Oracle and/or its affiliates
+Copyright (c) 2007&ndash;2012, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2008&ndash;2012, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2012, 2015, Oracle and/or its affiliates
+Copyright (c) 2012, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2011&ndash;2012, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2013, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2008&ndash;2013, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2016, Oracle and/or its affiliates
+Copyright (c) 2012&ndash;2013, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2012, 2013 Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2009&ndash;2012, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 1997, 2016, Oracle and/or its affiliates
+Copyright (c) 2012, 2016, Oracle and/or its affiliates
+Copyright (c) 1994, 2016, Oracle and/or its affiliates
+Copyright (c) 2003, 2012, Oracle and/or its affiliates
+Copyright (c) 2003&ndash;2008, International Business Machines Corporation and others
+Copyright (c) 2000, 2014, Oracle and/or its affiliates
+Copyright (c) 1997, 2017, Oracle and/or its affiliates
+Copyright (c) 2009, 2016, Oracle and/or its affiliates
+Copyright 1997 by Sun Microsystems, Inc., 901 San Antonio Road, Palo Alto, California, 94303, U.S.A.
+Copyright (c) 2011, 2013, Oracle and/or its affiliates
+Copyright (c) 2000, 2016, Oracle and/or its affiliates
+Copyright (c) 2013, 2014, Oracle and/or its affiliates
+Copyright (c) 2012, 2014, Oracle and/or its affiliates
+Copyright (c) 2006, 2013, Oracle and/or its affiliates
+Copyright (c) 1998, 2014, Oracle and/or its affiliates
+Copyright (c) 1998, 2015, Oracle and/or its affiliates
+Copyright (c) 1999, 2016, Oracle and/or its affiliates
+Copyright (c) 2014, Oracle and/or its affiliates
+Copyright (c) 2002, 2016, Oracle and/or its affiliates
+Copyright (c) 2004, 2015, Oracle and/or its affiliates
+Copyright (c) 2001, 2015, Oracle and/or its affiliates
+Copyright (c) 2008, 2015, Oracle and/or its affiliates
+Copyright (c) 2009, 2012, Oracle and/or its affiliates
+Copyright (c) 2003, 2014, Oracle and/or its affiliates
+(c) 1999 Entrust.net Limited
+Copyright (c) 1998, 2018, Oracle and/or its affiliates
+Copyright (c) 2008, 2018, Oracle and/or its affiliates
+Copyright (c) 2008&ndash;2012 Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2010&ndash;2012, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2010&ndash;2013, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2008,2012, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright (c) 2014, Stephen Colebourne &amp; Michael Nascimento Santos
+Copyright 2001&ndash;2017 The Apache Software Foundation
+Copyright (c) 1995&ndash;2005 International Business Machines Corporation and others
+Copyright (c) 1995&ndash;2009 International Business Machines Corporation and others
+Copyright (c) 2004 by Sun Microsystems, Inc.
+(c) 1995&ndash;2004 Jean&ndash;loup Gailly and Mark Adler
+Copyright (c) 2000 &ndash; 2009 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
+Copyright (c) 2001&ndash;2004 by the MX4J contributors
+copyright (c) 1991&ndash;1998, Thomas G. Lane
+Copyright (c) 1998&ndash;2007 Marti Maria Saguer
+Copyright (c) 2004, 2006&ndash;2009 Glenn Randers&ndash;Pehrson
+Copyright (c) 2000&ndash;2002 Glenn Randers&ndash;Pehrson
+Copyright (c) 1998, 1999, 2000 Glenn Randers&ndash;Pehrson
+Copyright (c) 1996, 1997 Andreas Dilger
+Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.
+Copyright (c) The Internet Society (1997)
+Copyright (c) The Internet Society (1998)
+Copyright (c) The Internet Society (1999)
+Copyright (c) The Internet Society (2000)
+Copyright (c) The Internet Society (2001)
+Copyright (c) The Internet Society (2002)
+Copyright (c) The Internet Society (1997&ndash;2000)
+Copyright (c) The Internet Society (2005)
+Copyright (c) 1991&ndash;1993 RSA Laboratories
+Copyright (c) 2003 by Bitstream, Inc.
+Copyright (c) 2006 by Tavmjong Bah
+Copyright (c) 2000&ndash;2005 INRIA, France Telecom
+Copyright 2001&ndash;2009 Kent Beck &lt;kent@threeriversinstitute.org&gt;
+Copyright 2000&ndash;2009 Erich Gamma &lt;erich_gamma@acm.org&gt;
+Copyright 2006&ndash;2009 David Saff &lt;david@saff.net&gt;
+Copyright (c) 1987, 1993, 1994 The Regents of the University of California
+Copyright (c) 1996 by Internet Software Consortium
+Copyright (c) 1992,1993,1995,1996,1997,1988 Jens&ndash;Uwe Mager, Helios Software GmbH, Hannover, Germany
+Copyright (c) 2000 by Martin Pool &lt;mbp@humbug.org.au&gt;
+Copyright (c) Caldera International Inc.
+Copyright (c) Caldera International Inc. 2001&ndash;2002
+Copyright (c) 2000&ndash;2006, www.hamcrest.org
+Copyright (c)  2006, 2010 The Apache Software Foundation
+Copyright (c)  2005 Intel Corporation
+Copyright (c)  2005&ndash;2006 Intel Corporation
+Copyright (c)  2006 Intel Corporation
+Copyright (c) 1995&ndash;2008 International Business Machines Corporation and others
+Copyright 2004&ndash;2007 The Apache Software Foundation
+Copyright 1997,2004 International Business Machines CorporationCopyright IBM Corp. 2003
+Portions Copyright (c) 1999&ndash;2007 Apple Inc.
+Copyright (c) 2002, 2006 Apple Inc.
+Copyright (c) 1999&ndash;2007 Apple Inc.
+Copyright 2013 Google, Inc.
+Copyright (c) 1995&ndash;2016 International Business Machines Corporation and others
+Copyright (c) 1991&ndash;2016 Unicode, Inc.
+Copyright (c) 2006&ndash;2008, Google Inc.
+(c) 1999 TaBE Project
+Copyright (c) 1999 Pai&ndash;Hsiang Hsiao
+Copyright (c) 1999 Computer Systems and Communication Lab, Institute of Information Science, Academia Sinica
+Copyright 1996 Chih&ndash;Hao Tsai Beckman Institute, University of Illinois c&ndash;tsai4@uiuc.edu http://casper.beckman.uiuc.edu/~c&ndash;tsai4
+Copyright 2000, 2001, 2002, 2003 Nara Institute of Science and Technology
+Copyright (c) 2013 International Business Machines Corporation and others
+Copyright (c) 2013 Brian Eugene Wilson, Robert Martin Campbell
+Copyright (c) 2014 International Business Machines Corporation and others
+Copyright (c) 2013, LeRoy Benjamin Sharon
+Copyright (c) 1999&ndash;2005, International Business Machines Corporation and others
+Copyright (c) 1997&ndash;2016, International Business Machines Corporation and others
+Copyright (c) 1997&ndash;2012, International Business Machines Corporation and others
+Copyright (c) 1997&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2002&ndash;2011 International Business Machines Corporation and others
+Copyright (c) 1998&ndash;2014, International Business Machines Corporation and others
+Copyright (c) 2004&ndash;2012, International Business Machines Corporation and others
+Copyright (c) 1999&ndash;2011, International Business Machines Corporation and others
+Copyright (c) 1999&ndash;2012, International Business Machines Corporation and others
+Copyright (c) 2002&ndash;2012, International Business Machines Corporation and others
+Copyright (c) 2000&ndash;2011, International Business Machines Corporation and others
+Copyright (c) 2011, 2012, Oracle and/or its affiliates
+Portions Copyright IBM Corporation, 2001
+Portions Copyright (c) 1995 Colin Plumb
+Portions Copyright IBM Corporation, 1997, 2001
+Copyright (c) 2017, Oracle and/or its affiliates
+Copyright (c) 2007&ndash;2009, JSR305 expert group
+Copyright 2014, Google Inc.
+Copyright 2008 Google Inc.
+Copyright 2013 Google Inc.
+Copyright (c) 2007 Mockito
+Copyright 2016 Google Inc.
+Copyright 2018 Google Inc.
+Copyright 1999&ndash;2006 The Apache Software Foundation
+copyright (c) 1999&ndash;2002, Lotus Development Corporation., http://www.lotus.com
+copyright (c) 2001&ndash;2002, Sun Microsystems., http://www.sun.com
+copyright (c) 2003, IBM Corporation., http://www.ibm.com
+copyright (c) 1999, IBM Corporation., http://www.ibm.com
+copyright (c) 1999, Sun Microsystems., http://www.sun.com
+Copyright 2001&ndash;2003,2006 The Apache Software Foundation
+copyright (c) 2000 World Wide Web Consortium, http://www.w3.org
+Copyright (c) 2002 World Wide Web Consortium, (Massachusetts Institute of Technology, Institut National de Recherche en Informatique et en Automatique, Keio University)
+
+License: Apache License Version 2.0
+
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      &quot;License&quot; shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      &quot;Licensor&quot; shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      &quot;Legal Entity&quot; shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      &quot;control&quot; means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      &quot;You&quot; (or &quot;Your&quot;) shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      &quot;Source&quot; form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      &quot;Object&quot; form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      &quot;Work&quot; shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      &quot;Derivative Works&quot; shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      &quot;Contribution&quot; shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, &quot;submitted&quot;
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as &quot;Not a Contribution.&quot;
+
+      &quot;Contributor&quot; shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non&ndash;exclusive, no&ndash;charge, royalty&ndash;free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non&ndash;exclusive, no&ndash;charge, royalty&ndash;free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross&ndash;claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a &quot;NOTICE&quot; text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third&ndash;party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an &quot;AS IS&quot; BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON&ndash;INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets &quot;[]&quot;
+      replaced with your own identifying information. (Don&prime;t include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same &quot;printed page&quot; as the copyright notice for easier
+      identification within third&ndash;party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE&ndash;2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</pre><!-- license-text -->
+            </td></tr><!-- same-license -->
+
+
+
+</table>
+</body></html>

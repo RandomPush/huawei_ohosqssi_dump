@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+    <process>voiceauth</process>
+    <loadlibs>
+        <libpath>libvoiceauthsrv.z.so</libpath>
+    </loadlibs>
+    <systemability>
+        <name>944</name>
+        <libpath>libvoiceauthsrv.z.so</libpath>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+</info>

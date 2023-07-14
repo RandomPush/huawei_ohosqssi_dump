@@ -1,0 +1,16 @@
+{
+    "simple_rule": [
+        {
+            "event_name": "CONTINUE_ABILITY",
+            "eventid": 991310083
+        },
+        {
+            "event_name": "ACQUIRE_FORM",
+            "eventid": 951000023
+        },
+        {
+            "event_name": "FIRST_REFRESH_FORM",
+            "eventid": 951000024
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+on property:sys.user.0.ce_available=true && property:init.svc.distributedfiledaemon=running
+    mkdir /data/misc_ce/0/mdfs 0755 system system
+    mkdir /mnt/mdfs 0771
+    mkdir /mnt/mdfs/groups 0000
+    mkdir /mnt/mdfs/hmdfs_groups 0771 root root
+    mkdir /mnt/mdfs/auth_groups 0771 root root
+
+    # Dentry Syncer Chardev
+    chmod 0660 /dev/hmdfs_dentry_syncer
+    chown root system /dev/hmdfs_dentry_syncer
+
+    write /sys/fs/fuse/pass_through_filter "mdfs"
+    start distributedfileservice
+
+on late-init
+   setprop sys.distributedfile_feature.enable true
+
+on init
+    chmod 0770 /config/hmdfs
+    chown system system /config/hmdfs
+
+# Start once booting is complete / Restart on zygote crash
+on property:init.svc.zygote=running && property:sys.boot_completed=1 && property:sys.distributedfile_feature.enable=true
+    restart distributedfiledaemon
+
+service distributedfiledaemon /system/bin/distributedfiledaemon
+    disabled
+    shutdown critical
+    user root
+    group root system shell sdcard_rw readproc media_rw inet everybody
+    seclabel u:r:distributedfiledaemon:s0
+    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks /dev/blkio/foreground/tasks
+    onrestart restart distributedfileservice
+
+service distributedfileservice /system/bin/distributedfileservice -data=/data/misc_ce/0/mdfs -mount=/mnt/mdfs \
+        -kdfs_data=/data/misc_ce -kdfs_mount=/mnt/mdfs -sdcard -external_sd
+    disabled
+    user system
+    group system shell sdcard_rw readproc media_rw inet everybody
+    seclabel u:r:distributedfile:s0
+    oneshot

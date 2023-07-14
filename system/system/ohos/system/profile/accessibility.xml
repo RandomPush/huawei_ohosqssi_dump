@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+    <process>accessibility</process>
+    <loadlibs>
+        <libpath>libaccessibleabilityms.z.so</libpath>
+    </loadlibs>
+    <systemability>
+        <name>801</name>
+        <libpath>libaccessibleabilityms.z.so</libpath>
+        <depend>401</depend>
+        <depend-time-out>60000</depend-time-out>
+        <run-on-create>true</run-on-create>
+        <distributed>false</distributed>
+        <dump-level>1</dump-level>
+    </systemability>
+</info>

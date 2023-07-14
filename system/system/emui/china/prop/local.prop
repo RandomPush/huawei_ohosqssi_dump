@@ -1,0 +1,122 @@
+# 2021-12-28 10:05:53.0
+hw.mc.launcher.app_classify=true
+# 2022-11-01 15:56:48.0
+hw_mc.dns.parrale_optimize=false
+# 2022-03-26 17:42:41.0
+hw_mc.famanager.quick_enable=true
+# 2021-12-28 10:05:53.0
+hw_mc.framework.approximately_location_devices_allow=true
+# 2021-12-28 10:05:53.0
+hw_mc.hicall.screensharing=true
+# 2021-12-28 10:05:53.0
+hw_mc.meetime.message.mode=1
+# 2021-12-28 10:05:53.0
+hw_mc.meetime.multipartycall.mode=1
+# 2022-10-17 19:50:05.0
+hw_mc.multidevice.hwdragdrop_enable=true
+# 2021-12-28 10:05:53.0
+hw_mc.power.USB_on_enable_FD=true
+# 2021-12-28 10:05:53.0
+hw_mc.power.fast_dormancy=true
+# 2021-12-28 10:05:53.0
+hw_mc.power.fdtimer_screenOff=4000
+# 2021-12-28 10:05:53.0
+hw_mc.power.fdtimer_screenOn=7000
+# 2021-12-28 10:05:53.0
+hw_mc.servicehost.needstartprocess=true
+# 2021-12-28 10:05:53.0
+hw_mc.telephony.rat_changed_delay=true
+# 2021-12-28 10:05:53.0
+hw_sc.foreground_data_opt_enable=true
+# 2021-12-28 10:05:53.0
+hw_sc.only_ipv6_allowed_cure=true
+# 2021-12-28 10:05:53.0
+hw_sc.platform.ux_level=200
+# 2022-10-10 17:32:45.0
+hw_sc.sound_bt_superdevice=false
+# 2021-12-28 10:05:53.0
+hw_sc.speed_limit_notifier_enable=true
+# 2021-12-28 10:05:53.0
+hw_sc.speed_test_limit_notifier_enable=true
+# 2021-12-28 10:05:53.0
+ro.camera.sound.not_forced=true
+# 2022-09-23 10:17:58.0
+ro.config.bundle_optb_mnc=306
+# 2021-12-28 10:05:53.0
+ro.config.dataoff_timeout=5
+# 2021-12-28 10:05:53.0
+ro.config.dnscure_ipcfg=10.8.2.1;10.8.2.2|8.8.8.8;208.67.222.222;180.76.76.76;223.5.5.5
+# 2021-12-28 10:05:53.0
+ro.config.enable_rms=true
+# 2021-12-28 10:05:53.0
+ro.config.hicall=true
+# 2021-12-28 10:05:53.0
+ro.config.hw_aqv_enabled=false
+# 2021-12-28 10:05:53.0
+ro.config.hw_ecclist_nocard=+120,+122
+# 2021-12-28 10:05:53.0
+ro.config.hw_ecclist_withcard=+112
+# 2021-12-28 10:05:53.0
+ro.config.hw_fake_ecc_list=110,120,122,999,119
+# 2021-12-28 10:05:53.0
+ro.config.hw_globalEcc=false
+# 2021-12-28 10:05:53.0
+ro.config.hw_nlp=com.huawei.lbs
+# 2021-12-28 10:05:53.0
+ro.config.hw_optb=156
+# 2021-12-28 10:05:53.0
+ro.config.hw_updateCotaPara=true
+# 2021-12-28 10:05:53.0
+ro.config.music_region=lowfreq
+# 2021-12-28 10:05:53.0
+ro.config.permanent_error_heal=true
+# 2022-07-26 18:12:30.0
+ro.config.pre_dns_query=false
+# 2021-12-28 10:05:53.0
+ro.config.support_doubletap_pay=true
+# 2022-12-06 19:32:02.0
+ro.config.support_etcis=true
+# 2021-12-28 10:05:53.0
+ro.config.support_iseapp=true
+# 2021-12-28 10:05:53.0
+ro.config.support_privacyspace=true
+# 2022-06-27 20:43:23.0
+ro.hw.defaultcotaversion=cota103.0.0
+# 2021-12-28 10:05:53.0
+ro.hw.ipv6opt=true
+# 2021-12-28 10:05:53.0
+ro.hw.sub1_disable_switch_cs=true
+# 2021-12-28 10:05:53.0
+ro.hwpp_ds_fail=111,30,32,33,35
+# 2021-12-28 10:05:53.0
+ro.iconnect.trustpair=true
+# 2021-12-28 10:05:53.0
+ro.odm.cdma.dormancy.mode=1
+# 2021-12-28 10:05:53.0
+ro.odm.cdma.dormancy.screen=3
+# 2021-12-28 10:05:53.0
+ro.odm.config.hw.imeisv=true
+# 2021-12-28 10:05:53.0
+ro.odm.cur_primary_dns=114.114.114.114
+# 2021-12-28 10:05:53.0
+ro.odm.cur_secondary_dns=180.76.76.76
+# 2021-12-28 10:05:53.0
+ro.odm.gsm.fastdormancy.mode=3
+# 2021-12-28 10:05:53.0
+ro.odm.gsm.fd.screen=2
+# 2021-12-28 10:05:53.0
+ro.odm.gsm.fd.time_scroff=4000
+# 2021-12-28 10:05:53.0
+ro.odm.high_priority_data_mode=true
+# 2021-12-28 10:05:53.0
+ro.odm.smart_dual_card=true
+# 2021-12-28 10:05:53.0
+ro.product.locale=zh-Hans-CN
+# 2021-12-28 10:05:53.0
+ro.product.locale.language=zh
+# 2021-12-28 10:05:53.0
+ro.product.locale.region=CN
+# 2021-12-28 10:05:53.0
+ro.setupwizard.mode=DISABLED
+# 2021-12-28 10:05:53.0
+ro.sys.ping_bf_dorecovery=true

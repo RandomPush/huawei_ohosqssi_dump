@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config hashvalue="3b6c55f187ff82a9b7e8367e45132cc5">
+  <dict>
+    <!--2021-12-28 10:05:53.0-->
+    <bool key="hw_hide_lte">true</bool>
+    <!--2022-03-14 17:21:15.0-->
+    <bool key="hw_stk_calling_show_text">true</bool>
+  </dict>
+</config>
