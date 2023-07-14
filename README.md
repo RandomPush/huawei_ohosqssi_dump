@@ -1,0 +1,14 @@
+# ohosqssi-user 12 SKQ1.220804.001 eng.root.20230221.150629 dev-keys
+- manufacturer: qualcomm
+- platform: 
+- codename: ohosqssi
+- flavor: ohosqssi-user
+- release: 12
+- id: SKQ1.220804.001
+- incremental: eng.root.20230221.150629
+- tags: release-keys
+- fingerprint: Huawei/ohosqssi/ohosqssi:12/SKQ1.220804.001/root02211519:user/dev-keys
+- is_ab: false
+- brand: Huawei
+- branch: ohosqssi-user-12-SKQ1.220804.001-eng.root.20230221.150629-dev-keys
+- repo: huawei_ohosqssi_dump
